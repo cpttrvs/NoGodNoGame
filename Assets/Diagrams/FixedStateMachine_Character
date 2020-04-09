@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-04-09T10:30:50.163Z" agent="5.0 (Windows)" etag="wifC2e3qm53oSWBZRgtO" version="12.9.10" type="github">
+<mxfile host="app.diagrams.net" modified="2020-04-09T11:01:37.383Z" agent="5.0 (Windows)" etag="Sf6wdE1XfGncf7w0wjJk" version="12.9.10" type="github">
   <diagram id="dxxjljuM5NoMf0PUY4K2" name="Page-1">
-    <mxGraphModel dx="1422" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="733" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -30,6 +30,9 @@
         </mxCell>
         <mxCell id="aDlBdVaL5Bm-pk_XOpl--7" value="Move" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="490" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FTHVbCTTzrHASNEeERR6-1" value="Fixed State Machine: Character" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="37" width="180" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
