@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-04-09T10:51:26.515Z" agent="5.0 (Windows)" etag="RhZ_yuqw8P96ZuQdy_W0" version="12.9.10" type="github">
+<mxfile host="app.diagrams.net" modified="2020-04-09T11:01:53.192Z" agent="5.0 (Windows)" etag="7DaGnurYmAjUm46iZUMC" version="12.9.10" type="github">
   <diagram id="0vfJhBpsVmZOij7DW5B-" name="Page-1">
     <mxGraphModel dx="1422" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -37,8 +37,8 @@
         <mxCell id="Cft4STkU9wOy2baomnqM-11" value="not facing a position" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
           <mxGeometry x="428" y="170" width="130" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Cft4STkU9wOy2baomnqM-13" value="- predefinedPositions: a list of predefined positions (3)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="360" y="40" width="310" height="20" as="geometry" />
+        <mxCell id="Cft4STkU9wOy2baomnqM-13" value="+ predefinedPositions: a list of predefined positions (3)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="355" y="40" width="320" height="20" as="geometry" />
         </mxCell>
         <mxCell id="Cft4STkU9wOy2baomnqM-16" value="&lt;div&gt;Turn towards a position&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="600" y="170" width="147" height="70" as="geometry" />
