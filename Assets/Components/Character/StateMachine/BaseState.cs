@@ -7,7 +7,7 @@ using UnityEditor;
 public class BaseState : StateMachineBehaviour
 {
     [SerializeField]
-    private Object behaviorFile;
+    private Object behaviorFile = null;
 
     protected BehaviorTree behaviorTree;
     protected Animator stateAnimator;

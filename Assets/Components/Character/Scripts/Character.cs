@@ -10,7 +10,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     private NavMeshAgent navMeshAgent = null;
 
     [SerializeField]
-    private List<Waypoint> _waypoints;
+    private List<Waypoint> _waypoints = null;
     public List<Waypoint> waypoints => _waypoints;
 
     public void MoveTo(Vector3 to)
