@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: d462ce24e59eeb84291bf90c35755456
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Stone: {fileID: 2800000, guid: 56fb266f2603a52479ea2c537224d23c, type: 3}
+  - _Plaster: {fileID: 2800000, guid: 0cef78a918829474d841ed0376703dfb, type: 3}
+  - _Stone_Height: {fileID: 2800000, guid: 20977112acb4953448c475886d7b869b, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
