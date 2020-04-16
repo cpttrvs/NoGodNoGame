@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: 1ad6c64b1fbe73343b4370c8605fb099
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: 6007417343056220348
+    second: Cry
+  - first:
+      74: -3100369314251171874
+    second: Idle
+  - first:
+      74: -4696928974034705990
+    second: IdleBellypat
+  - first:
+      74: 6804238219281155966
+    second: IdleHeadscratch
+  - first:
+      74: 2637834546616461252
+    second: IdleLook
+  - first:
+      74: 7605795887391212600
+    second: ChopMineVertical
+  - first:
+      74: -1669955983729754711
+    second: ChopMineHorizontal
+  - first:
+      74: -2791546748740142636
+    second: ChopMineClassic
+  - first:
+      74: -7086112901119940002
+    second: Netting
+  - first:
+      74: -1383029057635763919
+    second: Fishing
+  - first:
+      74: -8737858514347363607
+    second: FishingIdle
+  - first:
+      74: 6066393368950697183
+    second: DanceKossack
+  - first:
+      74: -7565314656692985373
+    second: DanceDisco
+  - first:
+      74: -747580877375797377
+    second: Flex
+  - first:
+      74: -3476255544956345808
+    second: WaveAtCamera
+  - first:
+      74: 4348485665485846014
+    second: Death
+  - first:
+      74: 492809569757335010
+    second: Dab
+  - first:
+      74: 1701519168366769839
+    second: Interact
+  - first:
+      74: 6384169306730710965
+    second: Tinker
+  - first:
+      74: -8639922974182340995
+    second: Kneel
+  - first:
+      74: 2667949614841947897
+    second: Walk
+  - first:
+      74: 3045611278313773117
+    second: WalkSwag
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
