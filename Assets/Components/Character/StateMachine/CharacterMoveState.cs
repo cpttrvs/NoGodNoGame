@@ -23,9 +23,10 @@ public class CharacterMoveState : BaseState
             if (character is IHasWaypoints)
             {
                 List<Waypoint> waypoints = character.waypoints;
+                Waypoint currentWaypoint = character.currentWaypoint;
 
                 behaviorTree.blackBoard["waypoints"] = new BBList<Waypoint>(waypoints);
-                behaviorTree.blackBoard["currentWaypoint"] = null;
+                behaviorTree.blackBoard["currentWaypoint"] = currentWaypoint;
             }
         }
     }
@@ -34,6 +35,18 @@ public class CharacterMoveState : BaseState
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
 
+        character.currentWaypoint = behaviorTree.blackBoard["currentWaypoint"] as Waypoint;
+
         stateAnimator.SetTrigger(triggerName);
+    }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
+    {
+        base.OnStateExit(animator, animatorStateInfo, layerIndex);
+
+        if(character is IMovable)
+        {
+            character.Stop();
+        }
     }
 }

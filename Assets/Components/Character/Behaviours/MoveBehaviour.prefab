@@ -471,6 +471,8 @@ MonoBehaviour:
       value: 1
     - key: preventSameWaypoint
       value: 1
+    - key: preventSameNode
+      value: 1
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:

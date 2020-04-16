@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 659376820}
   - component: {fileID: 659376822}
   - component: {fileID: 659376823}
+  - component: {fileID: 659376824}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -272,6 +273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96fcf78bf06aebd46a4f1374a4c34ac5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateMachine: {fileID: 659376822}
+  onClickTrigger: clickTrigger
   navMeshAgent: {fileID: 659376823}
   _waypoints:
   - {fileID: 393331193}
@@ -334,6 +337,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!65 &659376824
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659376819}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.7790947, z: 1}
+  m_Center: {x: 0, y: 0.88954735, z: 0}
 --- !u!1 &747963384
 GameObject:
   m_ObjectHideFlags: 0

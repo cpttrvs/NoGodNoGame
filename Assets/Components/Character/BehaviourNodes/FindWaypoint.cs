@@ -9,6 +9,8 @@ public class FindWaypoint : NodeAction
 {
     [NodeParam]
     private bool randomPick = true;
+    [NodeParam]
+    private bool preventSameNode = true;
 
     public override void Cleanup()
     {
@@ -25,9 +27,19 @@ public class FindWaypoint : NodeAction
 
             if (randomPick)
             {
-                int rand = rand = UnityEngine.Random.Range(0, waypoints.Count);
+                int rand = UnityEngine.Random.Range(0, waypoints.Count);
 
                 pickedWaypoint = waypoints[rand];
+
+                if(preventSameNode)
+                {
+                    while(pickedWaypoint == (behaviorTree.blackBoard["currentWaypoint"] as Waypoint))
+                    {
+                        rand = UnityEngine.Random.Range(0, waypoints.Count);
+
+                        pickedWaypoint = waypoints[rand];
+                    }
+                }
             }
             
             if (pickedWaypoint != null)
