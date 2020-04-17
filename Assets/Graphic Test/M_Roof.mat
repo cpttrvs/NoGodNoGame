@@ -65,11 +65,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ThatchLong:
         m_Texture: {fileID: 2800000, guid: a7289ec842744da4a84ad3e529fea26e, type: 3}
-        m_Scale: {x: 5, y: 5}
+        m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     - _ThatchShort:
         m_Texture: {fileID: 2800000, guid: fa50143cb74a84047a6a3dce7473c04e, type: 3}
-        m_Scale: {x: 5, y: 5}
+        m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
