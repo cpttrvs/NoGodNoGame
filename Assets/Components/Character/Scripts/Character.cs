@@ -12,6 +12,10 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     [SerializeField]
     private string onClickTrigger = null;
 
+    [SerializeField]
+    private float cooldownClick = 10f;
+    private bool onCooldown = false;
+
     [Header("Nav Mesh")]
     [SerializeField]
     private NavMeshAgent navMeshAgent = null;
@@ -38,6 +42,17 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     // IClickable
     public void OnMouseDown()
     {
-        stateMachine.SetTrigger(onClickTrigger);
+        if(!onCooldown)
+        {
+            StartCoroutine(StartCooldown());
+            stateMachine.SetTrigger(onClickTrigger);
+        }
+    }
+
+    private IEnumerator StartCooldown()
+    {
+        onCooldown = true;
+        yield return new WaitForSeconds(cooldownClick);
+        onCooldown = false;
     }
 }
