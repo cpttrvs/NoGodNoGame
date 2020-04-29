@@ -8,6 +8,16 @@ public class Plant : MonoBehaviour, IContainable
     private bool _isPlanted = false;
     public bool isPlanted { get { return _isPlanted; } }
 
+    public bool Unplant()
+    {
+        if(isPlanted)
+        {
+            _isPlanted = false;
+            return true;
+        }
+
+        return false;
+    }
 
 
     // IContainable

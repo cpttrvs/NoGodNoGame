@@ -2,6 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weeds : MonoBehaviour
+public class Weeds : Plant
 { 
 }
