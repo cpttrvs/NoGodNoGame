@@ -5,8 +5,10 @@ using AillieoUtils.EasyBehaviorTree;
 using System;
 
 [Serializable]
-public class IsOnWaypoint : NodeCondition
+public class IsNearObject : NodeCondition
 {
+    [NodeParam]
+    private string objectKey = null;
     [NodeParam]
     private float minimalRange = 1f;
 
@@ -18,14 +20,14 @@ public class IsOnWaypoint : NodeCondition
     {
         Character character = behaviorTree.blackBoard["self"] as Character;
 
-        if(character != null)
+        if (character != null)
         {
-            Waypoint waypoint = behaviorTree.blackBoard["currentWaypoint"] as Waypoint;
-            if(waypoint != null)
+            MonoBehaviour gameObject = behaviorTree.blackBoard[objectKey] as MonoBehaviour;
+            if (gameObject != null)
             {
-                float distance = Vector3.Distance(character.transform.position, waypoint.GetPosition());
+                float distance = Vector3.Distance(character.transform.position, gameObject.transform.position);
 
-                if(distance <= minimalRange)
+                if (distance <= minimalRange)
                 {
                     return true;
                 }

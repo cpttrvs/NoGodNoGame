@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using AillieoUtils.EasyBehaviorTree;
 
-public class Container : MonoBehaviour
+public class Container : MonoBehaviour, IBlackBoardData
 {
     [SerializeField]
     private uint capacity = 0;

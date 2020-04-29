@@ -5,10 +5,10 @@ using AillieoUtils.EasyBehaviorTree;
 using System;
 
 [Serializable]
-public class MoveToWaypoint : NodeAction
+public class MoveToObject : NodeAction
 {
     [NodeParam]
-    private string waypointKey = null;
+    private string objectKey = null;
 
     public override void Cleanup()
     {
@@ -18,15 +18,15 @@ public class MoveToWaypoint : NodeAction
     {
         IBlackBoardData obj = behaviorTree.blackBoard["self"];
 
-        if(obj is IMovable)
+        if (obj is IMovable)
         {
             IMovable movable = obj as IMovable;
 
-            Waypoint waypoint = behaviorTree.blackBoard[waypointKey] as Waypoint;
+            MonoBehaviour gameObject = behaviorTree.blackBoard[objectKey] as MonoBehaviour;
 
-            if (waypoint != null)
+            if (gameObject != null)
             {
-                movable.MoveTo(waypoint.GetPosition());
+                movable.MoveTo(gameObject.transform.position);
 
                 return BTState.Success;
             }

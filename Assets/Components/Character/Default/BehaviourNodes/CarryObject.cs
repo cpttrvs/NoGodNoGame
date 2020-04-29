@@ -5,10 +5,10 @@ using AillieoUtils.EasyBehaviorTree;
 using System;
 
 [Serializable]
-public class MoveToWaypoint : NodeAction
+public class CarryObject : NodeAction
 {
     [NodeParam]
-    private string waypointKey = null;
+    private string objectKey = null;
 
     public override void Cleanup()
     {
@@ -18,17 +18,18 @@ public class MoveToWaypoint : NodeAction
     {
         IBlackBoardData obj = behaviorTree.blackBoard["self"];
 
-        if(obj is IMovable)
+        if (obj is ICanCarry)
         {
-            IMovable movable = obj as IMovable;
+            ICanCarry canCarry = obj as ICanCarry;
 
-            Waypoint waypoint = behaviorTree.blackBoard[waypointKey] as Waypoint;
+            ICarriable carriable = behaviorTree.blackBoard[objectKey] as ICarriable;
 
-            if (waypoint != null)
+            if (carriable != null)
             {
-                movable.MoveTo(waypoint.GetPosition());
+                bool res = canCarry.Carry(carriable);
 
-                return BTState.Success;
+                if (res) return BTState.Success;
+                else return BTState.Failure;
             }
         }
 
