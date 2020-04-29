@@ -3,23 +3,16 @@ using System.Collections.Generic;
 using AillieoUtils.EasyBehaviorTree;
 using UnityEngine;
 
-public class CharacterMoveState : BaseState
+public class CharacterMoveState : CharacterBaseState
 {
     [SerializeField]
     private string triggerName = null;
 
-    private Character character;
-
     protected override void Init()
     {
         base.Init();
-
-        character = animatedGameobject.GetComponentInChildren<Character>();
-
         if(character != null)
         {
-            behaviorTree.blackBoard["self"] = character;
-
             if (character is IHasWaypoints)
             {
                 List<Waypoint> waypoints = character.waypoints;

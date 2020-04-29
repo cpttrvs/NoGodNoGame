@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using AillieoUtils.EasyBehaviorTree;
 using UnityEngine;
 
-public class CharacterIdleState : BaseState
+public class CharacterIdleState : CharacterBaseState
 {
     [SerializeField]
     protected string triggerName = null;
@@ -12,6 +12,7 @@ public class CharacterIdleState : BaseState
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
 
-        stateAnimator.SetTrigger(triggerName);        
+        if(state == BTState.Success)
+            stateAnimator.SetTrigger(triggerName);        
     }
 }

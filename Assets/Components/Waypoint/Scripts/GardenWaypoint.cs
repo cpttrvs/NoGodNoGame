@@ -8,4 +8,9 @@ public class GardenWaypoint : Waypoint
     private List<Plant> _connectedPlants = new List<Plant>();
     public List<Plant> connectedPlants { get { return _connectedPlants; } }
 
+    protected override void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, 0.5f);
+    }
 }

@@ -9,4 +9,10 @@ public class Waypoint : MonoBehaviour, IBlackBoardData
     {
         return transform.position;
     }
+
+    protected virtual void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, 0.5f);
+    }
 }
