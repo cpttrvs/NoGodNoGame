@@ -6,6 +6,8 @@ using AillieoUtils.EasyBehaviorTree;
 [System.Serializable]
 public class IfGardenHasWeeds : NodeCondition
 {
+    [NodeParam]
+    bool weedsToUnplant = false;
 
     public override void Cleanup()
     {
@@ -22,7 +24,10 @@ public class IfGardenHasWeeds : NodeCondition
                 Weeder weeder = character as Weeder;
 
                 Garden garden = weeder.garden;
-                Debug.Log(garden.GetRemainingWeeds());
+
+                if (weedsToUnplant)
+                    return garden.GetRemainingWeedsToUnplant() > 0;
+
                 return garden.GetRemainingWeeds() > 0;
             }
         }

@@ -27,6 +27,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     public List<Waypoint> waypoints => _waypoints;
 
     public Waypoint currentWaypoint { get; set; }
+    public Waypoint lastWaypoint { get; set; }
 
     // IMovable
     public void MoveTo(Vector3 to)

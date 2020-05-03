@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using AillieoUtils.EasyBehaviorTree;
 
-public class Garden : MonoBehaviour, IBlackBoardData, IArea
+public class Garden : Area, IBlackBoardData
 {
     [SerializeField]
     private Waypoint _entry = null;
@@ -16,11 +16,7 @@ public class Garden : MonoBehaviour, IBlackBoardData, IArea
     [SerializeField]
     private List<WaypointsLane> _waypointsLanes = new List<WaypointsLane>();
     public List<WaypointsLane> waypointsLanes { get { return _waypointsLanes; } }
-
-    [Header("Area")]
-    [SerializeField]
-    private Collider _areaCollider = null;
-
+    
     public List<Plant> GetPlants()
     {
         List<Plant> plants = null;
@@ -82,11 +78,37 @@ public class Garden : MonoBehaviour, IBlackBoardData, IArea
         return 0;
     }
 
-    // IArea
-    public Collider area { get { return _areaCollider; } }
-
-    public bool AreaContains(Vector3 pos)
+    public int GetRemainingWeedsToUnplant()
     {
-        return area.bounds.Contains(pos);
+        List<Weeds> weeds = GetWeeds();
+        int total = 0;
+
+        if(weeds != null)
+        {
+            foreach(Weeds w in weeds)
+            {
+                if (w.isPlanted)
+                    total++;
+            }
+        }
+
+        return total;
+    }
+
+    public int GetRemainingWeedsToPickup()
+    {
+        List<Weeds> weeds = GetWeeds();
+        int total = 0;
+
+        if(weeds != null)
+        {
+            foreach(Weeds w in weeds)
+            {
+                if (!w.isPlanted)
+                    total++;
+            }
+        }
+
+        return total;
     }
 }

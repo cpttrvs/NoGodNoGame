@@ -1909,6 +1909,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1506182321}
   - component: {fileID: 1506182322}
+  - component: {fileID: 1506182323}
   m_Layer: 0
   m_Name: Waypoints 1-2
   m_TagString: Untagged
@@ -1947,6 +1948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bca735d6ea3d884f97e50e312697e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _area: {fileID: 1506182323}
   _waypoints:
   - {fileID: 914985288}
   - {fileID: 309039025}
@@ -1955,6 +1957,19 @@ MonoBehaviour:
   - {fileID: 88732129}
   _startWaypoint: {fileID: 914985288}
   _endWaypoint: {fileID: 88732129}
+--- !u!65 &1506182323
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506182320}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2, z: 2}
+  m_Center: {x: 4, y: 0, z: 0}
 --- !u!1 &1511228927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,7 +2007,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1511228927}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 13}
+  m_LocalPosition: {x: 0, y: 0, z: 12.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1910856859}
@@ -2461,6 +2476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1724261568}
   - component: {fileID: 1724261569}
+  - component: {fileID: 1724261570}
   m_Layer: 0
   m_Name: Waypoints 2-3
   m_TagString: Untagged
@@ -2499,6 +2515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bca735d6ea3d884f97e50e312697e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _area: {fileID: 1724261570}
   _waypoints:
   - {fileID: 2089836632}
   - {fileID: 1368809257}
@@ -2507,6 +2524,19 @@ MonoBehaviour:
   - {fileID: 1105038343}
   _startWaypoint: {fileID: 2089836632}
   _endWaypoint: {fileID: 1105038343}
+--- !u!65 &1724261570
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724261567}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2, z: 2}
+  m_Center: {x: 4, y: 0, z: 0}
 --- !u!1 &1840043476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2670,12 +2700,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9138fba94340b4b9af1c129a203b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _area: {fileID: 1530846062}
   _entry: {fileID: 1511228928}
   _basketSpot: {fileID: 1954868877}
   _waypointsLanes:
   - {fileID: 1506182322}
   - {fileID: 1724261569}
-  _areaCollider: {fileID: 1530846062}
 --- !u!1 &1954868875
 GameObject:
   m_ObjectHideFlags: 0

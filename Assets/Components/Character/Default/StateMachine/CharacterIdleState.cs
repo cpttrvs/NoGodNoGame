@@ -12,7 +12,6 @@ public class CharacterIdleState : CharacterBaseState
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
 
-        if(state == BTState.Success)
-            stateAnimator.SetTrigger(triggerName);        
+        stateAnimator.SetTrigger(triggerName);
     }
 }

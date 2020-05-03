@@ -31,7 +31,7 @@ public class DropObject : NodeAction
             if (carriable != null && dropWaypoint != null)
             {
                 bool res = canCarry.Drop(carriable, dropWaypoint.transform);
-                
+
                 if (res) return BTState.Success;
                 else return BTState.Failure;
             }

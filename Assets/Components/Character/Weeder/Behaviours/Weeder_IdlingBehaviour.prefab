@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 5096075921971555168}
   - component: {fileID: 6508287163458807003}
   m_Layer: 0
-  m_Name: Weeder_IdleBehaviour
+  m_Name: Weeder_IdlingBehaviour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,6 +312,8 @@ MonoBehaviour:
       value: 0
     - key: preventSameNode
       value: 0
+    - key: weedsToUnplant
+      value: 1
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:

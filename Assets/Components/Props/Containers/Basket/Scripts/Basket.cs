@@ -23,7 +23,7 @@ public class Basket : Container, ICarriable
     public bool Drop()
     {
         if (!isCarried) return false;
-
+        
         _isCarriedBy = null;
         _isCarried = false;
 

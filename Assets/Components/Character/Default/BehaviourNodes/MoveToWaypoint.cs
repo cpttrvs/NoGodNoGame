@@ -26,6 +26,12 @@ public class MoveToWaypoint : NodeAction
 
             if (waypoint != null)
             {
+                if (obj is Character)
+                {
+                    (obj as Character).lastWaypoint = (obj as Character).currentWaypoint;
+                    (obj as Character).currentWaypoint = waypoint;
+                }
+
                 movable.MoveTo(waypoint.GetPosition());
 
                 return BTState.Success;

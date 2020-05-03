@@ -9,27 +9,56 @@ public class IsInArea : NodeCondition
     [NodeParam]
     private string areaKey = null;
 
+    [NodeParam]
+    private bool multipleAreas = false;
+
+    [NodeParam]
+    private bool anyArea = false;
+
     public override void Cleanup()
     {
     }
 
     protected override bool CheckCondition(float deltaTime)
     {
-        IBlackBoardData data = behaviorTree.blackBoard[areaKey];
+        List<Area> data = new List<Area>();
 
-        if(data != null)
+        if(multipleAreas)
         {
-            IArea area = data as IArea;
+            //!!add other types
+            List<WaypointsLane> temp = ((BBList<WaypointsLane>)behaviorTree.blackBoard[areaKey]).list;
+            foreach (WaypointsLane wl in temp)
+                data.Add(wl);
+        } else
+        {
+            data.Add(behaviorTree.blackBoard[areaKey] as Area);
+        }
 
-            if (area != null)
+        if(data.Count > 0)
+        {
+            Character character = behaviorTree.blackBoard["self"] as Character;
+
+            if (character != null)
             {
-                Character character = behaviorTree.blackBoard["self"] as Character;
-
-                if (character != null)
+                if(anyArea)
                 {
-                    return area.AreaContains(character.transform.position);
+                    foreach (Area area in data)
+                    {
+                        if (area.AreaContains(character.transform.position))
+                            return true;
+                    }
+                } else
+                {
+                    foreach(Area area in data)
+                    {
+                        if (!area.AreaContains(character.transform.position))
+                            return false;
+                    }
+
+                    return true;
                 }
             }
+            
         }
 
         return false;

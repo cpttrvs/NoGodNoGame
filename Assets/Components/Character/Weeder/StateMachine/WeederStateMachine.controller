@@ -230,6 +230,8 @@ MonoBehaviour:
   behaviorFile: {fileID: 102900000, guid: 8f98f40ef82a7ae4cb662bbbc7679ee6, type: 3}
   gardenKey: garden
   gardenEntryKey: gardenEntry
+  gardenBasketKey: basketWaypoint
+  waypointsLanesKey: waypointsLanes
   basketKey: basket
 --- !u!114 &8132947918602565098
 MonoBehaviour:

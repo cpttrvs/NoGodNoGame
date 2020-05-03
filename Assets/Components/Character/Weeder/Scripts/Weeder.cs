@@ -16,4 +16,14 @@ public class Weeder : Character
     [SerializeField]
     private Container _handsContainer = null;
     public Container handsContainer { get { return _handsContainer; } }
+
+    public bool Unplant(GardenWaypoint gardenWaypoint)
+    {
+        //animation
+        bool success = gardenWaypoint.UnplantAny();
+        //Debug.Log("Weeder: Unplant " + gardenWaypoint.name + " => " + success);
+
+
+        return success;
+    }
 }

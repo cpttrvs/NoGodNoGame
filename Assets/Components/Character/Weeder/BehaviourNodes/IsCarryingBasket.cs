@@ -19,7 +19,7 @@ public class IsCarryingBasket : NodeCondition
             if(character is Weeder)
             {
                 Weeder weeder = character as Weeder;
-
+                
                 return weeder.carrying.Contains(weeder.basket);
             }
         }
