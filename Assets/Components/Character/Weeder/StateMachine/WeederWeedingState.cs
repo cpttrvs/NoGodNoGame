@@ -19,8 +19,6 @@ public class WeederWeedingState : CharacterBaseState
     [SerializeField]
     private string gardenEntryKey = null;
     [SerializeField]
-    private string gardenBasketWaypointKey = null;
-    [SerializeField]
     private string waypointsLanesKey = null;
 
     [Header("Props")]
@@ -43,7 +41,6 @@ public class WeederWeedingState : CharacterBaseState
 
                 behaviorTree.blackBoard[gardenKey] = garden;
                 behaviorTree.blackBoard[gardenEntryKey] = garden.entry;
-                behaviorTree.blackBoard[gardenBasketWaypointKey] = garden.basketSpot;
                 behaviorTree.blackBoard[basketKey] = basket;
                 
                 behaviorTree.blackBoard[waypointsLanesKey] = new BBList<GardenWaypointsLane>(garden.waypointsLanes);

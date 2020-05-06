@@ -26,7 +26,7 @@ public class Container : MonoBehaviour, IBlackBoardData
         if (mb != null)
         {
             mb.transform.SetParent(containerSlot);
-            mb.transform.position = Vector3.zero;
+            mb.transform.localPosition = Vector3.zero;
         }
 
         Debug.Log("Container: " + name + " added an item");

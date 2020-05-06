@@ -23,8 +23,7 @@ public class MoveToObject : NodeAction
             IMovable movable = obj as IMovable;
 
             MonoBehaviour gameObject = behaviorTree.blackBoard[objectKey] as MonoBehaviour;
-
-            Debug.Log("MOVE TO " + objectKey + ", " + gameObject.name);
+            
             if (gameObject != null)
             {
                 movable.MoveTo(gameObject.transform.position);

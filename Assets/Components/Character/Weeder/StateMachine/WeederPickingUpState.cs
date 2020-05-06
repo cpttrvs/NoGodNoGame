@@ -21,8 +21,6 @@ public class WeederPickingUpState : CharacterBaseState
     [SerializeField]
     private string gardenKey = null;
     [SerializeField]
-    private string gardenBasketWaypointKey = null;
-    [SerializeField]
     private string waypointsLanesKey = null;
 
     [Header("Props")]
@@ -46,7 +44,6 @@ public class WeederPickingUpState : CharacterBaseState
                 basket = weeder.basket;
 
                 behaviorTree.blackBoard[gardenKey] = garden;
-                behaviorTree.blackBoard[gardenBasketWaypointKey] = garden.basketSpot;
 
                 behaviorTree.blackBoard[basketKey] = basket;
                 behaviorTree.blackBoard[weederHandsKey] = weeder.handsContainer;
@@ -61,15 +58,17 @@ public class WeederPickingUpState : CharacterBaseState
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
 
-        Debug.Log("PickingUpState: FINISHED " + state.ToString());
         if (garden.GetRemainingWeedsToUnplant() > 0 )
         {
+            Debug.Log("PickingUpState: FINISHED " + state.ToString() + " still unplant");
             stateAnimator.SetTrigger(triggerRemainingUnplantWork);
         } else if (garden.GetRemainingWeedsToPickup() > 0)
         {
+            Debug.Log("PickingUpState: FINISHED " + state.ToString() + " still pickup");
             stateAnimator.SetTrigger(triggerRemainingPickupWork);
         } else
         {
+            Debug.Log("PickingUpState: FINISHED " + state.ToString());
             stateAnimator.SetTrigger(triggerOnComplete);
         }
     }

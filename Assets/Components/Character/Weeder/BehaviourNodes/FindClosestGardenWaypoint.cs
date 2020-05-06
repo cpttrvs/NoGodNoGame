@@ -96,7 +96,6 @@ public class FindClosestGardenWaypoint : NodeAction
                         if (wpl.GetWaypoints().Contains(closest))
                         {
                             weeder.currentGardenWaypointsLane = wpl;
-                            Debug.Log("\tMEMORISED: " + wpl.name);
                             break;
                         }
                     }

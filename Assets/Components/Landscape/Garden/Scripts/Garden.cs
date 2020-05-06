@@ -10,10 +10,6 @@ public class Garden : Area, IBlackBoardData
     public Waypoint entry { get { return _entry; } }
 
     [SerializeField]
-    private Waypoint _basketSpot = null;
-    public Waypoint basketSpot { get { return _basketSpot; } }
-
-    [SerializeField]
     private List<GardenWaypointsLane> _waypointsLanes = new List<GardenWaypointsLane>();
     public List<GardenWaypointsLane> waypointsLanes { get { return _waypointsLanes; } }
     
