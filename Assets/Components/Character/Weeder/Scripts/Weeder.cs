@@ -10,6 +10,10 @@ public class Weeder : Character
     public Garden garden { get { return _garden; } }
 
     [SerializeField]
+    private Container _compostPile = null;
+    public Container compostPile { get { return _compostPile; } }
+
+    [SerializeField]
     private Basket _basket = null;
     public Basket basket { get { return _basket; } }
     

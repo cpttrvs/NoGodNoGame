@@ -5,11 +5,8 @@ using AillieoUtils.EasyBehaviorTree;
 using System;
 
 [Serializable]
-public class MoveToObject : NodeAction
+public class Stop : NodeAction
 {
-    [NodeParam]
-    private string objectKey = null;
-
     public override void Cleanup()
     {
     }
@@ -22,15 +19,9 @@ public class MoveToObject : NodeAction
         {
             IMovable movable = obj as IMovable;
 
-            MonoBehaviour gameObject = behaviorTree.blackBoard[objectKey] as MonoBehaviour;
+            movable.Stop();
 
-            Debug.Log("MOVE TO " + objectKey + ", " + gameObject.name);
-            if (gameObject != null)
-            {
-                movable.MoveTo(gameObject.transform.position);
-
-                return BTState.Success;
-            }
+            return BTState.Success;
         }
 
         return BTState.Failure;

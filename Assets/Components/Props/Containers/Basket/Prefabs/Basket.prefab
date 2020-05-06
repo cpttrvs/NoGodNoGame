@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8da8aac3ef7f0a4459905d06e17b1574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  capacity: 5
+  capacity: 20
   containerSlot: {fileID: 6896301241607315418}
 --- !u!1 &3138381079329910644
 GameObject:

@@ -32,13 +32,16 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     // IMovable
     public void MoveTo(Vector3 to)
     {
+        navMeshAgent.enabled = true;
         navMeshAgent.isStopped = false;
         navMeshAgent.SetDestination(to);
     }
 
     public void Stop()
     {
+        Debug.Log("STOP");
         navMeshAgent.isStopped = true;
+        navMeshAgent.enabled = false;
     }
     
     // IClickable
