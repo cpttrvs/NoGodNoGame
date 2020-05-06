@@ -29,6 +29,8 @@ public class Container : MonoBehaviour, IBlackBoardData
             mb.transform.position = Vector3.zero;
         }
 
+        Debug.Log("Container: " + name + " added an item");
+
         return true;
     }
 
@@ -54,4 +56,5 @@ public class Container : MonoBehaviour, IBlackBoardData
 
     public uint GetCapacity() { return capacity; }
     public int GetContentSize() { return items.Count; }
+    public bool IsFull() { return GetContentSize() == GetCapacity(); }
 }

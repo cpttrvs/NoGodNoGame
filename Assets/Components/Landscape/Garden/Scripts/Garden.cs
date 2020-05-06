@@ -14,26 +14,34 @@ public class Garden : Area, IBlackBoardData
     public Waypoint basketSpot { get { return _basketSpot; } }
 
     [SerializeField]
-    private List<WaypointsLane> _waypointsLanes = new List<WaypointsLane>();
-    public List<WaypointsLane> waypointsLanes { get { return _waypointsLanes; } }
+    private List<GardenWaypointsLane> _waypointsLanes = new List<GardenWaypointsLane>();
+    public List<GardenWaypointsLane> waypointsLanes { get { return _waypointsLanes; } }
     
-    public List<Plant> GetPlants()
+    public List<Plant> GetPlants(GardenWaypointsLane specific = null)
     {
         List<Plant> plants = null;
-        foreach(WaypointsLane wl in waypointsLanes)
+        List<GardenWaypointsLane> lanesToScan = new List<GardenWaypointsLane>();
+
+        if (specific != null)
+            lanesToScan.Add(specific);
+        else
+            lanesToScan.AddRange(waypointsLanes);
+
+        
+        foreach (WaypointsLane wl in lanesToScan)
         {
-            foreach(Waypoint wp in wl.GetWaypoints())
+            foreach (Waypoint wp in wl.GetWaypoints())
             {
-                if(wp is GardenWaypoint)
+                if (wp is GardenWaypoint)
                 {
                     List<Plant> pl = (wp as GardenWaypoint).connectedPlants;
 
                     if (plants == null)
                         plants = new List<Plant>();
 
-                    if(pl != null)
+                    if (pl != null)
                     {
-                        foreach(Plant p in pl)
+                        foreach (Plant p in pl)
                         {
                             plants.Add(p);
                         }
@@ -41,15 +49,17 @@ public class Garden : Area, IBlackBoardData
                 }
             }
         }
+        
+
 
         return plants;
     }
 
-    public List<Weeds> GetWeeds()
+    public List<Weeds> GetWeeds(GardenWaypointsLane specific = null)
     {
         List<Weeds> weeds = null;
 
-        List<Plant> plants = GetPlants();
+        List<Plant> plants = GetPlants(specific);
 
         if(plants != null)
         {
@@ -68,9 +78,9 @@ public class Garden : Area, IBlackBoardData
         return weeds;
     }
 
-    public int GetRemainingWeeds()
+    public int GetRemainingWeeds(GardenWaypointsLane specific = null)
     {
-        List<Weeds> weeds = GetWeeds();
+        List<Weeds> weeds = GetWeeds(specific);
 
         if (weeds != null)
             return weeds.Count;
@@ -78,9 +88,9 @@ public class Garden : Area, IBlackBoardData
         return 0;
     }
 
-    public int GetRemainingWeedsToUnplant()
+    public int GetRemainingWeedsToUnplant(GardenWaypointsLane specific = null)
     {
-        List<Weeds> weeds = GetWeeds();
+        List<Weeds> weeds = GetWeeds(specific);
         int total = 0;
 
         if(weeds != null)
@@ -92,12 +102,13 @@ public class Garden : Area, IBlackBoardData
             }
         }
 
+        //Debug.Log("Garden: remaining unplant: " + total);
         return total;
     }
 
-    public int GetRemainingWeedsToPickup()
+    public int GetRemainingWeedsToPickup(GardenWaypointsLane specific = null)
     {
-        List<Weeds> weeds = GetWeeds();
+        List<Weeds> weeds = GetWeeds(specific);
         int total = 0;
 
         if(weeds != null)
@@ -109,6 +120,7 @@ public class Garden : Area, IBlackBoardData
             }
         }
 
+        //Debug.Log("Garden: remaining pick up: " + total);
         return total;
     }
 }

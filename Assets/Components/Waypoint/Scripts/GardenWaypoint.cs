@@ -21,7 +21,7 @@ public class GardenWaypoint : Waypoint
         return false;
     }
 
-    public Plant CollectAny()
+    public Plant PickupAny()
     {
         foreach(Plant p in connectedPlants)
         {

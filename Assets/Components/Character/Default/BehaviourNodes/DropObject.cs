@@ -26,7 +26,7 @@ public class DropObject : NodeAction
 
             ICarriable carriable = behaviorTree.blackBoard[objectKey] as ICarriable;
 
-            Waypoint dropWaypoint = behaviorTree.blackBoard[dropWaypointKey] as Waypoint;
+            ContainerWaypoint dropWaypoint = behaviorTree.blackBoard[dropWaypointKey] as ContainerWaypoint;
 
             if (carriable != null && dropWaypoint != null)
             {

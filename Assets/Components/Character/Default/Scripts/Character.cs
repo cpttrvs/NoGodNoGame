@@ -117,4 +117,26 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
         return false;
     }
+
+    // Character
+    public bool EmptyContainerInContainer(Container from, Container to)
+    {
+        if (from == null || to == null) return false;
+
+        foreach(IContainable containable in from.GetItems())
+        {
+            if(to.IsFull())
+            {
+                Debug.Log("Character " + name + ": emptying container " + from.name + " to " + to.name + " (full)");
+                break;
+            }
+
+            if(from.RemoveItem(containable))
+            {
+                to.AddItem(containable);
+            }
+        }
+
+        return true;
+    }
 }
