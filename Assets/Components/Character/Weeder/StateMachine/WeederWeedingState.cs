@@ -56,7 +56,7 @@ public class WeederWeedingState : CharacterBaseState
 
         Debug.Log("WeedingState: FINISHED");
 
-        if (garden.GetRemainingWeedsToUnplant() == 0)
+        if (garden.GetRemainingWeedsToUnplant(weeder.currentGardenWaypointsLane) == 0)
         {
             stateAnimator.SetTrigger(triggerOnComplete);
         } else

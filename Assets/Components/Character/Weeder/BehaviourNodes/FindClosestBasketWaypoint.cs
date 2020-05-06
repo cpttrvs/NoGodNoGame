@@ -69,8 +69,31 @@ public class FindClosestBasketWaypoint : NodeAction
                     }
                 }
 
-                behaviorTree.blackBoard[closestWaypointKey] = closest;
-                return BTState.Success;
+                if (closest == null)
+                {
+                    Debug.LogWarning("FindClosestBasketWaypoint: No Basket Waypoint found");
+
+                    behaviorTree.blackBoard[closestWaypointKey] = closest;
+                    return BTState.Failure;
+                }
+                else
+                {
+                    // memorise the current garden lane
+                    foreach (GardenWaypointsLane wpl in garden.waypointsLanes)
+                    {
+                        foreach(ContainerWaypoint cwp in wpl.basketWaypoints)
+                        {
+                            if(cwp == closest)
+                            {
+                                weeder.currentGardenWaypointsLane = wpl;
+                                break;
+                            }
+                        }
+                    }
+
+                    behaviorTree.blackBoard[closestWaypointKey] = closest;
+                    return BTState.Success;
+                }
             }
         }
 

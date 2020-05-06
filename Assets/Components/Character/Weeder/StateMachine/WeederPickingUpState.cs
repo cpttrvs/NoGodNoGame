@@ -9,6 +9,9 @@ public class WeederPickingUpState : CharacterBaseState
     protected Garden garden;
     protected Basket basket;
 
+    [SerializeField]
+    private int reasonableAmountOfWeedsInBasket = 5;
+
     [Header("State Machine")]
     [SerializeField]
     private string triggerRemainingUnplantWork;
@@ -58,15 +61,19 @@ public class WeederPickingUpState : CharacterBaseState
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
 
-        if (garden.GetRemainingWeedsToUnplant() > 0 )
+        if(basket.GetContentSize() >= reasonableAmountOfWeedsInBasket)
         {
-            Debug.Log("PickingUpState: FINISHED " + state.ToString() + " still unplant");
+            Debug.Log("PickingUpState: FINISHED " + state.ToString() + ", reasonable amount picked up");
+            stateAnimator.SetTrigger(triggerOnComplete);
+        } else if(garden.GetRemainingWeedsToUnplant() > 0 && garden.GetRemainingWeedsToPickup(weeder.currentGardenWaypointsLane) == 0)
+        {
+            Debug.Log("PickingUpState: FINISHED " + state.ToString() + " still unplant (but finished pick up in lane)");
             stateAnimator.SetTrigger(triggerRemainingUnplantWork);
-        } else if (garden.GetRemainingWeedsToPickup() > 0)
+        } else if(garden.GetRemainingWeedsToPickup() > 0)
         {
-            Debug.Log("PickingUpState: FINISHED " + state.ToString() + " still pickup");
+            Debug.Log("PickingUpState: FINISHED " + state.ToString() + " still pickup in garden");
             stateAnimator.SetTrigger(triggerRemainingPickupWork);
-        } else
+        }  else
         {
             Debug.Log("PickingUpState: FINISHED " + state.ToString());
             stateAnimator.SetTrigger(triggerOnComplete);
