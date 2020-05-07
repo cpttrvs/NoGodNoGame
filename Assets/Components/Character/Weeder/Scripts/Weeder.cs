@@ -10,12 +10,22 @@ public class Weeder : Character
     public Garden garden { get { return _garden; } }
 
     [SerializeField]
+    private CompostPile _compostPile = null;
+    public CompostPile compostPile { get { return _compostPile; } }
+
+    [SerializeField]
     private Basket _basket = null;
     public Basket basket { get { return _basket; } }
+
+    [SerializeField]
+    private ContainerWaypoint _basketOnFootWaypoint = null;
+    public ContainerWaypoint basketOnFootWaypoint { get { return _basketOnFootWaypoint; } }
     
     [SerializeField]
     private Container _handsContainer = null;
     public Container handsContainer { get { return _handsContainer; } }
+    
+    public GardenWaypointsLane currentGardenWaypointsLane { get; set; }
 
     public bool Unplant(GardenWaypoint gardenWaypoint)
     {
@@ -25,5 +35,30 @@ public class Weeder : Character
 
 
         return success;
+    }
+
+    public bool Pickup(GardenWaypoint gardenWaypoint)
+    {
+        if (handsContainer.IsFull())
+            return false;
+        
+        Plant p = gardenWaypoint.PickupAny();
+
+        if(p != null)
+        {
+            bool success = handsContainer.AddItem(p);
+
+            if (success)
+                return true;
+        }
+
+        return false;
+    }
+
+    public bool Stretch()
+    {
+        //play animation
+        Debug.Log("STRETCH");
+        return true;
     }
 }

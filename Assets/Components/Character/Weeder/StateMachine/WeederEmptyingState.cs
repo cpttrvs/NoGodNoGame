@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using AillieoUtils.EasyBehaviorTree;
 
-public class WeederWeedingState : CharacterBaseState
+public class WeederEmptyingState : CharacterBaseState
 {
     protected Weeder weeder;
     protected Garden garden;
     protected Basket basket;
+    protected CompostPile compostPile;
 
     [Header("State Machine")]
     [SerializeField]
@@ -18,33 +19,37 @@ public class WeederWeedingState : CharacterBaseState
     private string gardenKey = null;
     [SerializeField]
     private string gardenEntryKey = null;
-    [SerializeField]
-    private string waypointsLanesKey = null;
 
     [Header("Props")]
     [SerializeField]
     private string basketKey = null;
+    [SerializeField]
+    private string compostPileKey = null;
+    [SerializeField]
+    private string compostPileWaypointKey = null;
 
     protected override void Init()
     {
         base.Init();
 
 
-        if(character != null)
+        if (character != null)
         {
-            if(character is Weeder)
+            if (character is Weeder)
             {
                 weeder = character as Weeder;
-
-                garden = weeder.garden;
+                
                 basket = weeder.basket;
+                garden = weeder.garden;
+                compostPile = weeder.compostPile;
 
                 behaviorTree.blackBoard[gardenKey] = garden;
                 behaviorTree.blackBoard[gardenEntryKey] = garden.entry;
+
                 behaviorTree.blackBoard[basketKey] = basket;
-                
-                behaviorTree.blackBoard[waypointsLanesKey] = new BBList<GardenWaypointsLane>(garden.waypointsLanes);
-                
+                behaviorTree.blackBoard[compostPileKey] = compostPile;
+                behaviorTree.blackBoard[compostPileWaypointKey] = compostPile.waypoint;
+
                 behaviorTree.debugLogging = false;
             }
         }
@@ -54,15 +59,14 @@ public class WeederWeedingState : CharacterBaseState
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
 
-        Debug.Log("WeedingState: FINISHED");
+        Debug.Log("EmptyingState: FINISHED");
 
-        if (garden.GetRemainingWeedsToUnplant(weeder.currentGardenWaypointsLane) == 0)
+        if (basket.GetContentSize() > 0)
         {
-            stateAnimator.SetTrigger(triggerOnComplete);
-        } else
-        {
-            Debug.Log("WeedingState: FINISHED but still have work");
+            Debug.LogWarning("EmptyingState: FINISHED but basket is not empty");
         }
+
+        stateAnimator.SetTrigger(triggerOnComplete);
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)

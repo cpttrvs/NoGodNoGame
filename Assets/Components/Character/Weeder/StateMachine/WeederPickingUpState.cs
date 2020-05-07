@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using AillieoUtils.EasyBehaviorTree;
 
-public class WeederWeedingState : CharacterBaseState
+public class WeederPickingUpState : CharacterBaseState
 {
     protected Weeder weeder;
     protected Garden garden;
     protected Basket basket;
 
+    [SerializeField]
+    private int reasonableAmountOfWeedsInBasket = 5;
+
     [Header("State Machine")]
+    [SerializeField]
+    private string triggerRemainingUnplantWork;
+    [SerializeField]
+    private string triggerRemainingPickupWork;
     [SerializeField]
     private string triggerOnComplete;
 
@@ -17,22 +24,22 @@ public class WeederWeedingState : CharacterBaseState
     [SerializeField]
     private string gardenKey = null;
     [SerializeField]
-    private string gardenEntryKey = null;
-    [SerializeField]
     private string waypointsLanesKey = null;
 
     [Header("Props")]
     [SerializeField]
     private string basketKey = null;
+    [SerializeField]
+    private string weederHandsKey = null;
 
     protected override void Init()
     {
         base.Init();
 
 
-        if(character != null)
+        if (character != null)
         {
-            if(character is Weeder)
+            if (character is Weeder)
             {
                 weeder = character as Weeder;
 
@@ -40,12 +47,12 @@ public class WeederWeedingState : CharacterBaseState
                 basket = weeder.basket;
 
                 behaviorTree.blackBoard[gardenKey] = garden;
-                behaviorTree.blackBoard[gardenEntryKey] = garden.entry;
+
                 behaviorTree.blackBoard[basketKey] = basket;
-                
+                behaviorTree.blackBoard[weederHandsKey] = weeder.handsContainer;
+
                 behaviorTree.blackBoard[waypointsLanesKey] = new BBList<GardenWaypointsLane>(garden.waypointsLanes);
-                
-                behaviorTree.debugLogging = false;
+
             }
         }
     }
@@ -54,14 +61,22 @@ public class WeederWeedingState : CharacterBaseState
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
 
-        Debug.Log("WeedingState: FINISHED");
-
-        if (garden.GetRemainingWeedsToUnplant(weeder.currentGardenWaypointsLane) == 0)
+        if(basket.GetContentSize() >= reasonableAmountOfWeedsInBasket)
         {
+            Debug.Log("PickingUpState: FINISHED " + state.ToString() + ", reasonable amount picked up");
             stateAnimator.SetTrigger(triggerOnComplete);
-        } else
+        } else if(garden.GetRemainingWeedsToUnplant() > 0 && garden.GetRemainingWeedsToPickup(weeder.currentGardenWaypointsLane) == 0)
         {
-            Debug.Log("WeedingState: FINISHED but still have work");
+            Debug.Log("PickingUpState: FINISHED " + state.ToString() + " still unplant (but finished pick up in lane)");
+            stateAnimator.SetTrigger(triggerRemainingUnplantWork);
+        } else if(garden.GetRemainingWeedsToPickup() > 0)
+        {
+            Debug.Log("PickingUpState: FINISHED " + state.ToString() + " still pickup in garden");
+            stateAnimator.SetTrigger(triggerRemainingPickupWork);
+        }  else
+        {
+            Debug.Log("PickingUpState: FINISHED " + state.ToString());
+            stateAnimator.SetTrigger(triggerOnComplete);
         }
     }
 

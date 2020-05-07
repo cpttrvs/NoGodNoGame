@@ -32,6 +32,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     // IMovable
     public void MoveTo(Vector3 to)
     {
+        //navMeshAgent.enabled = true;
         navMeshAgent.isStopped = false;
         navMeshAgent.SetDestination(to);
     }
@@ -39,6 +40,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     public void Stop()
     {
         navMeshAgent.isStopped = true;
+        //navMeshAgent.enabled = false;
     }
     
     // IClickable
@@ -46,6 +48,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     {
         if(!onCooldown)
         {
+            Debug.Log("Character: On Click");
             StartCoroutine(StartCooldown());
             stateMachine.SetTrigger(onClickTrigger);
         }
@@ -116,5 +119,27 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
         }
 
         return false;
+    }
+
+    // Character
+    public bool EmptyContainerInContainer(Container from, Container to)
+    {
+        if (from == null || to == null) return false;
+
+        foreach(IContainable containable in from.GetItems())
+        {
+            if(to.IsFull())
+            {
+                Debug.Log("Character " + name + ": emptying container " + from.name + " to " + to.name + " (full)");
+                break;
+            }
+
+            if(from.RemoveItem(containable))
+            {
+                to.AddItem(containable);
+            }
+        }
+
+        return true;
     }
 }

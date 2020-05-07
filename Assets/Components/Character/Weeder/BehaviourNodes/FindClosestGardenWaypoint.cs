@@ -27,7 +27,7 @@ public class FindClosestGardenWaypoint : NodeAction
         {
             Garden garden = behaviorTree.blackBoard[gardenKey] as Garden;
 
-            List<WaypointsLane> waypointsLanes = garden.waypointsLanes;
+            List<GardenWaypointsLane> waypointsLanes = garden.waypointsLanes;
             
             if (waypointsLanes != null)
             {
@@ -43,8 +43,7 @@ public class FindClosestGardenWaypoint : NodeAction
 
                 Waypoint closest = null;
                 Vector3 characterPosition = weeder.transform.position;
-
-                int i = 0;
+                
                 foreach(Waypoint wp in waypoints)
                 {
                     if (closest == null)
@@ -84,13 +83,23 @@ public class FindClosestGardenWaypoint : NodeAction
                         }
                     }
                 }
-
+                
                 if(closest == null)
                 {
                     Debug.Log("FindClosestGardenWaypoint: Nothing more");
                     return BTState.Success;
                 } else
                 {
+                    // memorise the current garden lane
+                    foreach (GardenWaypointsLane wpl in waypointsLanes)
+                    {
+                        if (wpl.GetWaypoints().Contains(closest))
+                        {
+                            weeder.currentGardenWaypointsLane = wpl;
+                            break;
+                        }
+                    }
+
                     behaviorTree.blackBoard[closestWaypointKey] = closest;
                     return BTState.Success;
                 }

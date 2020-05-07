@@ -26,8 +26,10 @@ public class Container : MonoBehaviour, IBlackBoardData
         if (mb != null)
         {
             mb.transform.SetParent(containerSlot);
-            mb.transform.position = Vector3.zero;
+            mb.transform.localPosition = Vector3.zero;
         }
+
+        Debug.Log("Container: " + name + " added an item");
 
         return true;
     }
@@ -54,4 +56,5 @@ public class Container : MonoBehaviour, IBlackBoardData
 
     public uint GetCapacity() { return capacity; }
     public int GetContentSize() { return items.Count; }
+    public bool IsFull() { return GetContentSize() == GetCapacity(); }
 }

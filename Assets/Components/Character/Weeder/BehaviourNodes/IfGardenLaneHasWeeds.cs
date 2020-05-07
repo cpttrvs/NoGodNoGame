@@ -4,7 +4,7 @@ using UnityEngine;
 using AillieoUtils.EasyBehaviorTree;
 
 [System.Serializable]
-public class IfGardenHasWeeds : NodeCondition
+public class IfGardenLaneHasWeeds : NodeCondition
 {
     [Header("Pick one at most")]
     [NodeParam]
@@ -22,19 +22,25 @@ public class IfGardenHasWeeds : NodeCondition
 
         if (character != null)
         {
-            if(character is Weeder)
+            if (character is Weeder)
             {
                 Weeder weeder = character as Weeder;
 
                 Garden garden = weeder.garden;
 
+                if(weeder.currentGardenWaypointsLane == null)
+                {
+                    Debug.LogWarning("IfGardenLaneHasWeeds: no memorised lane");
+                    return false;
+                }
+
                 if (weedsToUnplant)
-                    return garden.GetRemainingWeedsToUnplant() > 0;
+                    return garden.GetRemainingWeedsToUnplant(weeder.currentGardenWaypointsLane) > 0;
 
                 if (weedsToPickup)
-                    return garden.GetRemainingWeedsToPickup() > 0;
+                    return garden.GetRemainingWeedsToPickup(weeder.currentGardenWaypointsLane) > 0;
 
-                return garden.GetRemainingWeeds() > 0;
+                return garden.GetRemainingWeeds(weeder.currentGardenWaypointsLane) > 0;
             }
         }
 
