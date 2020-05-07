@@ -48,6 +48,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     {
         if(!onCooldown)
         {
+            Debug.Log("Character: On Click");
             StartCoroutine(StartCooldown());
             stateMachine.SetTrigger(onClickTrigger);
         }

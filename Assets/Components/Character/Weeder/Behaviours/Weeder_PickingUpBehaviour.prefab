@@ -2366,7 +2366,7 @@ GameObject:
   - component: {fileID: 1013812297070933593}
   - component: {fileID: 1719745463441523542}
   m_Layer: 0
-  m_Name: Sequence Still Unplant Work
+  m_Name: Selector Still Unplant Work
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2383,8 +2383,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1797811114248146501}
-  - {fileID: 4498072891496056540}
+  - {fileID: 2997626174932344421}
+  - {fileID: 4933053025625156077}
   m_Father: {fileID: 6606685020394242083}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2400,8 +2400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSequence
-  displayName: Sequence Still Unplant Work
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSelector
+  displayName: Selector Still Unplant Work
   nodeDescription: 
   mEnumParamSet:
     nodeParams: []
@@ -2527,7 +2527,7 @@ GameObject:
   - component: {fileID: 6606685020394242083}
   - component: {fileID: 2640726199398582437}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Invert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3044,7 +3044,7 @@ Transform:
   - {fileID: 1647636942848546615}
   - {fileID: 6380916631054827565}
   - {fileID: 8306859735704672413}
-  m_Father: {fileID: 1013812297070933593}
+  m_Father: {fileID: 4933053025625156077}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4373166207613742746
@@ -3081,6 +3081,88 @@ MonoBehaviour:
     - key: randomPick
       value: 0
     - key: preventSameNode
+      value: 0
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &7518163515178527107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2997626174932344421}
+  - component: {fileID: 8627172745776643861}
+  m_Layer: 0
+  m_Name: If Garden Lane has Weeds to Unplant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2997626174932344421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7518163515178527107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1013812297070933593}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8627172745776643861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7518163515178527107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: IfGardenLaneHasWeeds
+  displayName: If Garden Lane has Weeds to Unplant
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: weedsToUnplant
+      value: 1
+    - key: weedsToPickup
       value: 0
   mBoolArrayParamSet:
     nodeParams: []
@@ -3526,11 +3608,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8685564720477962286}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1013812297070933593}
+  m_Father: {fileID: 4933053025625156077}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6378492385286113683
@@ -3570,6 +3652,86 @@ MonoBehaviour:
       value: 1
     - key: weedsToPickup
       value: 0
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &8938074685003600285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4933053025625156077}
+  - component: {fileID: 8724946713159767165}
+  m_Layer: 0
+  m_Name: Sequence if Garden has Weeds to Unplant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4933053025625156077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8938074685003600285}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1797811114248146501}
+  - {fileID: 4498072891496056540}
+  m_Father: {fileID: 1013812297070933593}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8724946713159767165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8938074685003600285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSequence
+  displayName: Sequence if Garden has Weeds to Unplant
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:

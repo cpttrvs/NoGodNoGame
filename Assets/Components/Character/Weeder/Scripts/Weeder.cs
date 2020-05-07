@@ -16,6 +16,10 @@ public class Weeder : Character
     [SerializeField]
     private Basket _basket = null;
     public Basket basket { get { return _basket; } }
+
+    [SerializeField]
+    private ContainerWaypoint _basketOnFootWaypoint = null;
+    public ContainerWaypoint basketOnFootWaypoint { get { return _basketOnFootWaypoint; } }
     
     [SerializeField]
     private Container _handsContainer = null;
@@ -49,5 +53,12 @@ public class Weeder : Character
         }
 
         return false;
+    }
+
+    public bool Stretch()
+    {
+        //play animation
+        Debug.Log("STRETCH");
+        return true;
     }
 }
