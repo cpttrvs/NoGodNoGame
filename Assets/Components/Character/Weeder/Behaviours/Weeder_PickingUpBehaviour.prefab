@@ -82,6 +82,86 @@ MonoBehaviour:
     nodeParams: []
   mUnityEngine_Vector2ArrayParamSet:
     nodeParams: []
+--- !u!1 &583067838382149328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8949706675001892155}
+  - component: {fileID: 3508255332825170625}
+  m_Layer: 0
+  m_Name: Sequence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8949706675001892155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583067838382149328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3687187522604199066}
+  - {fileID: 3650095338775885336}
+  m_Father: {fileID: 3650095338268228009}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3508255332825170625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583067838382149328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSequence
+  displayName: Sequence
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
 --- !u!1 &647373072268825882
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +621,8 @@ MonoBehaviour:
       value: garden
     - key: closestWaypointKey
       value: closestBasketWaypoint
+    - key: currentLaneKey
+      value: currentLane
   mStringArrayParamSet:
     nodeParams: []
   mIntParamSet:
@@ -628,7 +710,9 @@ MonoBehaviour:
   mIntArrayParamSet:
     nodeParams: []
   mFloatParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: time
+      value: 1
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
@@ -1029,7 +1113,9 @@ MonoBehaviour:
   mIntArrayParamSet:
     nodeParams: []
   mFloatParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: time
+      value: 1
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
@@ -1270,7 +1356,9 @@ MonoBehaviour:
   mIntArrayParamSet:
     nodeParams: []
   mFloatParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: time
+      value: 1
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
@@ -1479,7 +1567,7 @@ Transform:
   m_LocalPosition: {x: 0.06318557, y: -3.4383059, z: -16.699318}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3650095338775885336}
+  - {fileID: 8949706675001892155}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1560,13 +1648,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3650095338775885343}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3650095339357854468}
-  m_Father: {fileID: 3650095338268228009}
-  m_RootOrder: 0
+  m_Father: {fileID: 8949706675001892155}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3650095338775885337
 MonoBehaviour:
@@ -2256,7 +2344,9 @@ MonoBehaviour:
   mIntArrayParamSet:
     nodeParams: []
   mFloatParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: time
+      value: 1
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
@@ -3556,6 +3646,8 @@ MonoBehaviour:
       value: garden
     - key: closestWaypointKey
       value: closestGardenWaypoint
+    - key: currentLaneKey
+      value: currentLane
   mStringArrayParamSet:
     nodeParams: []
   mIntParamSet:
@@ -3732,6 +3824,86 @@ MonoBehaviour:
     nodeParams: []
   mBoolParamSet:
     nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &9206386130985542484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3687187522604199066}
+  - component: {fileID: 7530566727410327620}
+  m_Layer: 0
+  m_Name: Stop Crawling
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3687187522604199066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206386130985542484}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8949706675001892155}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7530566727410327620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206386130985542484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: Crawl
+  displayName: Stop Crawling
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: stop
+      value: 1
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:

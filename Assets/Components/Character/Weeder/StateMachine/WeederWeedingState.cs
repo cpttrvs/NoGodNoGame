@@ -20,6 +20,8 @@ public class WeederWeedingState : CharacterBaseState
     private string gardenEntryKey = null;
     [SerializeField]
     private string waypointsLanesKey = null;
+    [SerializeField]
+    private string currentLaneKey = null;
 
     [Header("Props")]
     [SerializeField]
@@ -44,6 +46,7 @@ public class WeederWeedingState : CharacterBaseState
                 behaviorTree.blackBoard[basketKey] = basket;
                 
                 behaviorTree.blackBoard[waypointsLanesKey] = new BBList<GardenWaypointsLane>(garden.waypointsLanes);
+                behaviorTree.blackBoard[currentLaneKey] = weeder.currentGardenWaypointsLane;
                 
                 behaviorTree.debugLogging = false;
             }

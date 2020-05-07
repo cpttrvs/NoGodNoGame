@@ -6,6 +6,16 @@ using AillieoUtils.EasyBehaviorTree;
 
 public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints, IClickable, ICanCarry
 {
+    [Header("Animations")]
+    [SerializeField]
+    protected Animator animatorStateMachine = null;
+    [SerializeField]
+    private string stateWalkBool = null;
+    [SerializeField]
+    private string stateDropItemTrigger = null;
+    [SerializeField]
+    private string statePickUpItemTrigger = null;
+
     [Header("State Machine")]
     [SerializeField]
     private Animator stateMachine = null;
@@ -20,18 +30,28 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     [SerializeField]
     private NavMeshAgent navMeshAgent = null;
 
-    // IHasWaypoints
     [Header("Has Waypoints")]
     [SerializeField]
     private List<Waypoint> _waypoints = null;
     public List<Waypoint> waypoints => _waypoints;
+    
+    [Header("Can Carry")]
+    [SerializeField]
+    private uint _carryingCapacity = 0;
+    public uint carryingCapacity { get { return _carryingCapacity; } }
 
+    [SerializeField]
+    private List<Transform> _carryingSlots = new List<Transform>();
+    public List<Transform> carryingSlots { get { return _carryingSlots; } }
+
+    // IHasWaypoints
     public Waypoint currentWaypoint { get; set; }
     public Waypoint lastWaypoint { get; set; }
 
     // IMovable
     public void MoveTo(Vector3 to)
     {
+        animatorStateMachine.SetBool(stateWalkBool, true);
         //navMeshAgent.enabled = true;
         navMeshAgent.isStopped = false;
         navMeshAgent.SetDestination(to);
@@ -39,6 +59,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
     public void Stop()
     {
+        animatorStateMachine.SetBool(stateWalkBool, false);
         navMeshAgent.isStopped = true;
         //navMeshAgent.enabled = false;
     }
@@ -62,15 +83,6 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     }
 
     // ICanCarry
-    [Header("Can Carry")]
-    [SerializeField]
-    private uint _carryingCapacity = 0;
-    public uint carryingCapacity { get { return _carryingCapacity; } }
-
-    [SerializeField]
-    private List<Transform> _carryingSlots = new List<Transform>();
-    public List<Transform> carryingSlots { get { return _carryingSlots; } }
-
     protected List<ICarriable> _carrying = new List<ICarriable>();
     public List<ICarriable> carrying { get { return _carrying; } }
 
@@ -83,6 +95,8 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
         if(canCarry)
         {
+            animatorStateMachine.SetTrigger(statePickUpItemTrigger);
+
             _carrying.Add(carriable);
             
             if(carriable is MonoBehaviour)
@@ -107,6 +121,8 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
         if(canDrop)
         {
+            animatorStateMachine.SetTrigger(stateDropItemTrigger);
+
             _carrying.Remove(carriable);
 
             if (carriable is MonoBehaviour)
@@ -122,7 +138,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     }
 
     // Character
-    public bool EmptyContainerInContainer(Container from, Container to)
+    public virtual bool EmptyContainerInContainer(Container from, Container to)
     {
         if (from == null || to == null) return false;
 
