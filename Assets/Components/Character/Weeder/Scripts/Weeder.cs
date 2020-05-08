@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Weeder : Character
 {
@@ -42,41 +43,64 @@ public class Weeder : Character
 
 
     public GardenWaypointsLane currentGardenWaypointsLane { get; set; }
-
+    
+    // Unplant
+    private GardenWaypoint unplantGardenWaypoint;
     public bool Unplant(GardenWaypoint gardenWaypoint)
     {
-        bool success = gardenWaypoint.UnplantAny();
-        
-        if(success)
+        if(gardenWaypoint.HasWorkUnplant())
         {
-            //animatorStateMachine.SetTrigger(stateWeedTrigger);
+            unplantGardenWaypoint = gardenWaypoint;
+
+            this.OnAnimationCompleted += UnplantDelegate;
+            animatorStateMachine.SetTrigger(stateWeedTrigger);
+            
+            return true;
         }
 
-        return success;
+        return false;
+    }
+    private void UnplantDelegate(Character c, string s)
+    {
+        Debug.Log("UNPLANT DELEGATE");
+        bool success = unplantGardenWaypoint.UnplantAny();
+        OnActionComplete(success);
+
+        this.OnAnimationCompleted -= UnplantDelegate;
     }
 
+    // Pickup
+    private GardenWaypoint pickupGardenWaypoint;
     public bool Pickup(GardenWaypoint gardenWaypoint)
     {
         if (handsContainer.IsFull())
             return false;
         
-        Plant p = gardenWaypoint.PickupAny();
-
-        if(p != null)
+        if (gardenWaypoint.HasWorkPickUp())
         {
-            bool success = handsContainer.AddItem(p);
+            pickupGardenWaypoint = gardenWaypoint;
 
-            if (success)
-            {
-                animatorStateMachine.SetTrigger(statePickUpWeedsTrigger);
+            this.OnAnimationCompleted += PickupDelegate;
+            animatorStateMachine.SetTrigger(statePickUpWeedsTrigger);
 
-                return true;
-            }
+            return true;
         }
 
         return false;
     }
+    private void PickupDelegate(Character c, string s)
+    {
+        Debug.Log("PICK UP DELEGATE");
+        Plant p = pickupGardenWaypoint.PickupAny();
 
+        bool success = handsContainer.AddItem(p);
+
+        OnActionComplete(success);
+
+        this.OnAnimationCompleted -= PickupDelegate;
+    }
+
+    // Empty Container in Container
     public override bool EmptyContainerInContainer(Container from, Container to)
     {
         if (from == null || to == null) return false;
@@ -87,14 +111,23 @@ public class Weeder : Character
         {
             if (from == handsContainer)
             {
+                this.OnAnimationCompleted += EmptyContainerInContainerDelegate;
                 animatorStateMachine.SetTrigger(stateDropWeedsTrigger);
             } else if (from == basket)
             {
+                this.OnAnimationCompleted += EmptyContainerInContainerDelegate;
                 animatorStateMachine.SetTrigger(stateEmptyBasketTrigger);
             }
         }
 
         return success;
+    }
+    private void EmptyContainerInContainerDelegate(Character c, string s)
+    {
+        Debug.Log("EMPTY CONTAINER DELEGATE");
+        OnActionComplete(true);
+
+        this.OnAnimationCompleted -= EmptyContainerInContainerDelegate;
     }
 
     public void Crawl()
@@ -107,12 +140,5 @@ public class Weeder : Character
     {
         _isCrawling = false;
         animatorStateMachine.SetBool(stateCrawlBool, isCrawling);
-    }
-
-    public bool Stretch()
-    {
-        //play animation
-        Debug.Log("STRETCH");
-        return true;
     }
 }

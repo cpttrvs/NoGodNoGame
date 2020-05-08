@@ -7,22 +7,54 @@ using System;
 [Serializable]
 public class Stretch : NodeAction
 {
+    private bool actionCompleted = false;
+    private bool actionStarted = false;
+
     public override void Cleanup()
     {
+        actionCompleted = false;
+        actionStarted = false;
     }
 
     protected override BTState ExecuteTask(float deltaTime)
     {
-        Weeder weeder = behaviorTree.blackBoard["self"] as Weeder;
+        Character character = behaviorTree.blackBoard["self"] as Character;
 
-        if(weeder != null)
+        if(character != null)
         {
-            bool success = weeder.Stretch();
+            if(!actionStarted)
+            {
+                bool success = character.Stretch();
 
-            if (success)
-                return BTState.Success;
+                if (success)
+                {
+                    actionStarted = true;
+
+                    character.OnActionCompleted += Character_OnActionCompleted;
+
+                    return BTState.Running;
+                }
+            }
+            else
+            {
+                if (!actionCompleted)
+                {
+                    return BTState.Running;
+                }
+                else
+                {
+                    return BTState.Success;
+                }
+            }
         }
 
         return BTState.Failure;
+    }
+
+    private void Character_OnActionCompleted(Character arg1, bool arg2)
+    {
+        if (arg2) actionCompleted = true;
+
+        arg1.OnActionCompleted -= Character_OnActionCompleted;
     }
 }

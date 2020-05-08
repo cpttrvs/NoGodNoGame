@@ -22,11 +22,6 @@ public class BaseState : StateMachineBehaviour
 
         if(behaviorTree != null)
         {
-            behaviorTree.OnBehaviorTreeCompleted += BehaviourTree_OnBehaviorTreeCompleted;
-            behaviorTree.OnBehaviorTreeStarted += BehaviourTree_OnBehaviorTreeStarted;
-
-            behaviorTree.Restart();
-
             Init();
         }
     }
@@ -56,9 +51,14 @@ public class BaseState : StateMachineBehaviour
 
     protected virtual void BehaviourTree_OnBehaviorTreeCompleted(BehaviorTree tree, BTState state)
     {
+        behaviorTree.CleanUp();
     }
 
     protected virtual void Init()
     {
+        behaviorTree.OnBehaviorTreeCompleted += BehaviourTree_OnBehaviorTreeCompleted;
+        behaviorTree.OnBehaviorTreeStarted += BehaviourTree_OnBehaviorTreeStarted;
+
+        behaviorTree.Restart();
     }
 }

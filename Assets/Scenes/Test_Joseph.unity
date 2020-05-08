@@ -810,6 +810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animatorStateMachine: {fileID: 0}
   stateWalkBool: 
+  stateOnClickTrigger: 
   stateDropItemTrigger: 
   statePickUpItemTrigger: 
   stateMachine: {fileID: 659376822}
@@ -1354,6 +1355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animatorStateMachine: {fileID: 983824246}
   stateWalkBool: moving
+  stateOnClickTrigger: onClick
   stateDropItemTrigger: droppingBasket
   statePickUpItemTrigger: pickingUpBasket
   stateMachine: {fileID: 1000793759}
@@ -1388,7 +1390,6 @@ Transform:
   - {fileID: 983824247}
   - {fileID: 705389323}
   - {fileID: 335528611}
-  - {fileID: 1115617056}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1574,12 +1575,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115617055}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: 2.01, z: 0.54}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0.00010000005, y: -0.0032523393, z: 0.00033080392}
+  m_LocalScale: {x: 0.005, y: 0.005000001, z: 0.005000001}
   m_Children: []
-  m_Father: {fileID: 1000793761}
-  m_RootOrder: 3
+  m_Father: {fileID: 2058279932}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1120489012
 GameObject:
@@ -2600,6 +2601,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc7946c5662daf640aa54f790451df2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2058279932 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6187923827164135877, guid: 43ece9cc91fdc5b43bf17117e02103fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1230633137}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2061892688
 GameObject:
   m_ObjectHideFlags: 0

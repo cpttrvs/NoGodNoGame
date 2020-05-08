@@ -57,7 +57,7 @@ public class FindClosestGardenWaypoint : NodeAction
                                 closest = wp;
                             }
 
-                            if(!unplant && (wp as GardenWaypoint).HasWorkCollect())
+                            if(!unplant && (wp as GardenWaypoint).HasWorkPickUp())
                             {
                                 closest = wp;
                             }
@@ -73,7 +73,7 @@ public class FindClosestGardenWaypoint : NodeAction
                                     closest = wp;
                                 }
 
-                                if (!unplant && (wp as GardenWaypoint).HasWorkCollect())
+                                if (!unplant && (wp as GardenWaypoint).HasWorkPickUp())
                                 {
                                     closest = wp;
                                 }
