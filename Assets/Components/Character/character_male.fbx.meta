@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: e415ef4731c05aa40ad02521c03303b4
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: -6757622271648294386
+    second: Drop off weeds.001
+  - first:
+      74: 4102806027401932088
+    second: rig|_root
+  - first:
+      74: 7016406558501359886
+    second: rig|Crawl
+  - first:
+      74: -604322487650934211
+    second: rig|Crawl End
+  - first:
+      74: 8580502700279076941
+    second: rig|Crawl Idle
+  - first:
+      74: -3067341206131585940
+    second: rig|Crawl Start
+  - first:
+      74: -4194234933528032817
+    second: rig|Drop off basket
+  - first:
+      74: -5168857578407868035
+    second: rig|Drop off weeds
+  - first:
+      74: 495219987073809374
+    second: rig|Empty basket
+  - first:
+      74: -7361427651036151181
+    second: rig|Idle
+  - first:
+      74: -4832576496178626841
+    second: rig|Idle Stretch
+  - first:
+      74: 1976889594226162121
+    second: rig|Idle with basket
+  - first:
+      74: -233506173844808166
+    second: rig|Peeling
+  - first:
+      74: 270918204899830074
+    second: rig|Pick up basket
+  - first:
+      74: 2460783024770503810
+    second: rig|Pick up weeds
+  - first:
+      74: 7097073305958514244
+    second: rig|Sitting End
+  - first:
+      74: -6198618334189056480
+    second: rig|Sitting Idle
+  - first:
+      74: -2454167408169971976
+    second: rig|Sitting Start
+  - first:
+      74: 1023992570608409904
+    second: rig|Walk
+  - first:
+      74: 3678477869488249514
+    second: rig|Walk with basket
+  - first:
+      74: 9070364049792771239
+    second: rig|Weeding
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
