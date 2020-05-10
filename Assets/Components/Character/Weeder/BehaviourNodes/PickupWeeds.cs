@@ -17,6 +17,7 @@ public class PickupWeeds : NodeAction
     {
         actionCompleted = false;
         actionStarted = false;
+        
     }
 
     protected override BTState ExecuteTask(float deltaTime)

@@ -59,18 +59,16 @@ public class WeederEmptyingState : CharacterBaseState
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
 
-        Debug.Log("EmptyingState: FINISHED");
 
         if (basket.GetContentSize() > 0)
         {
             Debug.LogWarning("EmptyingState: FINISHED but basket is not empty");
+            Init();
+        } else
+        {
+            Debug.Log("EmptyingState: FINISHED");
+            stateAnimator.SetTrigger(triggerOnComplete);
         }
 
-        stateAnimator.SetTrigger(triggerOnComplete);
-    }
-
-    public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
-    {
-        base.OnStateExit(animator, animatorStateInfo, layerIndex);
     }
 }

@@ -14,6 +14,7 @@ public class Stretch : NodeAction
     {
         actionCompleted = false;
         actionStarted = false;
+        
     }
 
     protected override BTState ExecuteTask(float deltaTime)

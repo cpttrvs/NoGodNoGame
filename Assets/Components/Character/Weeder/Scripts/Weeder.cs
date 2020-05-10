@@ -93,10 +93,14 @@ public class Weeder : Character
         Debug.Log("PICK UP DELEGATE");
         Plant p = pickupGardenWaypoint.PickupAny();
 
-        bool success = handsContainer.AddItem(p);
+        bool success = false;
 
+        if (p != null)
+        {
+            success = handsContainer.AddItem(p);
+        }
+        
         OnActionComplete(success);
-
         this.OnAnimationCompleted -= PickupDelegate;
     }
 

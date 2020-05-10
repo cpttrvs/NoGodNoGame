@@ -17,6 +17,7 @@ public class UnplantWeeds : NodeAction
     {
         actionCompleted = false;
         actionStarted = false;
+        
     }
 
     protected override BTState ExecuteTask(float deltaTime)
@@ -27,7 +28,6 @@ public class UnplantWeeds : NodeAction
         {
             if(!actionStarted)
             {
-                Debug.Log("WEEDING START");
                 if (currentWaypoint)
                 {
                     if (weeder.currentWaypoint is GardenWaypoint)
@@ -55,7 +55,6 @@ public class UnplantWeeds : NodeAction
                 }
                 else
                 {
-                    Debug.Log("WEEDING SUCCESS");
                     return BTState.Success;
                 }
             }

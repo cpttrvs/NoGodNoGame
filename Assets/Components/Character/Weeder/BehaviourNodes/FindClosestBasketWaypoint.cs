@@ -27,7 +27,6 @@ public class FindClosestBasketWaypoint : NodeAction
 
         if (weeder != null && garden != null)
         {
-            Debug.Log("FIND CLOSEST BASKET WAYPOINT " + inCurrentGardenLane);
             List<ContainerWaypoint> containerWaypoints = new List<ContainerWaypoint>();
 
             GardenWaypointsLane currentGardenWaypointsLane = weeder.currentGardenWaypointsLane;
@@ -90,7 +89,6 @@ public class FindClosestBasketWaypoint : NodeAction
                             {
                                 weeder.currentGardenWaypointsLane = wpl;
                                 behaviorTree.blackBoard[currentLaneKey] = weeder.currentGardenWaypointsLane;
-                                Debug.Log("SAVED: " + weeder.currentGardenWaypointsLane.name);
                                 break;
                             }
                         }

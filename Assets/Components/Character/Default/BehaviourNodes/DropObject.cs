@@ -60,7 +60,7 @@ public class DropObject : NodeAction
                     return BTState.Success;
                 }
             }
-    }
+        }
 
         return BTState.Failure;
     }

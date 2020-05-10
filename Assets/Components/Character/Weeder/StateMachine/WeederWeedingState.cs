@@ -61,18 +61,18 @@ public class WeederWeedingState : CharacterBaseState
             garden.GetRemainingWeedsToPickup(weeder.currentGardenWaypointsLane) == 0 &&
             garden.GetRemainingWeedsToUnplant() > 0)
         {
-            Debug.Log("WeedingState: FINISHED but still have work (lane finished)");
+            //Debug.Log("WeedingState: FINISHED but still have work (lane finished)");
 
             Init();
         }
         else if (garden.GetRemainingWeedsToUnplant(weeder.currentGardenWaypointsLane) == 0)
         {
-            Debug.Log("WeedingState: FINISHED");
+            //Debug.Log("WeedingState: FINISHED");
 
             stateAnimator.SetTrigger(triggerOnComplete);
         } else
         {
-            Debug.Log("WeedingState: FINISHED but still have work");
+            //Debug.Log("WeedingState: FINISHED but still have work");
 
             Init();
         }
