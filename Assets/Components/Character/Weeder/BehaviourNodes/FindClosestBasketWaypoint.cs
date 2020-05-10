@@ -13,6 +13,8 @@ public class FindClosestBasketWaypoint : NodeAction
     private bool inCurrentGardenLane = true;
     [NodeParam]
     private string closestWaypointKey = null;
+    [NodeParam]
+    private string currentLaneKey = null;
 
     public override void Cleanup()
     {
@@ -86,6 +88,7 @@ public class FindClosestBasketWaypoint : NodeAction
                             if(cwp == closest)
                             {
                                 weeder.currentGardenWaypointsLane = wpl;
+                                behaviorTree.blackBoard[currentLaneKey] = weeder.currentGardenWaypointsLane;
                                 break;
                             }
                         }

@@ -3,14 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using AillieoUtils.EasyBehaviorTree;
+using System;
 
 public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints, IClickable, ICanCarry
 {
+    [Header("Animations")]
+    [SerializeField]
+    protected Animator animatorStateMachine = null;
+    [SerializeField]
+    private string stateWalkBool = null;
+    [SerializeField]
+    private string stateOnClickTrigger = null;
+    [SerializeField]
+    private string stateDropItemTrigger = null;
+    [SerializeField]
+    private string statePickUpItemTrigger = null;
+
+    public event Action<Character, string> OnAnimationCompleted;
+
     [Header("State Machine")]
     [SerializeField]
     private Animator stateMachine = null;
     [SerializeField]
     private string onClickTrigger = null;
+
+    public event Action<Character, bool> OnActionCompleted;
 
     [SerializeField]
     private float cooldownClick = 10f;
@@ -20,18 +37,28 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     [SerializeField]
     private NavMeshAgent navMeshAgent = null;
 
-    // IHasWaypoints
     [Header("Has Waypoints")]
     [SerializeField]
     private List<Waypoint> _waypoints = null;
     public List<Waypoint> waypoints => _waypoints;
+    
+    [Header("Can Carry")]
+    [SerializeField]
+    private uint _carryingCapacity = 0;
+    public uint carryingCapacity { get { return _carryingCapacity; } }
 
+    [SerializeField]
+    private List<Transform> _carryingSlots = new List<Transform>();
+    public List<Transform> carryingSlots { get { return _carryingSlots; } }
+
+    // IHasWaypoints
     public Waypoint currentWaypoint { get; set; }
     public Waypoint lastWaypoint { get; set; }
 
     // IMovable
     public void MoveTo(Vector3 to)
     {
+        animatorStateMachine.SetBool(stateWalkBool, true);
         //navMeshAgent.enabled = true;
         navMeshAgent.isStopped = false;
         navMeshAgent.SetDestination(to);
@@ -39,6 +66,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
     public void Stop()
     {
+        animatorStateMachine.SetBool(stateWalkBool, false);
         navMeshAgent.isStopped = true;
         //navMeshAgent.enabled = false;
     }
@@ -62,15 +90,6 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     }
 
     // ICanCarry
-    [Header("Can Carry")]
-    [SerializeField]
-    private uint _carryingCapacity = 0;
-    public uint carryingCapacity { get { return _carryingCapacity; } }
-
-    [SerializeField]
-    private List<Transform> _carryingSlots = new List<Transform>();
-    public List<Transform> carryingSlots { get { return _carryingSlots; } }
-
     protected List<ICarriable> _carrying = new List<ICarriable>();
     public List<ICarriable> carrying { get { return _carrying; } }
 
@@ -83,9 +102,12 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
         if(canCarry)
         {
+            this.OnAnimationCompleted += CarryDelegate;
+            animatorStateMachine.SetTrigger(statePickUpItemTrigger);
+
             _carrying.Add(carriable);
-            
-            if(carriable is MonoBehaviour)
+
+            if (carriable is MonoBehaviour)
             {
                 (carriable as MonoBehaviour).transform.SetParent(carryingSlots[0]);
                 (carriable as MonoBehaviour).transform.localPosition = Vector3.zero;
@@ -95,6 +117,12 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
         }
 
         return false;
+    }
+    private void CarryDelegate(Character c, string s)
+    {
+        Debug.Log("CARRY DELEGATE");
+        OnActionComplete(true);
+        this.OnAnimationCompleted -= CarryDelegate;
     }
 
     public bool Drop(ICarriable carriable, Transform pos)
@@ -107,6 +135,9 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
         if(canDrop)
         {
+            this.OnAnimationCompleted += DropDelegate;
+            animatorStateMachine.SetTrigger(stateDropItemTrigger);
+
             _carrying.Remove(carriable);
 
             if (carriable is MonoBehaviour)
@@ -120,9 +151,17 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
         return false;
     }
+    private void DropDelegate(Character c, string s)
+    {
+        Debug.Log("DROP DELEGATE");
+        OnActionComplete(true);
+
+        this.OnAnimationCompleted -= DropDelegate;
+    }
 
     // Character
-    public bool EmptyContainerInContainer(Container from, Container to)
+
+    public virtual bool EmptyContainerInContainer(Container from, Container to)
     {
         if (from == null || to == null) return false;
 
@@ -141,5 +180,31 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
         }
 
         return true;
+    }
+    
+    public bool Stretch()
+    {
+        this.OnAnimationCompleted += StretchDelegate;
+        animatorStateMachine.SetTrigger(stateOnClickTrigger);
+
+        return true;
+    }
+    private void StretchDelegate(Character c, string s)
+    {
+        Debug.Log("STRETCH DELEGATE");
+        OnActionComplete(true);
+        this.OnAnimationCompleted -= StretchDelegate;
+    }
+
+    public void OnAnimationComplete(string key)
+    {
+        //Debug.Log("Character: On Animation Complete " + key);
+        OnAnimationCompleted?.Invoke(this, key);
+    }
+
+    protected void OnActionComplete(bool success)
+    {
+        //Debug.Log("Character: On Action Complete " + success);
+        OnActionCompleted?.Invoke(this, success);
     }
 }

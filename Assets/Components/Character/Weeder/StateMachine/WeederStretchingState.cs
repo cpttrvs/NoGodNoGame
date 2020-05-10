@@ -43,6 +43,13 @@ public class WeederStretchingState : CharacterBaseState
         }
     }
 
+    protected override void BehaviourTree_OnBehaviorTreeStarted(BehaviorTree tree)
+    {
+        base.BehaviourTree_OnBehaviorTreeStarted(tree);
+
+        Debug.Log("STRETCH START");
+    }
+
     protected override void BehaviourTree_OnBehaviorTreeCompleted(BehaviorTree tree, BTState state)
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
@@ -53,6 +60,9 @@ public class WeederStretchingState : CharacterBaseState
         } else if (garden.GetRemainingWeedsToUnplant() > 0)
         {
             stateAnimator.SetTrigger(triggerRemainingUnplantWork);
+        } else if (garden.GetRemainingWeedsToPickup() > 0)
+        {
+            stateAnimator.SetTrigger(triggerRemainingPickupWork);
         } else
         {
             Debug.LogWarning("StretchingState: FINISHED nothing more");

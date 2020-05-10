@@ -5,7 +5,7 @@ using AillieoUtils.EasyBehaviorTree;
 using System;
 
 [Serializable]
-public class Stop : NodeAction
+public class Stop : NodeActionWait
 {
     public override void Cleanup()
     {
@@ -20,10 +20,8 @@ public class Stop : NodeAction
             IMovable movable = obj as IMovable;
 
             movable.Stop();
-
-            return BTState.Success;
         }
 
-        return BTState.Failure;
+        return base.ExecuteTask(deltaTime);
     }
 }

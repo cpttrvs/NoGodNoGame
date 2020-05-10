@@ -11,6 +11,8 @@ public class FindClosestGardenWaypoint : NodeAction
     private string gardenKey = null;
     [NodeParam]
     private string closestWaypointKey = null;
+    [NodeParam]
+    private string currentLaneKey = null;
     [Header("Work (if unplant is false, it is about collecting)")]
     [NodeParam]
     private bool unplant = false;
@@ -55,7 +57,7 @@ public class FindClosestGardenWaypoint : NodeAction
                                 closest = wp;
                             }
 
-                            if(!unplant && (wp as GardenWaypoint).HasWorkCollect())
+                            if(!unplant && (wp as GardenWaypoint).HasWorkPickUp())
                             {
                                 closest = wp;
                             }
@@ -71,7 +73,7 @@ public class FindClosestGardenWaypoint : NodeAction
                                     closest = wp;
                                 }
 
-                                if (!unplant && (wp as GardenWaypoint).HasWorkCollect())
+                                if (!unplant && (wp as GardenWaypoint).HasWorkPickUp())
                                 {
                                     closest = wp;
                                 }
@@ -96,6 +98,7 @@ public class FindClosestGardenWaypoint : NodeAction
                         if (wpl.GetWaypoints().Contains(closest))
                         {
                             weeder.currentGardenWaypointsLane = wpl;
+                            behaviorTree.blackBoard[currentLaneKey] = weeder.currentGardenWaypointsLane;
                             break;
                         }
                     }

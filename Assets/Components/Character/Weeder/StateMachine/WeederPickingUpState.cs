@@ -63,19 +63,32 @@ public class WeederPickingUpState : CharacterBaseState
 
         if(basket.GetContentSize() >= reasonableAmountOfWeedsInBasket)
         {
-            Debug.Log("PickingUpState: FINISHED " + state.ToString() + ", reasonable amount picked up");
+            //Debug.Log("PickingUpState: FINISHED " + state.ToString() + ", reasonable amount picked up");
             stateAnimator.SetTrigger(triggerOnComplete);
-        } else if(garden.GetRemainingWeedsToUnplant() > 0 && garden.GetRemainingWeedsToPickup(weeder.currentGardenWaypointsLane) == 0)
+        }
+        else if (weeder.handsContainer.GetContentSize() > 0)
         {
-            Debug.Log("PickingUpState: FINISHED " + state.ToString() + " still unplant (but finished pick up in lane)");
-            stateAnimator.SetTrigger(triggerRemainingUnplantWork);
-        } else if(garden.GetRemainingWeedsToPickup() > 0)
-        {
-            Debug.Log("PickingUpState: FINISHED " + state.ToString() + " still pickup in garden");
+            //Debug.Log("PickingUpState: FINISHED " + state.ToString() + " still content in hands");
             stateAnimator.SetTrigger(triggerRemainingPickupWork);
-        }  else
+
+            Init();
+        }
+        else if (garden.GetRemainingWeedsToPickup() > 0)
         {
-            Debug.Log("PickingUpState: FINISHED " + state.ToString());
+            //Debug.Log("PickingUpState: FINISHED " + state.ToString() + " still pickup in garden");
+            stateAnimator.SetTrigger(triggerRemainingPickupWork);
+
+            Init();
+        }
+        else if (garden.GetRemainingWeedsToUnplant() > 0 && garden.GetRemainingWeedsToPickup(weeder.currentGardenWaypointsLane) == 0)
+        {
+            //Debug.Log("PickingUpState: FINISHED " + state.ToString() + " still unplant (but finished pick up in lane)");
+            stateAnimator.SetTrigger(triggerRemainingUnplantWork);
+            
+        }
+        else
+        {
+            //Debug.Log("PickingUpState: FINISHED " + state.ToString());
             stateAnimator.SetTrigger(triggerOnComplete);
         }
     }
