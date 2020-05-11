@@ -70,6 +70,18 @@ public class Container : MonoBehaviour, IBlackBoardData
         return true;
     }
 
+    public bool RemoveAny()
+    {
+        IContainable item = null;
+        foreach(IContainable i in items)
+        {
+            item = i;
+            break;
+        }
+
+        return RemoveItem(item);
+    }
+
     public IContainable[] GetItems()
     {
         return items.ToArray();

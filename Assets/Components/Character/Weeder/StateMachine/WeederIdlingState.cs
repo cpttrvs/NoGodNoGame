@@ -36,7 +36,7 @@ public class WeederIdlingState : CharacterBaseState
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
 
-        Debug.Log("IdlingState: FINISHED " + state.ToString());
+        //Debug.Log("Weeder IdlingState: FINISHED " + state.ToString());
 
         if (garden.GetRemainingWeedsToUnplant() > 0)
         {
@@ -46,7 +46,7 @@ public class WeederIdlingState : CharacterBaseState
             stateAnimator.SetTrigger(triggerPickupWork);
         } else
         {
-            Debug.Log("IdlingState: FINISHED but still have work");
+            Debug.Log("Weeder IdlingState: FINISHED but still have work");
         }
     }
 }

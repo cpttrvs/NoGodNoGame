@@ -62,11 +62,11 @@ public class WeederEmptyingState : CharacterBaseState
 
         if (basket.GetContentSize() > 0)
         {
-            Debug.LogWarning("EmptyingState: FINISHED but basket is not empty");
+            Debug.LogWarning("Weeder EmptyingState: FINISHED but basket is not empty");
             Init();
         } else
         {
-            Debug.Log("EmptyingState: FINISHED");
+            Debug.Log("Weeder EmptyingState: FINISHED");
             stateAnimator.SetTrigger(triggerOnComplete);
         }
 

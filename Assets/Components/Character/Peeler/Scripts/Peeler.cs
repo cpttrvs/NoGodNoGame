@@ -42,22 +42,55 @@ public class Peeler : Character
     public bool isSitted { get { return _isSitted; } }
 
     // Peel
+    private Basket savedBasket = null;
+    private IContainable savedItem = null;
     public bool PeelAny(Basket basket)
     {
-        if(basketVegetables.GetContentSize() > 0)
+        if(handsContainer.IsFull())
         {
+            Debug.Log("HAND IS FULL");
+
+            savedItem = handsContainer.GetItems()[0];
+
             this.OnAnimationCompleted += PeelAnyDelegate;
             animatorStateMachine.SetTrigger(statePeelTrigger);
 
             return true;
+        } else
+        {
+            if (basketVegetables.GetContentSize() > 0 && !basketPeeled.IsFull())
+            {
+                savedBasket = basket;
+
+                savedItem = null;
+                foreach (IContainable i in savedBasket.GetItems())
+                {
+                    savedItem = i;
+                    break;
+                }
+
+                bool success = savedBasket.RemoveItem(savedItem);
+
+                handsContainer.AddItem(savedItem);
+
+                this.OnAnimationCompleted += PeelAnyDelegate;
+                animatorStateMachine.SetTrigger(statePeelTrigger);
+
+                return success;
+            }
         }
+
+
 
         return false;
     }
     private void PeelAnyDelegate(Character c, string s)
     {
         Debug.Log("PEEL DELEGATE");
-        bool success = true;
+
+        handsContainer.RemoveItem(savedItem);
+        bool success = basketPeeled.AddItem(savedItem);
+        
         OnActionComplete(success);
 
         this.OnAnimationCompleted -= PeelAnyDelegate;
@@ -103,6 +136,15 @@ public class Peeler : Character
         Debug.Log("STAND DELEGATE");
         OnActionComplete(true);
 
+        this.OnAnimationCompleted -= StandDelegate;
+    }
+
+    protected override void UnregisterDelegates()
+    {
+        base.UnregisterDelegates();
+
+        this.OnAnimationCompleted -= PeelAnyDelegate;
+        this.OnAnimationCompleted -= SitDelegate;
         this.OnAnimationCompleted -= StandDelegate;
     }
 }

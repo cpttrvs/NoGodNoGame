@@ -17,7 +17,7 @@ public class WeederStretchingState : CharacterBaseState
     private string triggerRemainingPickupWork;
     [SerializeField]
     private string triggerRemainingUnplantWork;
-    
+
     [Header("Props")]
     [SerializeField]
     private string basketKey = null;
@@ -47,7 +47,7 @@ public class WeederStretchingState : CharacterBaseState
     {
         base.BehaviourTree_OnBehaviorTreeStarted(tree);
 
-        Debug.Log("STRETCH START");
+        Debug.Log("WEEDER STRETCH START");
     }
 
     protected override void BehaviourTree_OnBehaviorTreeCompleted(BehaviorTree tree, BTState state)
@@ -57,13 +57,16 @@ public class WeederStretchingState : CharacterBaseState
         if (garden.GetRemainingWeedsToPickup(weeder.currentGardenWaypointsLane) >= reasonableAmountOfWeedsToPickUp)
         {
             stateAnimator.SetTrigger(triggerRemainingPickupWork);
-        } else if (garden.GetRemainingWeedsToUnplant() > 0)
+        }
+        else if (garden.GetRemainingWeedsToUnplant() > 0)
         {
             stateAnimator.SetTrigger(triggerRemainingUnplantWork);
-        } else if (garden.GetRemainingWeedsToPickup() > 0)
+        }
+        else if (garden.GetRemainingWeedsToPickup() > 0)
         {
             stateAnimator.SetTrigger(triggerRemainingPickupWork);
-        } else
+        }
+        else
         {
             Debug.LogWarning("StretchingState: FINISHED nothing more");
         }

@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 8521191505644497152}
   - component: {fileID: 8521191505644497155}
   m_Layer: 0
-  m_Name: Peeler_IdlingState
+  m_Name: Peeler_IdlingBehaviour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

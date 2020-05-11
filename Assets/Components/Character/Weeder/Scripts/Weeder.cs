@@ -145,4 +145,14 @@ public class Weeder : Character
         _isCrawling = false;
         animatorStateMachine.SetBool(stateCrawlBool, isCrawling);
     }
+
+    protected override void UnregisterDelegates()
+    {
+        base.UnregisterDelegates();
+
+        this.OnAnimationCompleted -= UnplantDelegate;
+        this.OnAnimationCompleted -= PickupDelegate;
+
+        this.OnAnimationCompleted -= EmptyContainerInContainerDelegate;
+    }
 }

@@ -125,6 +125,7 @@ MonoBehaviour:
   animatorStateMachine: {fileID: 4214589734832522758}
   stateWalkBool: moving
   stateOnClickTrigger: onClick
+  stateStretchBool: stretching
   stateDropItemTrigger: droppingBasket
   statePickUpItemTrigger: pickingUpBasket
   stateMachine: {fileID: 1264821036076064328}
@@ -175,8 +176,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 4, z: 2}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!195 &1264821036076064330
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -314,17 +315,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 43ece9cc91fdc5b43bf17117e02103fb,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 43ece9cc91fdc5b43bf17117e02103fb,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 43ece9cc91fdc5b43bf17117e02103fb,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4126759163159158479, guid: 43ece9cc91fdc5b43bf17117e02103fb,
         type: 3}
