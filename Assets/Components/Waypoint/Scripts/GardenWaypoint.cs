@@ -53,7 +53,7 @@ public class GardenWaypoint : Waypoint
         return false;
     }
 
-    public bool HasWorkCollect()
+    public bool HasWorkPickUp()
     {
         foreach (Plant p in connectedPlants)
         {

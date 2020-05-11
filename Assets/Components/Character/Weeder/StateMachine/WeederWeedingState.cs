@@ -20,6 +20,8 @@ public class WeederWeedingState : CharacterBaseState
     private string gardenEntryKey = null;
     [SerializeField]
     private string waypointsLanesKey = null;
+    [SerializeField]
+    private string currentLaneKey = null;
 
     [Header("Props")]
     [SerializeField]
@@ -44,6 +46,7 @@ public class WeederWeedingState : CharacterBaseState
                 behaviorTree.blackBoard[basketKey] = basket;
                 
                 behaviorTree.blackBoard[waypointsLanesKey] = new BBList<GardenWaypointsLane>(garden.waypointsLanes);
+                behaviorTree.blackBoard[currentLaneKey] = weeder.currentGardenWaypointsLane;
                 
                 behaviorTree.debugLogging = false;
             }
@@ -54,14 +57,24 @@ public class WeederWeedingState : CharacterBaseState
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
 
-        Debug.Log("WeedingState: FINISHED");
-
-        if (garden.GetRemainingWeedsToUnplant(weeder.currentGardenWaypointsLane) == 0)
+        if(garden.GetRemainingWeedsToUnplant(weeder.currentGardenWaypointsLane) == 0 &&
+            garden.GetRemainingWeedsToPickup(weeder.currentGardenWaypointsLane) == 0 &&
+            garden.GetRemainingWeedsToUnplant() > 0)
         {
+            //Debug.Log("WeedingState: FINISHED but still have work (lane finished)");
+
+            Init();
+        }
+        else if (garden.GetRemainingWeedsToUnplant(weeder.currentGardenWaypointsLane) == 0)
+        {
+            //Debug.Log("WeedingState: FINISHED");
+
             stateAnimator.SetTrigger(triggerOnComplete);
         } else
         {
-            Debug.Log("WeedingState: FINISHED but still have work");
+            //Debug.Log("WeedingState: FINISHED but still have work");
+
+            Init();
         }
     }
 

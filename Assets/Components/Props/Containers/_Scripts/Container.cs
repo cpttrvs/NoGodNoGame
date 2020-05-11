@@ -29,7 +29,7 @@ public class Container : MonoBehaviour, IBlackBoardData
             mb.transform.localPosition = Vector3.zero;
         }
 
-        Debug.Log("Container: " + name + " added an item");
+        //Debug.Log("Container: " + name + " added an item");
 
         return true;
     }

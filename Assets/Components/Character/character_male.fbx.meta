@@ -40,11 +40,23 @@ ModelImporter:
       74: 1976889594226162121
     second: rig|Idle with basket
   - first:
+      74: -233506173844808166
+    second: rig|Peeling
+  - first:
       74: 270918204899830074
     second: rig|Pick up basket
   - first:
       74: 2460783024770503810
     second: rig|Pick up weeds
+  - first:
+      74: 7097073305958514244
+    second: rig|Sitting End
+  - first:
+      74: -6198618334189056480
+    second: rig|Sitting Idle
+  - first:
+      74: -2454167408169971976
+    second: rig|Sitting Start
   - first:
       74: 1023992570608409904
     second: rig|Walk
