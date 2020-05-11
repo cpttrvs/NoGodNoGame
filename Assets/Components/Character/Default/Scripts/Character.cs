@@ -22,6 +22,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     private string statePickUpItemTrigger = null;
 
     public event Action<Character, string> OnAnimationCompleted;
+    public event Action<Character, string> OnAnimationStretchCompleted;
 
     [Header("State Machine")]
     [SerializeField]
@@ -188,27 +189,30 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     {
         UnregisterDelegates();
 
-        this.OnAnimationCompleted += StretchDelegate;
+        this.OnAnimationStretchCompleted += StretchDelegate;
 
         animatorStateMachine.SetTrigger(stateOnClickTrigger);
-        animatorStateMachine.SetBool(stateStretchBool, true);
 
         return true;
     }
     private void StretchDelegate(Character c, string s)
     {
         Debug.Log("STRETCH DELEGATE");
-        animatorStateMachine.SetBool(stateStretchBool, false);
     
         OnActionComplete(true);
 
-        this.OnAnimationCompleted -= StretchDelegate;
+        this.OnAnimationStretchCompleted -= StretchDelegate;
     }
 
     public void OnAnimationComplete(string key)
     {
         //Debug.Log("Character: On Animation Complete " + key);
         OnAnimationCompleted?.Invoke(this, key);
+    }
+
+    public void OnAnimationStretchComplete(string key)
+    {
+        OnAnimationStretchCompleted(this, key);
     }
 
     protected void OnActionComplete(bool success)
@@ -223,6 +227,6 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
         this.OnAnimationCompleted -= CarryDelegate;
         this.OnAnimationCompleted -= DropDelegate;
 
-        this.OnAnimationCompleted -= StretchDelegate;
+        this.OnAnimationStretchCompleted -= StretchDelegate;
     }
 }
