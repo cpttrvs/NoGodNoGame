@@ -30,6 +30,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     [SerializeField]
     private string onRainTrigger = null;
 
+    public Animator GetStateMachine() { return stateMachine; }
     public event Action<Character, bool> OnActionCompleted;
 
     [SerializeField]

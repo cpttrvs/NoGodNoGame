@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
     {
         // init Rain Manager
         rainManager.RainIntensity = 0;
+
+        foreach(CharacterRain cr in characters)
+        {
+            cr.character.GetStateMachine().enabled = false;
+        }
     }
     
     void Update()
@@ -49,6 +54,11 @@ public class GameManager : MonoBehaviour
                 isGameStarted = true;
 
                 StartCoroutine(TimeBeforeRain());
+
+                foreach (CharacterRain cr in characters)
+                {
+                    cr.character.GetStateMachine().enabled = true;
+                }
             }
         } else
         {

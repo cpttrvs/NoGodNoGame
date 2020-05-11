@@ -2377,8 +2377,8 @@ MonoBehaviour:
     rainThresholdTrigger: 0.5
     triggered: 0
   rainManager: {fileID: 1293005003}
-  secondsBeforeRain: 1
-  secondsForRainToReachMax: 5
+  secondsBeforeRain: 10
+  secondsForRainToReachMax: 10
 --- !u!1 &1590141905
 GameObject:
   m_ObjectHideFlags: 0
