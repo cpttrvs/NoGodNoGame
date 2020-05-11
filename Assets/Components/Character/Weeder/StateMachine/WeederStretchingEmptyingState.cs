@@ -11,7 +11,7 @@ public class WeederStretchingEmptyingState : CharacterBaseState
 
     [Header("State Machine")]
     [SerializeField]
-    private string triggerOnComplete;
+    private string triggerOnComplete = null;
 
     [Header("Props")]
     [SerializeField]

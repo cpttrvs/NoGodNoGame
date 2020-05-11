@@ -10,7 +10,7 @@ public class PeelerStretchingState : CharacterBaseState
     
     [Header("State Machine")]
     [SerializeField]
-    private string triggerRemainingWork;
+    private string triggerRemainingWork = null;
 
     [Header("Props")]
     [SerializeField]
