@@ -42,7 +42,7 @@ public class WeederStretchingEmptyingState : CharacterBaseState
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
 
-        Debug.Log("StretchingEmptyingState: FINISHED " + state.ToString());
+        Debug.Log("Weeder StretchingEmptyingState: FINISHED " + state.ToString());
         stateAnimator.SetTrigger(triggerOnComplete);
         
     }

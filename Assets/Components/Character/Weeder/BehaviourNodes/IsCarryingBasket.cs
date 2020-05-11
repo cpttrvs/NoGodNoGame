@@ -6,6 +6,9 @@ using AillieoUtils.EasyBehaviorTree;
 [System.Serializable]
 public class IsCarryingBasket : NodeCondition
 {
+    [NodeParam]
+    private string basketKey = null;
+
     public override void Cleanup()
     {
     }
@@ -16,12 +19,9 @@ public class IsCarryingBasket : NodeCondition
 
         if (character != null)
         {
-            if(character is Weeder)
-            {
-                Weeder weeder = character as Weeder;
-                
-                return weeder.carrying.Contains(weeder.basket);
-            }
+            Basket basket = behaviorTree.blackBoard[basketKey] as Basket;
+
+            return character.carrying.Contains(basket);
         }
 
         return false;

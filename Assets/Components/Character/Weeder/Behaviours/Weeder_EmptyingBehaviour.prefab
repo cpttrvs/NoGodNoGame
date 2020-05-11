@@ -877,7 +877,9 @@ MonoBehaviour:
   mEnumParamSet:
     nodeParams: []
   mStringParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: basketKey
+      value: basket
   mStringArrayParamSet:
     nodeParams: []
   mIntParamSet:
@@ -1690,6 +1692,8 @@ MonoBehaviour:
     nodeParams:
     - key: objectKey
       value: 
+    - key: basketKey
+      value: basket
   mStringArrayParamSet:
     nodeParams: []
   mIntParamSet:

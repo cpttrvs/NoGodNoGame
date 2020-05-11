@@ -8,9 +8,30 @@ public class Container : MonoBehaviour, IBlackBoardData
     [SerializeField]
     private uint capacity = 0;
     [SerializeField]
-    private Transform containerSlot = null;
+    protected Transform containerSlot = null;
 
     private List<IContainable> items = new List<IContainable>();
+
+    private void Start()
+    {
+        if(containerSlot.childCount > 0)
+        {
+            foreach (Transform tr in containerSlot)
+            {
+                IContainable containable = tr.gameObject.GetComponent<IContainable>();
+
+                if (containable != null)
+                {
+                    bool success = AddItem(containable);
+
+                    if (!success)
+                    {
+                        Debug.LogWarning("Start: " + name + " can't auto-add containables");
+                    }
+                }
+            }
+        }
+    }
 
     public bool AddItem(IContainable item)
     {
@@ -47,6 +68,18 @@ public class Container : MonoBehaviour, IBlackBoardData
         // change transform parent ?
 
         return true;
+    }
+
+    public bool RemoveAny()
+    {
+        IContainable item = null;
+        foreach(IContainable i in items)
+        {
+            item = i;
+            break;
+        }
+
+        return RemoveItem(item);
     }
 
     public IContainable[] GetItems()
