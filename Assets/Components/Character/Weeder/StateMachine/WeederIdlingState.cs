@@ -49,9 +49,4 @@ public class WeederIdlingState : CharacterBaseState
             Debug.Log("IdlingState: FINISHED but still have work");
         }
     }
-
-    public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
-    {
-        base.OnStateExit(animator, animatorStateInfo, layerIndex);
-    }
 }

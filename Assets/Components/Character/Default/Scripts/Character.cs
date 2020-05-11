@@ -35,7 +35,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
     [Header("Nav Mesh")]
     [SerializeField]
-    private NavMeshAgent navMeshAgent = null;
+    protected NavMeshAgent navMeshAgent = null;
 
     [Header("Has Waypoints")]
     [SerializeField]

@@ -7,6 +7,11 @@ public class ContainerWaypoint : Waypoint
     protected Container _container;
     public Container container { get { return _container; } }
 
+    private void Start()
+    {
+        
+    }
+
     public bool IsEmpty()
     {
         return container == null;

@@ -4,11 +4,8 @@ using UnityEngine;
 using AillieoUtils.EasyBehaviorTree;
 
 [System.Serializable]
-public class IsCarryingBasket : NodeCondition
+public class IsSitted : NodeCondition
 {
-    [NodeParam]
-    private string basketKey = null;
-
     public override void Cleanup()
     {
     }
@@ -19,9 +16,12 @@ public class IsCarryingBasket : NodeCondition
 
         if (character != null)
         {
-            Basket basket = behaviorTree.blackBoard[basketKey] as Basket;
+            if (character is Peeler)
+            {
+                Peeler peeler = character as Peeler;
 
-            return character.carrying.Contains(basket);
+                return peeler.isSitted;
+            }
         }
 
         return false;
