@@ -34,17 +34,7 @@ public class cameraBehaviour : MonoBehaviour
     {
         if (gameManager.isGameStarted)
         {
-            if (gameTimer <= 0 && !zoomInDone)
-            {
-                zoomIn = true;
-            }
-            else
-            {
-                gameTimer -= Time.deltaTime;
-                //Debug.Log(gameTimer);
-            }
-        }
-        IEnumerator zoomingOut = LerpFromTo(startPos.position, endPos.position, zoomDuration);
+        
         IEnumerator zoomingIn = LerpFromTo(endPos.position, startPos.position, zoomDuration);
 
         if (zoomIn)
@@ -60,13 +50,21 @@ public class cameraBehaviour : MonoBehaviour
             }
             StartCoroutine(zoomingIn);
         }
-
-        IEnumerator coroutine = LerpFromTo(startPos.position, endPos.position, zoomDuration);
+            if (gameTimer <= 0 && !zoomInDone)
+            {
+                zoomIn = true;
+            }
+            else
+            {
+                gameTimer -= Time.deltaTime;
+                //Debug.Log(gameTimer);
+            }
+        }
         if (gameManager.isGameStarted && gameTimer > 0 && !zoomOutDone)
         {
             zoomOut = true;
         }
-
+        IEnumerator zoomingOut = LerpFromTo(startPos.position, endPos.position, zoomDuration);
         if (zoomOut)
         {
             if (transform.position == startPos.position)
