@@ -42241,7 +42241,7 @@ MonoBehaviour:
     triggered: 0
   startText: {fileID: 1281431202}
   rainManager: {fileID: 1895643129}
-  secondsBeforeRain: 2
+  secondsBeforeRain: 180
   secondsForRainToReachMax: 45
   isGameStarted: 0
 --- !u!4 &1219014385
