@@ -488,7 +488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorFile: {fileID: 102900000, guid: f64e2eb9f10ca7a4b857ebbbc9228074, type: 3}
-  reasonableAmountOfWeedsToPickUp: 3
+  reasonableAmountOfWeedsToPickUp: 1
   triggerRemainingPickupWork: hasUnfinishedPickingup
   triggerRemainingUnplantWork: hasUnfinishedWeeding
   basketKey: basket
@@ -629,7 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorFile: {fileID: 102900000, guid: ee76d9b703fea464fa40f74ce0f2d597, type: 3}
-  reasonableAmountOfWeedsInBasket: 10
+  reasonableAmountOfWeedsInBasket: 1
   triggerRemainingUnplantWork: hasUnfinishedWeeding
   triggerRemainingPickupWork: hasUnfinishedPickingup
   triggerOnComplete: hasFinishedPickingUp
