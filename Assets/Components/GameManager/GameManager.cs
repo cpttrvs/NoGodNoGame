@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private List<CharacterRain> characters = new List<CharacterRain>();
 
+    [SerializeField]
+    private GameObject startText;
+
     [Header("End Game")]
     [SerializeField]
     private RainScript rainManager = null;
@@ -52,6 +55,8 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Game Manager: START");
 
                 isGameStarted = true;
+
+                startText.SetActive(false);
 
                 StartCoroutine(TimeBeforeRain());
 
