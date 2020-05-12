@@ -27,7 +27,7 @@ public class IfGardenHasWeeds : NodeCondition
                 Weeder weeder = character as Weeder;
 
                 Garden garden = weeder.garden;
-
+                
                 if (weedsToUnplant)
                     return garden.GetRemainingWeedsToUnplant() > 0;
 

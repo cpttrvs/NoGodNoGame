@@ -92,7 +92,7 @@ public class Weeder : Character
     }
     private void PickupDelegate(Character c, string s)
     {
-        //Debug.Log("PICK UP DELEGATE");
+        Debug.Log("PICK UP DELEGATE");
         Plant p = pickupGardenWaypoint.PickupAny();
 
         bool success = false;

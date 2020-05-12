@@ -56,6 +56,9 @@ public class BaseState : StateMachineBehaviour
 
     protected virtual void Init()
     {
+        behaviorTree.OnBehaviorTreeCompleted -= BehaviourTree_OnBehaviorTreeCompleted;
+        behaviorTree.OnBehaviorTreeStarted -= BehaviourTree_OnBehaviorTreeStarted;
+
         behaviorTree.OnBehaviorTreeCompleted += BehaviourTree_OnBehaviorTreeCompleted;
         behaviorTree.OnBehaviorTreeStarted += BehaviourTree_OnBehaviorTreeStarted;
 
