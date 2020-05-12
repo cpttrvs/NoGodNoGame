@@ -23,17 +23,17 @@ public class GameManager : MonoBehaviour
     private List<CharacterRain> characters = new List<CharacterRain>();
 
     [SerializeField]
-    private GameObject startText;
+    private GameObject startText = null;
 
     [Header("End Game")]
     [SerializeField]
     private RainScript rainManager = null;
     [SerializeField]
-    private float secondsBeforeRain = 20f;
+    public float secondsBeforeRain = 20f;
     [SerializeField]
-    private float secondsForRainToReachMax = 5f;
+    public float secondsForRainToReachMax = 5f;
 
-    private bool isGameStarted = false;
+    public bool isGameStarted = false;
     
     void Start()
     {

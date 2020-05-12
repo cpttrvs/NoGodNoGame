@@ -1,0 +1,68 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class cameraBehaviour : MonoBehaviour
+{
+    public Transform startPos;
+    public Transform endPos;
+
+    public bool zoomOut = false;
+    public bool zoomIn = false;
+
+    [SerializeField]
+    private float zoomDuration = 5f;
+    [SerializeField]
+    private float distanceThreshold = 5f;
+
+    private GameManager gameManager;
+
+    [SerializeField]
+    private float gameTimer = 0;
+
+    void Start()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        IEnumerator zoomingOut = LerpFromTo(startPos.position, endPos.position, zoomDuration);
+        IEnumerator zoomingIn = LerpFromTo(endPos.position, startPos.position, zoomDuration);
+        if (gameTimer <= 0) {
+            zoomIn = true;
+        }
+        else { 
+            gameTimer -= Time.deltaTime; 
+        }
+        if (zoomIn)
+        {
+            StartCoroutine(zoomingIn);
+        }
+
+        IEnumerator coroutine = LerpFromTo(startPos.position, endPos.position, zoomDuration);
+        zoomOut = gameManager.isGameStarted;
+        if (zoomOut && Vector3.Distance(transform.position, endPos.position) > 5)
+        {
+            StartCoroutine(zoomingOut);
+        }
+        if (Vector3.Distance(transform.position, endPos.position) <= distanceThreshold)
+        {
+            zoomOut = false;
+            StopCoroutine(zoomingOut);
+            Debug.Log("done");
+        }
+    }
+
+    IEnumerator LerpFromTo(Vector3 pos1, Vector3 pos2, float duration)
+    {
+        for (float t = 0f; t < duration; t += Time.deltaTime)
+        {
+            transform.position = Vector3.Lerp(pos1, pos2, t / duration);
+            yield return 0;
+        }
+        transform.position = pos2;
+    }
+}
