@@ -1288,7 +1288,7 @@ MonoBehaviour:
   mFloatParamSet:
     nodeParams:
     - key: minimalRange
-      value: 2
+      value: 0.2
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:

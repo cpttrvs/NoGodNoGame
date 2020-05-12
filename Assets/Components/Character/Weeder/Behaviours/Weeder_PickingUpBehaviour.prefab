@@ -700,7 +700,7 @@ MonoBehaviour:
     - key: objectKey
       value: 
     - key: waypointKey
-      value: closestBaksetWaypoint
+      value: closestBasketWaypoint
   mStringArrayParamSet:
     nodeParams: []
   mIntParamSet:

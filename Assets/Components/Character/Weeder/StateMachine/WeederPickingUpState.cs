@@ -53,7 +53,7 @@ public class WeederPickingUpState : CharacterBaseState
 
                 behaviorTree.blackBoard[waypointsLanesKey] = new BBList<GardenWaypointsLane>(garden.waypointsLanes);
 
-                behaviorTree.debugLogging = true;
+                behaviorTree.debugLogging = false;
             }
         }
     }
