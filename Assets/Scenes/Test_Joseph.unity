@@ -3016,11 +3016,6 @@ MonoBehaviour:
   _area: {fileID: 245664521}
   _waypoints:
   - {fileID: 688584353}
-  - {fileID: 75688301}
-  - {fileID: 230966549}
-  - {fileID: 1987747220}
-  - {fileID: 2145758623}
-  - {fileID: 298577849}
   _startWaypoint: {fileID: 688584353}
   _endWaypoint: {fileID: 75688301}
   _basketWaypoints:
@@ -5787,6 +5782,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Peeler (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4148927460599010518, guid: bd94b2cca51e94045bb93b6453adf44c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4148927460599010522, guid: bd94b2cca51e94045bb93b6453adf44c,
         type: 3}
       propertyPath: _basketVegetables
@@ -7115,11 +7115,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1264821036076064330, guid: 955196b865d66854980541e424eb3579,
-        type: 3}
-      propertyPath: m_Speed
-      value: 2.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1264821036076064331, guid: 955196b865d66854980541e424eb3579,
         type: 3}
       propertyPath: m_Name
@@ -15182,11 +15177,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1264821036076064330, guid: 955196b865d66854980541e424eb3579,
-        type: 3}
-      propertyPath: m_Speed
-      value: 2.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1264821036076064331, guid: 955196b865d66854980541e424eb3579,
         type: 3}
       propertyPath: m_Name
@@ -15195,7 +15185,7 @@ PrefabInstance:
     - target: {fileID: 1264821036076064331, guid: 955196b865d66854980541e424eb3579,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1264821036076064374, guid: 955196b865d66854980541e424eb3579,
         type: 3}
@@ -17290,6 +17280,7 @@ MonoBehaviour:
   - character: {fileID: 2143484587}
     rainThresholdTrigger: 0
     triggered: 0
+  startText: {fileID: 0}
   rainManager: {fileID: 1293005003}
   secondsBeforeRain: 1
   secondsForRainToReachMax: 1
