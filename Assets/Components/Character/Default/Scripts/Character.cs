@@ -21,6 +21,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
     public event Action<Character, string> OnAnimationCompleted;
     public event Action<Character, string> OnAnimationStretchCompleted;
+    public event Action<Character, string> OnAnimationEventFired;
 
     [Header("State Machine")]
     [SerializeField]
@@ -103,6 +104,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     protected List<ICarriable> _carrying = new List<ICarriable>();
     public List<ICarriable> carrying { get { return _carrying; } }
 
+    private ICarriable savedCarriable = null;
     public bool Carry(ICarriable carriable)
     {
         if (carriable.isCarried) return false;
@@ -112,29 +114,48 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
         if(canCarry)
         {
+            Debug.Log(this.name + " Carry Start");
+
             this.OnAnimationCompleted += CarryDelegate;
+            this.OnAnimationEventFired += CarryEvent;
+
+            savedCarriable = carriable;
+            _carrying.Add(savedCarriable);
+
             animatorStateMachine.SetTrigger(statePickUpItemTrigger);
-
-            _carrying.Add(carriable);
-
-            if (carriable is MonoBehaviour)
-            {
-                (carriable as MonoBehaviour).transform.SetParent(carryingSlots[0]);
-                (carriable as MonoBehaviour).transform.localPosition = Vector3.zero;
-            }
             
             return true;
         }
 
         return false;
     }
+    private void CarryEvent(Character c, string s)
+    {
+        Debug.Log(this.name + " Carry Event");
+
+        this.OnAnimationEventFired -= CarryEvent;
+        
+        if (savedCarriable is MonoBehaviour)
+        {
+            (savedCarriable as MonoBehaviour).transform.SetParent(carryingSlots[0]);
+            (savedCarriable as MonoBehaviour).transform.localPosition = Vector3.zero;
+        }
+    }
     private void CarryDelegate(Character c, string s)
     {
-        //Debug.Log("CARRY DELEGATE");
+        Debug.Log(this.name + " Carry Delegate");
+
+        if (savedCarriable is MonoBehaviour)
+        {
+            (savedCarriable as MonoBehaviour).transform.SetParent(carryingSlots[0]);
+            (savedCarriable as MonoBehaviour).transform.localPosition = Vector3.zero;
+        }
+
         OnActionComplete(true);
         this.OnAnimationCompleted -= CarryDelegate;
     }
 
+    private Transform savedPos = null;
     public bool Drop(ICarriable carriable, Transform pos)
     {
         if (!carriable.isCarried) return false;
@@ -145,25 +166,45 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
         if(canDrop)
         {
+            Debug.Log(this.name + " Drop Start");
+
             this.OnAnimationCompleted += DropDelegate;
+            this.OnAnimationEventFired += DropEvent;
+
+            savedCarriable = carriable;
+            savedPos = pos;
+
+            _carrying.Remove(savedCarriable);
+            
             animatorStateMachine.SetTrigger(stateDropItemTrigger);
-
-            _carrying.Remove(carriable);
-
-            if (carriable is MonoBehaviour)
-            {
-                (carriable as MonoBehaviour).transform.SetParent(pos);
-                (carriable as MonoBehaviour).transform.localPosition = Vector3.zero;
-            }
-
+            
             return true;
         }
 
         return false;
     }
+    private void DropEvent(Character c, string s)
+    {
+        Debug.Log(this.name + " Drop Event");
+
+        this.OnAnimationEventFired -= DropEvent;
+
+        if (savedCarriable is MonoBehaviour)
+        {
+            (savedCarriable as MonoBehaviour).transform.SetParent(savedPos);
+            (savedCarriable as MonoBehaviour).transform.localPosition = Vector3.zero;
+        }
+    }
     private void DropDelegate(Character c, string s)
     {
-        //Debug.Log("DROP DELEGATE");
+        Debug.Log(this.name + " Drop Delegate");
+
+        if (savedCarriable is MonoBehaviour)
+        {
+            (savedCarriable as MonoBehaviour).transform.SetParent(savedPos);
+            (savedCarriable as MonoBehaviour).transform.localPosition = Vector3.zero;
+        }
+
         OnActionComplete(true);
 
         this.OnAnimationCompleted -= DropDelegate;
@@ -204,7 +245,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     }
     private void StretchDelegate(Character c, string s)
     {
-        Debug.Log("STRETCH DELEGATE");
+        //Debug.Log("STRETCH DELEGATE");
     
         OnActionComplete(true);
 
@@ -225,6 +266,11 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
         OnAnimationCompleted?.Invoke(this, key);
     }
 
+    public void OnAnimationEvent(string key)
+    {
+        OnAnimationEventFired?.Invoke(this, key);
+    }
+
     public void OnAnimationStretchComplete(string key)
     {
         OnAnimationStretchCompleted(this, key);
@@ -240,7 +286,10 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     {
         //Debug.Log("Character " + name + ": unregister delegates");
         this.OnAnimationCompleted -= CarryDelegate;
+        this.OnAnimationEventFired -= CarryEvent;
+        
         this.OnAnimationCompleted -= DropDelegate;
+        this.OnAnimationEventFired -= DropEvent;
 
         this.OnAnimationStretchCompleted -= StretchDelegate;
         

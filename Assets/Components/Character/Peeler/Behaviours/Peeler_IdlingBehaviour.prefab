@@ -61,7 +61,7 @@ MonoBehaviour:
   mFloatParamSet:
     nodeParams:
     - key: time
-      value: 2
+      value: 0.25
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:

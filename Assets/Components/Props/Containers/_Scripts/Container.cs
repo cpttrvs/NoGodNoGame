@@ -22,7 +22,7 @@ public class Container : MonoBehaviour, IBlackBoardData
 
                 if (containable != null)
                 {
-                    bool success = AddItem(containable);
+                    bool success = AddItem(containable, false);
 
                     if (!success)
                     {
@@ -33,7 +33,7 @@ public class Container : MonoBehaviour, IBlackBoardData
         }
     }
 
-    public bool AddItem(IContainable item)
+    public bool AddItem(IContainable item, bool hasPosition = true)
     {
         if (item.isContained) return false;
 
@@ -47,7 +47,9 @@ public class Container : MonoBehaviour, IBlackBoardData
         if (mb != null)
         {
             mb.transform.SetParent(containerSlot);
-            mb.transform.localPosition = Vector3.zero;
+
+            if(hasPosition)
+                mb.transform.localPosition = Vector3.zero;
         }
 
         //Debug.Log("Container: " + name + " added an item");
