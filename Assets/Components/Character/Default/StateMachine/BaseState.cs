@@ -22,7 +22,9 @@ public class BaseState : StateMachineBehaviour
         animatedGameobject = stateAnimator.gameObject;
         
         string path = "";
-        
+#if UNITY_EDITOR
+        behaviorTree = BytesAssetProcessor.LoadBehaviorTree(AssetDatabase.GetAssetPath(behaviorFile));
+#else
         if(Application.platform == RuntimePlatform.OSXPlayer)
         {
             path = Path.Combine(Application.dataPath + "/Resources/Data/StreamingAssets", behaviorName + ".bt");
@@ -35,6 +37,9 @@ public class BaseState : StateMachineBehaviour
         }
 
         behaviorTree = BytesAssetProcessor.LoadBehaviorTree(path);
+#endif
+
+
 
         if (behaviorTree != null)
         {
