@@ -11,6 +11,10 @@ public class IsNearObject : NodeCondition
     private string objectKey = null;
     [NodeParam]
     private float minimalRange = 1f;
+    [NodeParam]
+    private bool autoStop = true;
+    [NodeParam]
+    private bool faceObject = true;
 
     public override void Cleanup()
     {
@@ -32,6 +36,24 @@ public class IsNearObject : NodeCondition
 
                 if (distance <= minimalRange)
                 {
+                    if (autoStop)
+                        character.Stop();
+
+                    if (faceObject)
+                    {
+
+                        /*
+                        Debug.Log("NearObject FACE");
+                        Vector3 direction = objectPos - characterPos;
+                        Quaternion rotation = Quaternion.LookRotation(direction);
+
+                        character.transform.rotation = Quaternion.Lerp(character.transform.rotation, rotation, 1f * Time.deltaTime);
+                        */
+
+                        character.transform.LookAt(new Vector3(gameObject.transform.position.x, character.transform.position.y, gameObject.transform.position.z));
+                    }
+
+
                     return true;
                 }
             }

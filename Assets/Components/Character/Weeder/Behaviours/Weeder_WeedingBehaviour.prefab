@@ -61,7 +61,7 @@ MonoBehaviour:
   mFloatParamSet:
     nodeParams:
     - key: minimalRange
-      value: 1
+      value: 0.5
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
@@ -70,6 +70,10 @@ MonoBehaviour:
       value: 0
     - key: preventSameNode
       value: 0
+    - key: autoStop
+      value: 1
+    - key: faceObject
+      value: 1
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -195,7 +199,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5477942231496315189}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2920361790463757749
 MonoBehaviour:
@@ -277,7 +281,6 @@ Transform:
   - {fileID: 2827503245845148193}
   - {fileID: 3434019490133147864}
   - {fileID: 7350344936475346502}
-  - {fileID: 7899769008500390324}
   - {fileID: 8937768684851581890}
   m_Father: {fileID: 2515816013748847814}
   m_RootOrder: 1
@@ -844,7 +847,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4171239473146710740}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1791690851103296727
 MonoBehaviour:
@@ -1212,86 +1215,6 @@ MonoBehaviour:
     nodeParams: []
   mUnityEngine_Vector2ArrayParamSet:
     nodeParams: []
---- !u!1 &3744395622477577907
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7899769008500390324}
-  - component: {fileID: 8224379638975516005}
-  m_Layer: 0
-  m_Name: Stop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7899769008500390324
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3744395622477577907}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08907139, y: 14.796752, z: -13.668028}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4171239473146710740}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8224379638975516005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3744395622477577907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeFullName: Stop
-  displayName: Stop
-  nodeDescription: 
-  mEnumParamSet:
-    nodeParams: []
-  mStringParamSet:
-    nodeParams:
-    - key: objectKey
-      value: 
-  mStringArrayParamSet:
-    nodeParams: []
-  mIntParamSet:
-    nodeParams: []
-  mIntArrayParamSet:
-    nodeParams: []
-  mFloatParamSet:
-    nodeParams:
-    - key: time
-      value: 1
-  mFloatArrayParamSet:
-    nodeParams: []
-  mBoolParamSet:
-    nodeParams: []
-  mBoolArrayParamSet:
-    nodeParams: []
-  mLongParamSet:
-    nodeParams: []
-  mLongArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ArrayParamSet:
-    nodeParams: []
 --- !u!1 &3900338386221985992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1325,6 @@ Transform:
   - {fileID: 3605937909557561967}
   - {fileID: 3915473038114274672}
   - {fileID: 3915473038595573314}
-  - {fileID: 2598060700802253298}
   - {fileID: 3915473038560123463}
   m_Father: {fileID: 3611608454821743741}
   m_RootOrder: 1
@@ -1927,7 +1849,7 @@ MonoBehaviour:
   mFloatParamSet:
     nodeParams:
     - key: minimalRange
-      value: 1
+      value: 0.5
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
@@ -1936,6 +1858,10 @@ MonoBehaviour:
       value: 0
     - key: preventSameNode
       value: 0
+    - key: autoStop
+      value: 1
+    - key: faceObject
+      value: 1
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -2020,6 +1946,10 @@ MonoBehaviour:
       value: 0
     - key: preventSameNode
       value: 0
+    - key: autoStop
+      value: 0
+    - key: faceDirection
+      value: 0
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -2063,7 +1993,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3915473037388720366}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3915473038560123460
 MonoBehaviour:
@@ -2681,7 +2611,11 @@ MonoBehaviour:
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: autoStop
+      value: 1
+    - key: faceDirection
+      value: 0
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -2725,7 +2659,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 713824683600952081}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3497553757047029649
 MonoBehaviour:
@@ -2973,7 +2907,6 @@ Transform:
   - {fileID: 2441316693651316256}
   - {fileID: 7806546245735816559}
   - {fileID: 8493571699343958091}
-  - {fileID: 2866217637818999674}
   - {fileID: 4736830795659444595}
   m_Father: {fileID: 9067162484107337806}
   m_RootOrder: 0
@@ -3304,7 +3237,7 @@ Transform:
   - {fileID: 283843570733574455}
   - {fileID: 3886562056127013338}
   m_Father: {fileID: 713824683600952081}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7460620698179789389
 MonoBehaviour:
@@ -3464,7 +3397,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 713824683600952081}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2216020993678131249
 MonoBehaviour:
@@ -3585,6 +3518,10 @@ MonoBehaviour:
       value: 0
     - key: preventSameNode
       value: 0
+    - key: autoStop
+      value: 1
+    - key: faceDirection
+      value: 0
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -3666,166 +3603,6 @@ MonoBehaviour:
       value: 0
     - key: preventSameNode
       value: 0
-  mBoolArrayParamSet:
-    nodeParams: []
-  mLongParamSet:
-    nodeParams: []
-  mLongArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ArrayParamSet:
-    nodeParams: []
---- !u!1 &7266232590278384048
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2598060700802253298}
-  - component: {fileID: 7709063562646354369}
-  m_Layer: 0
-  m_Name: Stop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2598060700802253298
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7266232590278384048}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08907139, y: 14.796752, z: -13.668028}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3915473037388720366}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7709063562646354369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7266232590278384048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeFullName: Stop
-  displayName: Stop
-  nodeDescription: 
-  mEnumParamSet:
-    nodeParams: []
-  mStringParamSet:
-    nodeParams:
-    - key: objectKey
-      value: 
-  mStringArrayParamSet:
-    nodeParams: []
-  mIntParamSet:
-    nodeParams: []
-  mIntArrayParamSet:
-    nodeParams: []
-  mFloatParamSet:
-    nodeParams:
-    - key: time
-      value: 0.1
-  mFloatArrayParamSet:
-    nodeParams: []
-  mBoolParamSet:
-    nodeParams: []
-  mBoolArrayParamSet:
-    nodeParams: []
-  mLongParamSet:
-    nodeParams: []
-  mLongArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ArrayParamSet:
-    nodeParams: []
---- !u!1 &7306794574392241242
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 892894905954167956}
-  - component: {fileID: 8756372516139206015}
-  m_Layer: 0
-  m_Name: Stop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &892894905954167956
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7306794574392241242}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08907139, y: 14.796752, z: -13.668028}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 713824683600952081}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8756372516139206015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7306794574392241242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeFullName: Stop
-  displayName: Stop
-  nodeDescription: 
-  mEnumParamSet:
-    nodeParams: []
-  mStringParamSet:
-    nodeParams:
-    - key: objectKey
-      value: 
-  mStringArrayParamSet:
-    nodeParams: []
-  mIntParamSet:
-    nodeParams: []
-  mIntArrayParamSet:
-    nodeParams: []
-  mFloatParamSet:
-    nodeParams:
-    - key: time
-      value: 0.1
-  mFloatArrayParamSet:
-    nodeParams: []
-  mBoolParamSet:
-    nodeParams: []
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -3986,86 +3763,6 @@ MonoBehaviour:
     nodeParams:
     - key: stop
       value: 0
-  mBoolArrayParamSet:
-    nodeParams: []
-  mLongParamSet:
-    nodeParams: []
-  mLongArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ArrayParamSet:
-    nodeParams: []
---- !u!1 &7724214027411780903
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2866217637818999674}
-  - component: {fileID: 1414537203580203913}
-  m_Layer: 0
-  m_Name: Stop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2866217637818999674
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7724214027411780903}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.08907139, y: 14.796752, z: -13.668028}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 5477942231496315189}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1414537203580203913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7724214027411780903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeFullName: Stop
-  displayName: Stop
-  nodeDescription: 
-  mEnumParamSet:
-    nodeParams: []
-  mStringParamSet:
-    nodeParams:
-    - key: objectKey
-      value: 
-  mStringArrayParamSet:
-    nodeParams: []
-  mIntParamSet:
-    nodeParams: []
-  mIntArrayParamSet:
-    nodeParams: []
-  mFloatParamSet:
-    nodeParams:
-    - key: time
-      value: 0.1
-  mFloatArrayParamSet:
-    nodeParams: []
-  mBoolParamSet:
-    nodeParams: []
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -4278,7 +3975,6 @@ Transform:
   - {fileID: 4360124196219666836}
   - {fileID: 2532460362673309020}
   - {fileID: 4727804007473748803}
-  - {fileID: 892894905954167956}
   - {fileID: 2794720823934794676}
   - {fileID: 3126480980797111504}
   - {fileID: 6928079873642953343}

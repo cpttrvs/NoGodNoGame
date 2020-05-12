@@ -1,85 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &492844798230654490
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 252166911474210528}
-  - component: {fileID: 9195650858038738283}
-  m_Layer: 0
-  m_Name: Stop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &252166911474210528
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492844798230654490}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.089071274, y: 14.796752, z: -13.668028}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 977085695072160841}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9195650858038738283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492844798230654490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeFullName: Stop
-  displayName: Stop
-  nodeDescription: 
-  mEnumParamSet:
-    nodeParams: []
-  mStringParamSet:
-    nodeParams:
-    - key: objectKey
-      value: 
-  mStringArrayParamSet:
-    nodeParams: []
-  mIntParamSet:
-    nodeParams: []
-  mIntArrayParamSet:
-    nodeParams: []
-  mFloatParamSet:
-    nodeParams:
-    - key: time
-      value: 0.1
-  mFloatArrayParamSet:
-    nodeParams: []
-  mBoolParamSet:
-    nodeParams: []
-  mBoolArrayParamSet:
-    nodeParams: []
-  mLongParamSet:
-    nodeParams: []
-  mLongArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ArrayParamSet:
-    nodeParams: []
 --- !u!1 &760908732278273680
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +30,6 @@ Transform:
   m_Children:
   - {fileID: 5911365509788773476}
   - {fileID: 1281997450210287911}
-  - {fileID: 252166911474210528}
   - {fileID: 1062752960271408630}
   - {fileID: 1338796468786334279}
   m_Father: {fileID: 982420326102830139}
@@ -194,7 +113,6 @@ Transform:
   - {fileID: 7767033725638280718}
   - {fileID: 982420325147672832}
   - {fileID: 982420326466779466}
-  - {fileID: 6154642912641958858}
   - {fileID: 982420326386333043}
   m_Father: {fileID: 982420326449719363}
   m_RootOrder: 1
@@ -477,7 +395,7 @@ MonoBehaviour:
   mFloatParamSet:
     nodeParams:
     - key: minimalRange
-      value: 1
+      value: 0.5
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
@@ -486,6 +404,10 @@ MonoBehaviour:
       value: 0
     - key: preventSameNode
       value: 0
+    - key: autoStop
+      value: 1
+    - key: faceObject
+      value: 1
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -694,7 +616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 982420324650204405}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &982420326386333040
 MonoBehaviour:
@@ -1126,7 +1048,7 @@ MonoBehaviour:
   mFloatParamSet:
     nodeParams:
     - key: time
-      value: 0.1
+      value: 0.05
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
@@ -1292,7 +1214,11 @@ MonoBehaviour:
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: autoStop
+      value: 1
+    - key: faceDirection
+      value: 1
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -1386,86 +1312,6 @@ MonoBehaviour:
     nodeParams: []
   mUnityEngine_Vector2ArrayParamSet:
     nodeParams: []
---- !u!1 &4021983490072164174
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6154642912641958858}
-  - component: {fileID: 9197400603020686691}
-  m_Layer: 0
-  m_Name: Stop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6154642912641958858
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4021983490072164174}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.089071274, y: 14.796752, z: -13.668028}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 982420324650204405}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9197400603020686691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4021983490072164174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeFullName: Stop
-  displayName: Stop
-  nodeDescription: 
-  mEnumParamSet:
-    nodeParams: []
-  mStringParamSet:
-    nodeParams:
-    - key: objectKey
-      value: 
-  mStringArrayParamSet:
-    nodeParams: []
-  mIntParamSet:
-    nodeParams: []
-  mIntArrayParamSet:
-    nodeParams: []
-  mFloatParamSet:
-    nodeParams:
-    - key: time
-      value: 0.1
-  mFloatArrayParamSet:
-    nodeParams: []
-  mBoolParamSet:
-    nodeParams: []
-  mBoolArrayParamSet:
-    nodeParams: []
-  mLongParamSet:
-    nodeParams: []
-  mLongArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ArrayParamSet:
-    nodeParams: []
 --- !u!1 &4022763639332275792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,7 +1341,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 977085695072160841}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2785084822579575265
 MonoBehaviour:
@@ -1527,7 +1373,7 @@ MonoBehaviour:
   mFloatParamSet:
     nodeParams:
     - key: time
-      value: 0.1
+      value: 0.05
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
@@ -1663,7 +1509,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 977085695072160841}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8085266677172122519
 MonoBehaviour:

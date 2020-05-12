@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SitWaypoint : Waypoint
 {
-    public Vector3 faceDirection { get { return transform.forward; } }
-
     protected override void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;

@@ -70,5 +70,9 @@ public class GardenWaypoint : Waypoint
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, 0.5f);
+        Gizmos.DrawLine(transform.position, new Vector3(
+            transform.position.x + transform.forward.x,
+            transform.position.y + transform.forward.y,
+            transform.position.z + transform.forward.z));
     }
 }

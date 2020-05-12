@@ -69,17 +69,24 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     // IMovable
     public void MoveTo(Vector3 to)
     {
-        animatorStateMachine.SetBool(stateWalkBool, true);
-        //navMeshAgent.enabled = true;
+        navMeshAgent.enabled = true;
+
         navMeshAgent.isStopped = false;
+
         navMeshAgent.SetDestination(to);
+
+        animatorStateMachine.SetBool(stateWalkBool, true);
     }
 
     public void Stop()
     {
         animatorStateMachine.SetBool(stateWalkBool, false);
-        navMeshAgent.isStopped = true;
-        //navMeshAgent.enabled = false;
+
+        //navMeshAgent.isStopped = true;
+
+        //navMeshAgent.ResetPath();
+        
+        navMeshAgent.enabled = false;
     }
     
     // IClickable
@@ -114,7 +121,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
         if(canCarry)
         {
-            Debug.Log(this.name + " Carry Start");
+            //Debug.Log(this.name + " Carry Start");
 
             this.OnAnimationCompleted += CarryDelegate;
             this.OnAnimationEventFired += CarryEvent;
@@ -131,7 +138,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     }
     private void CarryEvent(Character c, string s)
     {
-        Debug.Log(this.name + " Carry Event");
+        //Debug.Log(this.name + " Carry Event");
 
         this.OnAnimationEventFired -= CarryEvent;
         
@@ -143,7 +150,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     }
     private void CarryDelegate(Character c, string s)
     {
-        Debug.Log(this.name + " Carry Delegate");
+        //Debug.Log(this.name + " Carry Delegate");
 
         if (savedCarriable is MonoBehaviour)
         {
@@ -166,7 +173,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
         if(canDrop)
         {
-            Debug.Log(this.name + " Drop Start");
+            //Debug.Log(this.name + " Drop Start");
 
             this.OnAnimationCompleted += DropDelegate;
             this.OnAnimationEventFired += DropEvent;
@@ -185,7 +192,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     }
     private void DropEvent(Character c, string s)
     {
-        Debug.Log(this.name + " Drop Event");
+        //Debug.Log(this.name + " Drop Event");
 
         this.OnAnimationEventFired -= DropEvent;
 
@@ -197,7 +204,7 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     }
     private void DropDelegate(Character c, string s)
     {
-        Debug.Log(this.name + " Drop Delegate");
+        //Debug.Log(this.name + " Drop Delegate");
 
         if (savedCarriable is MonoBehaviour)
         {
