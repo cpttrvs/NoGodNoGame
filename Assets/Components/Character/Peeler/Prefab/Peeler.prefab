@@ -56,7 +56,7 @@ MonoBehaviour:
   stateMachine: {fileID: 4148927460599010523}
   onClickTrigger: clickTrigger
   onRainTrigger: rainTrigger
-  cooldownClick: 10
+  cooldownClick: 45
   navMeshAgent: {fileID: 4148927460599010521}
   _carryingCapacity: 1
   _carryingSlots:

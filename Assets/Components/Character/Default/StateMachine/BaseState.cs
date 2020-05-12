@@ -18,27 +18,8 @@ public class BaseState : StateMachineBehaviour
     {
         stateAnimator = animator;
         animatedGameobject = stateAnimator.gameObject;
-
-#if UNITY_WEBGL
-        //Debug.Log(Application.persistentDataPath + "/Assets/StreamingAssets/" + behaviorFile.name + ".bt");
-        //string filepath = System.IO.Path.Combine(Application.persistentDataPath + "/Assets/StreamingAssets/", behaviorFile.name + ".bt");
-
-        /*
-        DirectoryInfo directoryInfo = new DirectoryInfo(Application.streamingAssetsPath);
-        FileInfo[] allFiles = directoryInfo.GetFiles(behaviorFile.name + ".bt");
-
-        Debug.Log(Application.streamingAssetsPath + " " + allFiles.Length);
-
-        if (allFiles.Length == 0)
-            Debug.LogError("No files at : " + Application.streamingAssetsPath);
-    
-        behaviorTree = BytesAssetProcessor.LoadBehaviorTree(allFiles[0].FullName);
-        */
         
-        behaviorTree = BytesAssetProcessor.LoadBehaviorTree("Assets/Resources/" + behaviorFile.name + ".bt");
-#else
         behaviorTree = BytesAssetProcessor.LoadBehaviorTree(AssetDatabase.GetAssetPath(behaviorFile));
-#endif
 
         if (behaviorTree != null)
         {

@@ -36,7 +36,7 @@ public class PeelerIdlingState : CharacterBaseState
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
 
-        Debug.Log("Peeler IdlingState: FINISHED " + state.ToString());
+        //Debug.Log("Peeler IdlingState: FINISHED " + state.ToString());
 
         if (basketVegetables.GetContentSize() > 0)
         {
@@ -44,7 +44,7 @@ public class PeelerIdlingState : CharacterBaseState
         }
         else
         {
-            Debug.Log("Peeler IdlingState: FINISHED but still have work");
+            Debug.LogWarning("Peeler IdlingState: FINISHED but still have work");
         }
     }
 }

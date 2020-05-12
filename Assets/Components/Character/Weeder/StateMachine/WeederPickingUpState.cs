@@ -97,5 +97,7 @@ public class WeederPickingUpState : CharacterBaseState
     public override void OnStateExit(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
         base.OnStateExit(animator, animatorStateInfo, layerIndex);
+
+        stateAnimator.ResetTrigger(triggerRemainingPickupWork);
     }
 }

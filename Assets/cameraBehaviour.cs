@@ -88,8 +88,8 @@ public class cameraBehaviour : MonoBehaviour
         for (float t = 0f; t < duration; t += Time.deltaTime)
         {
             transform.position = Vector3.Lerp(pos1, pos2, t / duration);
-            if (zoomOut) { Debug.Log("dist " + Vector3.Distance(transform.position, endPos.position)); }
-            if (zoomIn) { Debug.Log("dist " + Vector3.Distance(transform.position, startPos.position)); }
+            //if (zoomOut) { Debug.Log("dist " + Vector3.Distance(transform.position, endPos.position)); }
+            //if (zoomIn) { Debug.Log("dist " + Vector3.Distance(transform.position, startPos.position)); }
 
             yield return 0;
         }

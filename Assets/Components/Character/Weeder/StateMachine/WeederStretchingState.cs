@@ -39,6 +39,9 @@ public class WeederStretchingState : CharacterBaseState
 
                 behaviorTree.blackBoard[basketKey] = basket;
                 behaviorTree.blackBoard[basketWaypointOnFootKey] = weeder.basketOnFootWaypoint;
+
+                stateAnimator.ResetTrigger(triggerRemainingPickupWork);
+                stateAnimator.ResetTrigger(triggerRemainingUnplantWork);
             }
         }
     }
@@ -54,21 +57,28 @@ public class WeederStretchingState : CharacterBaseState
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
 
-        if (garden.GetRemainingWeedsToPickup(weeder.currentGardenWaypointsLane) >= reasonableAmountOfWeedsToPickUp)
+        if(state == BTState.Success)
         {
-            stateAnimator.SetTrigger(triggerRemainingPickupWork);
-        }
-        else if (garden.GetRemainingWeedsToUnplant() > 0)
+            Debug.Log("STRETCHING : " + state.ToString());
+            if (garden.GetRemainingWeedsToPickup(weeder.currentGardenWaypointsLane) >= reasonableAmountOfWeedsToPickUp)
+            {
+                stateAnimator.SetTrigger(triggerRemainingPickupWork);
+            }
+            else if (garden.GetRemainingWeedsToUnplant() > 0)
+            {
+                stateAnimator.SetTrigger(triggerRemainingUnplantWork);
+            }
+            else if (garden.GetRemainingWeedsToPickup() > 0)
+            {
+                stateAnimator.SetTrigger(triggerRemainingPickupWork);
+            }
+            else
+            {
+                Debug.LogWarning("StretchingState: FINISHED nothing more");
+            }
+        } else
         {
-            stateAnimator.SetTrigger(triggerRemainingUnplantWork);
-        }
-        else if (garden.GetRemainingWeedsToPickup() > 0)
-        {
-            stateAnimator.SetTrigger(triggerRemainingPickupWork);
-        }
-        else
-        {
-            Debug.LogWarning("StretchingState: FINISHED nothing more");
+            Debug.LogError("STRETCHING: " + state.ToString());
         }
     }
 }

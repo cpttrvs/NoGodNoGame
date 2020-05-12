@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e46591162dc244fa4939315409f5e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  behaviorFile: {fileID: 102900000, guid: f64e2eb9f10ca7a4b857ebbbc9228074, type: 3}
+  behaviorFile: {fileID: 102900000, guid: 2f9826f5485086e42bbbbda05f84ab99, type: 3}
   triggerOnComplete: hasFinishedStretching
   basketKey: basket
   basketWaypointOnFootKey: basketWaypointOnFoot
@@ -487,8 +487,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83a73945e93e1ce4e9523cc2dfd51039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  behaviorFile: {fileID: 102900000, guid: f64e2eb9f10ca7a4b857ebbbc9228074, type: 3}
-  reasonableAmountOfWeedsToPickUp: 5
+  behaviorFile: {fileID: 102900000, guid: 2f9826f5485086e42bbbbda05f84ab99, type: 3}
+  reasonableAmountOfWeedsToPickUp: 3
   triggerRemainingPickupWork: hasUnfinishedPickingup
   triggerRemainingUnplantWork: hasUnfinishedWeeding
   basketKey: basket
@@ -601,7 +601,7 @@ AnimatorStateMachine:
     m_Position: {x: 240, y: 400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5185163129452524588}
-    m_Position: {x: 570, y: 400, z: 0}
+    m_Position: {x: 580, y: 400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -461532023155516113}
     m_Position: {x: 260, y: -40, z: 0}
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7479cbae7440e43ad981d9097f3327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  behaviorFile: {fileID: 102900000, guid: ee76d9b703fea464fa40f74ce0f2d597, type: 3}
+  behaviorFile: {fileID: 102900000, guid: a99a147a9a682324e961d6672b98b5ab, type: 3}
   reasonableAmountOfWeedsInBasket: 5
   triggerRemainingUnplantWork: hasUnfinishedWeeding
   triggerRemainingPickupWork: hasUnfinishedPickingup

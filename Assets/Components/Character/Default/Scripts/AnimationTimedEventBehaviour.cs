@@ -42,7 +42,7 @@ public class AnimationTimedEventBehaviour : AnimationCompleteBehaviour
                 if (timer >= f - delta && timer < f + delta)
                 {
                     te.fired = true;
-                    Debug.Log(character.name + " EVENT " + f + " timer: " + timer);
+                    //Debug.Log(character.name + " EVENT " + f + " timer: " + timer);
                     character.OnAnimationEvent(stateInfo.tagHash.ToString());
                 }
             }
