@@ -47,7 +47,7 @@ public class WeederStretchingState : CharacterBaseState
     {
         base.BehaviourTree_OnBehaviorTreeStarted(tree);
 
-        Debug.Log("WEEDER STRETCH START");
+        //Debug.Log("WEEDER STRETCH START");
     }
 
     protected override void BehaviourTree_OnBehaviorTreeCompleted(BehaviorTree tree, BTState state)

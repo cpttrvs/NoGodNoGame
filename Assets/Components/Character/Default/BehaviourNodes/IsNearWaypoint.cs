@@ -25,9 +25,12 @@ public class IsNearWaypoint : NodeCondition
             Waypoint waypoint = behaviorTree.blackBoard[waypointKey] as Waypoint;
             if(waypoint != null)
             {
-                float distance = Vector3.Distance(character.transform.position, waypoint.GetPosition());
+                Vector2 characterPos = new Vector2(character.transform.position.x, character.transform.position.z);
+                Vector2 objectPos = new Vector2(waypoint.GetPosition().x, waypoint.GetPosition().z);
 
-                if(distance <= minimalRange)
+                float distance = Vector2.Distance(characterPos, objectPos);
+
+                if (distance <= minimalRange)
                 {
                     return true;
                 }
