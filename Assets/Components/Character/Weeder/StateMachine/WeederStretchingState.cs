@@ -14,9 +14,9 @@ public class WeederStretchingState : CharacterBaseState
 
     [Header("State Machine")]
     [SerializeField]
-    private string triggerRemainingPickupWork;
+    private string triggerRemainingPickupWork = null;
     [SerializeField]
-    private string triggerRemainingUnplantWork;
+    private string triggerRemainingUnplantWork = null;
 
     [Header("Props")]
     [SerializeField]

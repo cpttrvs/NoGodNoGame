@@ -35,6 +35,8 @@ public class Weeder : Character
     [SerializeField]
     private string stateWeedTrigger = null;
     [SerializeField]
+    private string stateInterruptWeedTrigger = null;
+    [SerializeField]
     private string statePickUpWeedsTrigger = null;
     [SerializeField]
     private string stateDropWeedsTrigger = null;
@@ -62,7 +64,7 @@ public class Weeder : Character
     }
     private void UnplantDelegate(Character c, string s)
     {
-        Debug.Log("UNPLANT DELEGATE");
+        //Debug.Log("UNPLANT DELEGATE");
         bool success = unplantGardenWaypoint.UnplantAny();
         OnActionComplete(success);
 
@@ -90,7 +92,7 @@ public class Weeder : Character
     }
     private void PickupDelegate(Character c, string s)
     {
-        Debug.Log("PICK UP DELEGATE");
+        //Debug.Log("PICK UP DELEGATE");
         Plant p = pickupGardenWaypoint.PickupAny();
 
         bool success = false;
@@ -128,7 +130,7 @@ public class Weeder : Character
     }
     private void EmptyContainerInContainerDelegate(Character c, string s)
     {
-        Debug.Log("EMPTY CONTAINER DELEGATE");
+        //Debug.Log("EMPTY CONTAINER DELEGATE");
         OnActionComplete(true);
 
         this.OnAnimationCompleted -= EmptyContainerInContainerDelegate;
@@ -144,6 +146,11 @@ public class Weeder : Character
     {
         _isCrawling = false;
         animatorStateMachine.SetBool(stateCrawlBool, isCrawling);
+    }
+
+    public void StopWeeding()
+    {
+        animatorStateMachine.SetTrigger(stateInterruptWeedTrigger);
     }
 
     protected override void UnregisterDelegates()

@@ -15,20 +15,22 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     [SerializeField]
     private string stateOnClickTrigger = null;
     [SerializeField]
-    private string stateStretchBool = null;
-    [SerializeField]
     private string stateDropItemTrigger = null;
     [SerializeField]
     private string statePickUpItemTrigger = null;
 
     public event Action<Character, string> OnAnimationCompleted;
+    public event Action<Character, string> OnAnimationStretchCompleted;
 
     [Header("State Machine")]
     [SerializeField]
     private Animator stateMachine = null;
     [SerializeField]
     private string onClickTrigger = null;
+    [SerializeField]
+    private string onRainTrigger = null;
 
+    public Animator GetStateMachine() { return stateMachine; }
     public event Action<Character, bool> OnActionCompleted;
 
     [SerializeField]
@@ -38,11 +40,6 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     [Header("Nav Mesh")]
     [SerializeField]
     protected NavMeshAgent navMeshAgent = null;
-
-    [Header("Has Waypoints")]
-    [SerializeField]
-    private List<Waypoint> _waypoints = null;
-    public List<Waypoint> waypoints => _waypoints;
     
     [Header("Can Carry")]
     [SerializeField]
@@ -53,6 +50,17 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     private List<Transform> _carryingSlots = new List<Transform>();
     public List<Transform> carryingSlots { get { return _carryingSlots; } }
 
+    [Header("Home")]
+    [SerializeField]
+    private Waypoint _homeDoorWaypoint = null;
+    public Waypoint homeDoorWaypoint { get { return _homeDoorWaypoint; } }
+    [SerializeField]
+    private Waypoint _homeInsideWaypoint = null;
+    public Waypoint homeInsideWaypoint { get { return _homeInsideWaypoint; } }
+    [SerializeField]
+    private ContainerWaypoint _homeContainerWaypoint = null;
+    public ContainerWaypoint homeContainerWaypoint { get { return _homeContainerWaypoint; } }
+    
     // IHasWaypoints
     public Waypoint currentWaypoint { get; set; }
     public Waypoint lastWaypoint { get; set; }
@@ -188,27 +196,38 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
     {
         UnregisterDelegates();
 
-        this.OnAnimationCompleted += StretchDelegate;
+        this.OnAnimationStretchCompleted += StretchDelegate;
 
         animatorStateMachine.SetTrigger(stateOnClickTrigger);
-        animatorStateMachine.SetBool(stateStretchBool, true);
 
         return true;
     }
     private void StretchDelegate(Character c, string s)
     {
         Debug.Log("STRETCH DELEGATE");
-        animatorStateMachine.SetBool(stateStretchBool, false);
     
         OnActionComplete(true);
 
-        this.OnAnimationCompleted -= StretchDelegate;
+        this.OnAnimationStretchCompleted -= StretchDelegate;
+    }
+
+    public void NoticeRain()
+    {
+        Debug.Log("Character " + name + ": notices rain");
+        UnregisterDelegates();
+
+        stateMachine.SetTrigger(onRainTrigger);
     }
 
     public void OnAnimationComplete(string key)
     {
         //Debug.Log("Character: On Animation Complete " + key);
         OnAnimationCompleted?.Invoke(this, key);
+    }
+
+    public void OnAnimationStretchComplete(string key)
+    {
+        OnAnimationStretchCompleted(this, key);
     }
 
     protected void OnActionComplete(bool success)
@@ -219,10 +238,11 @@ public class Character : MonoBehaviour, IBlackBoardData, IMovable, IHasWaypoints
 
     protected virtual void UnregisterDelegates()
     {
-        Debug.Log("Character " + name + ": unregister delegates");
+        //Debug.Log("Character " + name + ": unregister delegates");
         this.OnAnimationCompleted -= CarryDelegate;
         this.OnAnimationCompleted -= DropDelegate;
 
-        this.OnAnimationCompleted -= StretchDelegate;
+        this.OnAnimationStretchCompleted -= StretchDelegate;
+        
     }
 }

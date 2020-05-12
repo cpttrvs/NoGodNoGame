@@ -36,6 +36,8 @@ public class Peeler : Character
     private string stateSitBool = null;
     [SerializeField]
     private string statePeelTrigger = null;
+    [SerializeField]
+    private string stateInterruptPeelTrigger = null;
 
 
     private bool _isSitted = false;
@@ -94,6 +96,11 @@ public class Peeler : Character
         OnActionComplete(success);
 
         this.OnAnimationCompleted -= PeelAnyDelegate;
+    }
+
+    public void StopPeeling()
+    {
+        animatorStateMachine.SetTrigger(stateInterruptPeelTrigger);
     }
 
     // Sit

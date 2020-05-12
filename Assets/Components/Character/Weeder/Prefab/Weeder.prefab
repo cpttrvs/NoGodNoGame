@@ -125,17 +125,19 @@ MonoBehaviour:
   animatorStateMachine: {fileID: 4214589734832522758}
   stateWalkBool: moving
   stateOnClickTrigger: onClick
-  stateStretchBool: stretching
   stateDropItemTrigger: droppingBasket
   statePickUpItemTrigger: pickingUpBasket
   stateMachine: {fileID: 1264821036076064328}
   onClickTrigger: clickTrigger
+  onRainTrigger: rainTrigger
   cooldownClick: 2
   navMeshAgent: {fileID: 1264821036076064330}
-  _waypoints: []
   _carryingCapacity: 1
   _carryingSlots:
   - {fileID: 1264821034571878391}
+  _homeDoorWaypoint: {fileID: 0}
+  _homeInsideWaypoint: {fileID: 0}
+  _homeContainerWaypoint: {fileID: 0}
   _garden: {fileID: 0}
   _compostPile: {fileID: 0}
   _basket: {fileID: 0}
@@ -143,6 +145,7 @@ MonoBehaviour:
   _handsContainer: {fileID: 1264821036322184157}
   stateCrawlBool: crawling
   stateWeedTrigger: weeding
+  stateInterruptWeedTrigger: interruptWeeding
   statePickUpWeedsTrigger: pickingUpWeeds
   stateDropWeedsTrigger: droppingWeeds
   stateEmptyBasketTrigger: emptyingBasket
@@ -199,7 +202,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 0
 --- !u!1 &1264821036322184158
 GameObject:
   m_ObjectHideFlags: 0

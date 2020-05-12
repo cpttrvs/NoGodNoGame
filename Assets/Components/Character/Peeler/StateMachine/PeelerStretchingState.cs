@@ -10,7 +10,7 @@ public class PeelerStretchingState : CharacterBaseState
     
     [Header("State Machine")]
     [SerializeField]
-    private string triggerRemainingWork;
+    private string triggerRemainingWork = null;
 
     [Header("Props")]
     [SerializeField]
@@ -49,15 +49,13 @@ public class PeelerStretchingState : CharacterBaseState
     protected override void BehaviourTree_OnBehaviorTreeCompleted(BehaviorTree tree, BTState state)
     {
         base.BehaviourTree_OnBehaviorTreeCompleted(tree, state);
-
-        Debug.Log("PEELER STRETCHING RETURN " + state.ToString());
+        
         if(state == BTState.Success)
         {
             if (basketVegetables != null)
             {
                 if (basketVegetables.GetContentSize() > 0)
                 {
-                    Debug.Log("STRETCHING STATE WORK");
                     stateAnimator.SetTrigger(triggerRemainingWork);
                 }
                 else

@@ -14,11 +14,11 @@ public class WeederPickingUpState : CharacterBaseState
 
     [Header("State Machine")]
     [SerializeField]
-    private string triggerRemainingUnplantWork;
+    private string triggerRemainingUnplantWork = null;
     [SerializeField]
-    private string triggerRemainingPickupWork;
+    private string triggerRemainingPickupWork = null;
     [SerializeField]
-    private string triggerOnComplete;
+    private string triggerOnComplete = null;
 
     [Header("Garden")]
     [SerializeField]

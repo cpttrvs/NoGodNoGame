@@ -12,7 +12,7 @@ public class WeederEmptyingState : CharacterBaseState
 
     [Header("State Machine")]
     [SerializeField]
-    private string triggerOnComplete;
+    private string triggerOnComplete = null;
 
     [Header("Garden")]
     [SerializeField]
