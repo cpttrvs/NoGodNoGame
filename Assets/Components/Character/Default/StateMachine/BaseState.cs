@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using AillieoUtils.EasyBehaviorTree;
 using UnityEditor;
+using System.IO;
 
 public class BaseState : StateMachineBehaviour
 {
@@ -18,11 +19,33 @@ public class BaseState : StateMachineBehaviour
         stateAnimator = animator;
         animatedGameobject = stateAnimator.gameObject;
 
-        behaviorTree = BytesAssetProcessor.LoadBehaviorTree(AssetDatabase.GetAssetPath(behaviorFile));
+#if UNITY_WEBGL
+        //Debug.Log(Application.persistentDataPath + "/Assets/StreamingAssets/" + behaviorFile.name + ".bt");
+        //string filepath = System.IO.Path.Combine(Application.persistentDataPath + "/Assets/StreamingAssets/", behaviorFile.name + ".bt");
 
-        if(behaviorTree != null)
+        /*
+        DirectoryInfo directoryInfo = new DirectoryInfo(Application.streamingAssetsPath);
+        FileInfo[] allFiles = directoryInfo.GetFiles(behaviorFile.name + ".bt");
+
+        Debug.Log(Application.streamingAssetsPath + " " + allFiles.Length);
+
+        if (allFiles.Length == 0)
+            Debug.LogError("No files at : " + Application.streamingAssetsPath);
+    
+        behaviorTree = BytesAssetProcessor.LoadBehaviorTree(allFiles[0].FullName);
+        */
+        
+        behaviorTree = BytesAssetProcessor.LoadBehaviorTree("Assets/Resources/" + behaviorFile.name + ".bt");
+#else
+        behaviorTree = BytesAssetProcessor.LoadBehaviorTree(AssetDatabase.GetAssetPath(behaviorFile));
+#endif
+
+        if (behaviorTree != null)
         {
             Init();
+        } else
+        {
+            Debug.LogError(behaviorFile.name + " can't load Behavior Tree from it");
         }
     }
 

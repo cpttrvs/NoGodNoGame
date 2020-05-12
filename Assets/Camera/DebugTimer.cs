@@ -16,6 +16,6 @@ public class DebugTimer : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        Debug.Log(timer);
+        //Debug.Log(timer);
     }
 }
