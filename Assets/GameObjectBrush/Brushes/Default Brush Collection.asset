@@ -24,7 +24,7 @@ MonoBehaviour:
     parentContainer: {fileID: 0}
     density: 5
     brushSize: 0.8
-    minScale: 0.005
+    minScale: 0.006
     maxScale: 0.008
     offsetFromPivot: {x: 0, y: 0, z: 0}
     rotOffsetFromPivot: {x: 0, y: 0, z: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
     parentContainer: {fileID: 0}
     density: 5
     brushSize: 0.8
-    minScale: 0.005
+    minScale: 0.006
     maxScale: 0.008
     offsetFromPivot: {x: 0, y: 0, z: 0}
     rotOffsetFromPivot: {x: 0, y: 0, z: 0}
@@ -70,7 +70,7 @@ MonoBehaviour:
     parentContainer: {fileID: 0}
     density: 5
     brushSize: 0.8
-    minScale: 0.005
+    minScale: 0.006
     maxScale: 0.008
     offsetFromPivot: {x: 0, y: 0, z: 0}
     rotOffsetFromPivot: {x: 0, y: 0, z: 0}
