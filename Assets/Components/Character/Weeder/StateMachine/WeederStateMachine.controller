@@ -63,6 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorFile: {fileID: 102900000, guid: a1d3a745c17b02d44be60825fbd1ac97, type: 3}
+  behaviorName: Weeder_GoingHomeBehaviour
   basketKey: basket
   weederHandsKey: hands
   homeDoorWaypointKey: doorWaypoint
@@ -316,6 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorFile: {fileID: 102900000, guid: 2f9826f5485086e42bbbbda05f84ab99, type: 3}
+  behaviorName: Weeder_StretchingBehaviour
   triggerOnComplete: hasFinishedStretching
   basketKey: basket
   basketWaypointOnFootKey: basketWaypointOnFoot
@@ -473,6 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorFile: {fileID: 102900000, guid: e153b2d412803434484bd6a84e296de2, type: 3}
+  behaviorName: Weeder_IdlingBehaviour
   triggerUnplantWork: hasWorkUnplant
   triggerPickupWork: hasWorkPickup
 --- !u!114 &3629516401927700155
@@ -488,6 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorFile: {fileID: 102900000, guid: 2f9826f5485086e42bbbbda05f84ab99, type: 3}
+  behaviorName: Weeder_StretchingBehaviour
   reasonableAmountOfWeedsToPickUp: 3
   triggerRemainingPickupWork: hasUnfinishedPickingup
   triggerRemainingUnplantWork: hasUnfinishedWeeding
@@ -629,6 +633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorFile: {fileID: 102900000, guid: a99a147a9a682324e961d6672b98b5ab, type: 3}
+  behaviorName: Weeder_PickingUpBehaviour
   reasonableAmountOfWeedsInBasket: 5
   triggerRemainingUnplantWork: hasUnfinishedWeeding
   triggerRemainingPickupWork: hasUnfinishedPickingup
@@ -650,6 +655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorFile: {fileID: 102900000, guid: 8f98f40ef82a7ae4cb662bbbc7679ee6, type: 3}
+  behaviorName: Weeder_WeedingBehaviour
   triggerOnComplete: hasFinishedWeeding
   gardenKey: garden
   gardenEntryKey: gardenEntry
@@ -744,6 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorFile: {fileID: 102900000, guid: 084f306474e8fc241bb78c890b82aaaf, type: 3}
+  behaviorName: Weeder_EmptyingBehaviour
   triggerOnComplete: hasFinishedEmptying
   gardenKey: garden
   gardenEntryKey: gardenEntry

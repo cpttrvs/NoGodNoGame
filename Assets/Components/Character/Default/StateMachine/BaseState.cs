@@ -9,6 +9,8 @@ public class BaseState : StateMachineBehaviour
 {
     [SerializeField]
     private Object behaviorFile = null;
+    [SerializeField]
+    private string behaviorName = "";
 
     protected BehaviorTree behaviorTree;
     protected Animator stateAnimator;
@@ -18,8 +20,11 @@ public class BaseState : StateMachineBehaviour
     {
         stateAnimator = animator;
         animatedGameobject = stateAnimator.gameObject;
-        
-        behaviorTree = BytesAssetProcessor.LoadBehaviorTree(AssetDatabase.GetAssetPath(behaviorFile));
+
+
+        string path = Path.Combine(Application.streamingAssetsPath, behaviorName + ".bt");
+
+        behaviorTree = BytesAssetProcessor.LoadBehaviorTree(path);
 
         if (behaviorTree != null)
         {

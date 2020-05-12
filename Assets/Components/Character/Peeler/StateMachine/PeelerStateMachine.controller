@@ -38,6 +38,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorFile: {fileID: 102900000, guid: 15a8f54dcefcd6641b4c68f70629e897, type: 3}
+  behaviorName: Peeler_IdlingBehaviour
   triggerPeelingWork: hasPeelingWork
 --- !u!1101 &-5358522361584335837
 AnimatorStateTransition:
@@ -77,6 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorFile: {fileID: 102900000, guid: 1505f2747187a3942888a0b8d6e800e1, type: 3}
+  behaviorName: Peeler_GoingHomeBehaviour
   basketVegetablesKey: basketVegetables
   basketPeeledKey: basketPeeled
   benchWaypointKey: benchWaypoint
@@ -124,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorFile: {fileID: 102900000, guid: 284de92bf3248744eb51b075ffa6cdd0, type: 3}
+  behaviorName: Peeler_PeelingBehaviour
   triggerOnComplete: hasFinishedPeeling
   benchWaypointKey: benchWaypoint
   basketVegetablesKey: basketVegetables
@@ -189,6 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviorFile: {fileID: 102900000, guid: 357c70936f770c3498361e0d6d7734fc, type: 3}
+  behaviorName: Peeler_StretchingBehaviour
   triggerRemainingWork: hasPeelingWork
   basketKey: basket
   basketWaypointOnFootKey: basketWaypointOnFoot

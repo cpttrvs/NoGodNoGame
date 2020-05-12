@@ -35,7 +35,11 @@ public class GameManager : MonoBehaviour
     public float secondsForRainToReachMax = 5f;
 
     public bool isGameStarted = false;
-    
+
+    [SerializeField]
+    private float timeToEscape = 2f;
+    private float escapePressed = 0f;
+
     void Start()
     {
         // init Rain Manager
@@ -45,10 +49,23 @@ public class GameManager : MonoBehaviour
         {
             cr.character.GetStateMachine().enabled = false;
         }
+
+        escapePressed = 0f;
     }
     
     void Update()
     {
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            escapePressed += Time.deltaTime;
+
+            if(escapePressed >= timeToEscape)
+            {
+                Debug.Log("Quit");
+                Application.Quit();
+            }
+        }
+
         if(!isGameStarted)
         {
             if(Input.GetMouseButtonUp(0))
