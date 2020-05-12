@@ -25,7 +25,10 @@ public class IsNearObject : NodeCondition
             MonoBehaviour gameObject = behaviorTree.blackBoard[objectKey] as MonoBehaviour;
             if (gameObject != null)
             {
-                float distance = Vector3.Distance(character.transform.position, gameObject.transform.position);
+                Vector2 characterPos = new Vector2(character.transform.position.x, character.transform.position.z);
+                Vector2 objectPos = new Vector2(gameObject.transform.position.x, gameObject.transform.position.z);
+
+                float distance = Vector2.Distance(characterPos, objectPos);
 
                 if (distance <= minimalRange)
                 {

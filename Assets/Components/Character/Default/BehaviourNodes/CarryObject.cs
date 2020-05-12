@@ -61,8 +61,6 @@ public class CarryObject : NodeAction
 
     private void Character_OnActionCompleted(Character arg1, bool arg2)
     {
-        Debug.Log("CARRY OBJECT DONE");
-
         if (arg2) actionCompleted = true;
 
         arg1.OnActionCompleted -= Character_OnActionCompleted;

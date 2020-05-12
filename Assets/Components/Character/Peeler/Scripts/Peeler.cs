@@ -88,7 +88,7 @@ public class Peeler : Character
     }
     private void PeelAnyDelegate(Character c, string s)
     {
-        Debug.Log("PEEL DELEGATE");
+        //Debug.Log("PEEL DELEGATE");
 
         handsContainer.RemoveItem(savedItem);
         bool success = basketPeeled.AddItem(savedItem);
@@ -121,7 +121,7 @@ public class Peeler : Character
     }
     private void SitDelegate(Character c, string s)
     {
-        Debug.Log("SIT DELEGATE");
+        //Debug.Log("SIT DELEGATE");
         OnActionComplete(true);
 
         this.OnAnimationCompleted -= SitDelegate;

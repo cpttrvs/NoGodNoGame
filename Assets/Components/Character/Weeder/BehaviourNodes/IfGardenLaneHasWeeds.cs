@@ -33,7 +33,7 @@ public class IfGardenLaneHasWeeds : NodeCondition
                     Debug.LogWarning("IfGardenLaneHasWeeds: no memorised lane");
                     return false;
                 }
-
+                
                 if (weedsToUnplant)
                     return garden.GetRemainingWeedsToUnplant(weeder.currentGardenWaypointsLane) > 0;
 
