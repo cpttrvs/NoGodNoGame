@@ -20,9 +20,19 @@ public class BaseState : StateMachineBehaviour
     {
         stateAnimator = animator;
         animatedGameobject = stateAnimator.gameObject;
-
-
-        string path = Path.Combine(Application.streamingAssetsPath, behaviorName + ".bt");
+        
+        string path = "";
+        
+        if(Application.platform == RuntimePlatform.OSXPlayer)
+        {
+            path = Path.Combine(Application.dataPath + "/Resources/Data/StreamingAssets", behaviorName + ".bt");
+        } else if(Application.platform == RuntimePlatform.WindowsPlayer)
+        {
+            path = Path.Combine(Application.streamingAssetsPath, behaviorName + ".bt");
+        } else
+        {
+            path = Path.Combine(Application.streamingAssetsPath, behaviorName + ".bt");
+        }
 
         behaviorTree = BytesAssetProcessor.LoadBehaviorTree(path);
 
