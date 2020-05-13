@@ -21,13 +21,19 @@ public class BaseState : StateMachineBehaviour
         stateAnimator = animator;
         animatedGameobject = stateAnimator.gameObject;
         
-        string path = "";
 #if UNITY_EDITOR
+
         behaviorTree = BytesAssetProcessor.LoadBehaviorTree(AssetDatabase.GetAssetPath(behaviorFile));
+
 #else
-        if(Application.platform == RuntimePlatform.OSXPlayer)
+        string path = "";
+
+        if(Application.platform == RuntimePlatform.WebGLPlayer)
         {
-            path = Path.Combine(Application.dataPath + "/Resources/Data/StreamingAssets", behaviorName + ".bt");
+            path = Path.Combine("StreamingAssets", behaviorName + ".bt");
+        } else if(Application.platform == RuntimePlatform.OSXPlayer)
+        {
+            path = Path.Combine(Application.streamingAssetsPath, behaviorName + ".bt");
         } else if(Application.platform == RuntimePlatform.WindowsPlayer)
         {
             path = Path.Combine(Application.streamingAssetsPath, behaviorName + ".bt");

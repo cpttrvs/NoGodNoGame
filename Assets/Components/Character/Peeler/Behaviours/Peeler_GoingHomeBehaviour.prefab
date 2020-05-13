@@ -307,7 +307,11 @@ MonoBehaviour:
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: autoStop
+      value: 0
+    - key: faceDirection
+      value: 0
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -389,7 +393,11 @@ MonoBehaviour:
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: autoStop
+      value: 0
+    - key: faceDirection
+      value: 0
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -434,7 +442,6 @@ Transform:
   m_Children:
   - {fileID: 4186039712471571745}
   - {fileID: 4186039713057449206}
-  - {fileID: 4186039712478107558}
   - {fileID: 4186039712340794889}
   - {fileID: 4186039714098869815}
   m_Father: {fileID: 4186039712385291268}
@@ -516,7 +523,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4186039713052424409}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4186039712262053180
 MonoBehaviour:
@@ -548,7 +555,7 @@ MonoBehaviour:
   mFloatParamSet:
     nodeParams:
     - key: time
-      value: 0.2
+      value: 1.8
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
@@ -678,7 +685,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4186039712247836694}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4186039712340794888
 MonoBehaviour:
@@ -1088,7 +1095,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4186039713052424409}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4186039712458793323
 MonoBehaviour:
@@ -1215,86 +1222,6 @@ MonoBehaviour:
     nodeParams: []
   mUnityEngine_Vector2ArrayParamSet:
     nodeParams: []
---- !u!1 &4186039712478107559
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4186039712478107558}
-  - component: {fileID: 4186039712478107557}
-  m_Layer: 0
-  m_Name: Stop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4186039712478107558
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4186039712478107559}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4186039712247836694}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4186039712478107557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4186039712478107559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeFullName: Stop
-  displayName: Stop
-  nodeDescription: 
-  mEnumParamSet:
-    nodeParams: []
-  mStringParamSet:
-    nodeParams:
-    - key: objectKey
-      value: 
-  mStringArrayParamSet:
-    nodeParams: []
-  mIntParamSet:
-    nodeParams: []
-  mIntArrayParamSet:
-    nodeParams: []
-  mFloatParamSet:
-    nodeParams:
-    - key: time
-      value: 0.2
-  mFloatArrayParamSet:
-    nodeParams: []
-  mBoolParamSet:
-    nodeParams: []
-  mBoolArrayParamSet:
-    nodeParams: []
-  mLongParamSet:
-    nodeParams: []
-  mLongArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ArrayParamSet:
-    nodeParams: []
 --- !u!1 &4186039712648978152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,7 +1287,11 @@ MonoBehaviour:
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: autoStop
+      value: 1
+    - key: faceObject
+      value: 1
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -1522,7 +1453,11 @@ MonoBehaviour:
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: autoStop
+      value: 0
+    - key: faceDirection
+      value: 0
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -1647,7 +1582,6 @@ Transform:
   m_Children:
   - {fileID: 4186039714099761302}
   - {fileID: 4186039713977798759}
-  - {fileID: 4186039713164722540}
   - {fileID: 4186039712458793332}
   - {fileID: 4186039712262053181}
   m_Father: {fileID: 4186039712385291268}
@@ -1840,86 +1774,6 @@ MonoBehaviour:
     nodeParams: []
   mFloatParamSet:
     nodeParams: []
-  mFloatArrayParamSet:
-    nodeParams: []
-  mBoolParamSet:
-    nodeParams: []
-  mBoolArrayParamSet:
-    nodeParams: []
-  mLongParamSet:
-    nodeParams: []
-  mLongArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector3ArrayParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ParamSet:
-    nodeParams: []
-  mUnityEngine_Vector2ArrayParamSet:
-    nodeParams: []
---- !u!1 &4186039713164722541
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4186039713164722540}
-  - component: {fileID: 4186039713164722531}
-  m_Layer: 0
-  m_Name: Stop
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4186039713164722540
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4186039713164722541}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4186039713052424409}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4186039713164722531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4186039713164722541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeFullName: Stop
-  displayName: Stop
-  nodeDescription: 
-  mEnumParamSet:
-    nodeParams: []
-  mStringParamSet:
-    nodeParams:
-    - key: objectKey
-      value: 
-  mStringArrayParamSet:
-    nodeParams: []
-  mIntParamSet:
-    nodeParams: []
-  mIntArrayParamSet:
-    nodeParams: []
-  mFloatParamSet:
-    nodeParams:
-    - key: time
-      value: 0.2
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
@@ -2244,7 +2098,11 @@ MonoBehaviour:
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: autoStop
+      value: 0
+    - key: faceDirection
+      value: 0
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -2483,7 +2341,11 @@ MonoBehaviour:
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: autoStop
+      value: 1
+    - key: faceObject
+      value: 1
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:
@@ -2685,7 +2547,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4186039712247836694}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4186039714098869814
 MonoBehaviour:
@@ -2881,7 +2743,11 @@ MonoBehaviour:
   mFloatArrayParamSet:
     nodeParams: []
   mBoolParamSet:
-    nodeParams: []
+    nodeParams:
+    - key: autoStop
+      value: 0
+    - key: faceDirection
+      value: 0
   mBoolArrayParamSet:
     nodeParams: []
   mLongParamSet:

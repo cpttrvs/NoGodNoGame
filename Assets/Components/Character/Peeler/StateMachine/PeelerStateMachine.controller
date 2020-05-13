@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60acfc8f13e5884799a4a6537c2d6b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  behaviorFile: {fileID: 102900000, guid: 1505f2747187a3942888a0b8d6e800e1, type: 3}
+  behaviorFile: {fileID: 102900000, guid: 4b54b5c43b776d341aa9b95997bba409, type: 3}
   behaviorName: Peeler_GoingHomeBehaviour
   basketVegetablesKey: basketVegetables
   basketPeeledKey: basketPeeled
