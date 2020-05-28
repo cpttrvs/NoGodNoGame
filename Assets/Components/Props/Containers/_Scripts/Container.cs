@@ -8,11 +8,32 @@ public class Container : MonoBehaviour, IBlackBoardData
     [SerializeField]
     private uint capacity = 0;
     [SerializeField]
-    private Transform containerSlot = null;
+    protected Transform containerSlot = null;
 
     private List<IContainable> items = new List<IContainable>();
 
-    public bool AddItem(IContainable item)
+    private void Start()
+    {
+        if(containerSlot.childCount > 0)
+        {
+            foreach (Transform tr in containerSlot)
+            {
+                IContainable containable = tr.gameObject.GetComponent<IContainable>();
+
+                if (containable != null)
+                {
+                    bool success = AddItem(containable, false);
+
+                    if (!success)
+                    {
+                        Debug.LogWarning("Start: " + name + " can't auto-add containables");
+                    }
+                }
+            }
+        }
+    }
+
+    public bool AddItem(IContainable item, bool hasPosition = true)
     {
         if (item.isContained) return false;
 
@@ -26,8 +47,12 @@ public class Container : MonoBehaviour, IBlackBoardData
         if (mb != null)
         {
             mb.transform.SetParent(containerSlot);
-            mb.transform.position = Vector3.zero;
+
+            if(hasPosition)
+                mb.transform.localPosition = Vector3.zero;
         }
+
+        //Debug.Log("Container: " + name + " added an item");
 
         return true;
     }
@@ -47,6 +72,18 @@ public class Container : MonoBehaviour, IBlackBoardData
         return true;
     }
 
+    public bool RemoveAny()
+    {
+        IContainable item = null;
+        foreach(IContainable i in items)
+        {
+            item = i;
+            break;
+        }
+
+        return RemoveItem(item);
+    }
+
     public IContainable[] GetItems()
     {
         return items.ToArray();
@@ -54,4 +91,5 @@ public class Container : MonoBehaviour, IBlackBoardData
 
     public uint GetCapacity() { return capacity; }
     public int GetContentSize() { return items.Count; }
+    public bool IsFull() { return GetContentSize() == GetCapacity(); }
 }

@@ -1,0 +1,3512 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &79704388618746262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4263256107126609944}
+  - component: {fileID: 2584348426189953687}
+  m_Layer: 0
+  m_Name: Move to Closest Garden Waypoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4263256107126609944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79704388618746262}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 879313430309186269}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2584348426189953687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 79704388618746262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: MoveToWaypoint
+  displayName: Move to Closest Basket Waypoint
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+    - key: waypointKey
+      value: closestGardenWaypoint
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &583067838382149328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8949706675001892155}
+  - component: {fileID: 3508255332825170625}
+  m_Layer: 0
+  m_Name: Sequence
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8949706675001892155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583067838382149328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5755382422356298420}
+  - {fileID: 3687187522604199066}
+  - {fileID: 3650095338775885336}
+  m_Father: {fileID: 3650095338268228009}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3508255332825170625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583067838382149328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSequence
+  displayName: Sequence
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &666423375423018779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8132029541163580854}
+  - component: {fileID: 4442743396484686068}
+  m_Layer: 0
+  m_Name: Is Carrying Basket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8132029541163580854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666423375423018779}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5024542006734534142}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4442743396484686068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666423375423018779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: IsCarryingBasket
+  displayName: Is Carrying Basket
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+    - key: basketKey
+      value: basket
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &840839522742168378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5167236745724263836}
+  - component: {fileID: 4242171046781024845}
+  m_Layer: 0
+  m_Name: Is Near
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5167236745724263836
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840839522742168378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8755096052470416444}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4242171046781024845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840839522742168378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: IsNearWaypoint
+  displayName: Is Near
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+    - key: waypointKey
+      value: closestGardenWaypoint
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams:
+    - key: minimalRange
+      value: 0.2
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: autoStop
+      value: 0
+    - key: faceDirection
+      value: 0
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &1066685710253489149
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3826593662386517773}
+  - component: {fileID: 678177560031078182}
+  m_Layer: 0
+  m_Name: Is Near
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3826593662386517773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066685710253489149}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1061342886983787254}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &678177560031078182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1066685710253489149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: IsNearWaypoint
+  displayName: Is Near
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+    - key: waypointKey
+      value: closestBasketWaypoint
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams:
+    - key: minimalRange
+      value: 0.5
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: autoStop
+      value: 1
+    - key: faceDirection
+      value: 0
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &1199598524580662667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2817780842326677201}
+  - component: {fileID: 1150535272870677276}
+  m_Layer: 0
+  m_Name: If Space in Hands
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2817780842326677201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199598524580662667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 879313430309186269}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1150535272870677276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199598524580662667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: IfSpaceInContainer
+  displayName: If Space in Hands
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+    - key: containerKey
+      value: weederHands
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &1450969440233250944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8755096052470416444}
+  - component: {fileID: 2757728288525490156}
+  m_Layer: 0
+  m_Name: Until Success
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8755096052470416444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450969440233250944}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5167236745724263836}
+  m_Father: {fileID: 879313430309186269}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2757728288525490156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450969440233250944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeUntilSuccess
+  displayName: Until Success
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &1955553355664430453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5024542006734534142}
+  - component: {fileID: 8790858861964975608}
+  m_Layer: 0
+  m_Name: Sequence Carrying Basket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5024542006734534142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955553355664430453}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8132029541163580854}
+  - {fileID: 4027830727594612156}
+  - {fileID: 1766884646693448685}
+  - {fileID: 1061342886983787254}
+  - {fileID: 2247638095456848633}
+  - {fileID: 8150144392635806022}
+  m_Father: {fileID: 8995259159190981138}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8790858861964975608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955553355664430453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSequence
+  displayName: Sequence Carrying Basket
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &2043885193177042028
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3984222410806763559}
+  - component: {fileID: 1167631641928447389}
+  m_Layer: 0
+  m_Name: If Garden has Weeds to Pickup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3984222410806763559
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043885193177042028}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2429414219661896307}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1167631641928447389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043885193177042028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: IfGardenHasWeeds
+  displayName: If Garden has Weeds to Pickup
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: weedsToUnplant
+      value: 0
+    - key: weedsToPickup
+      value: 1
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &2718005906425578318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7364942731042328829}
+  - component: {fileID: 7917308171184595027}
+  m_Layer: 0
+  m_Name: Stop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7364942731042328829
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2718005906425578318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 879313430309186269}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7917308171184595027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2718005906425578318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: Stop
+  displayName: Stop
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams:
+    - key: time
+      value: 0.05
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &2794221015494685668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8262066475933258731}
+  - component: {fileID: 2196266172129445514}
+  m_Layer: 0
+  m_Name: Sequence Empty Hands
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8262066475933258731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2794221015494685668}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6891951107421216381}
+  - {fileID: 8257271491592261969}
+  - {fileID: 5919808508103619899}
+  - {fileID: 8331632304180461992}
+  m_Father: {fileID: 3283900038260978667}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2196266172129445514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2794221015494685668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSequence
+  displayName: Sequence Empty Hands
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &2864531122852040145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4755361323523895904}
+  - component: {fileID: 7132336466881275057}
+  m_Layer: 0
+  m_Name: Is Near Basket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4755361323523895904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864531122852040145}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8257271491592261969}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7132336466881275057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2864531122852040145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: IsNearObject
+  displayName: Is Near Basket
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: basket
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams:
+    - key: minimalRange
+      value: 0.5
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: randomPick
+      value: 0
+    - key: preventSameNode
+      value: 0
+    - key: autoStop
+      value: 1
+    - key: faceObject
+      value: 1
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &3363252050989483001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5919808508103619899}
+  - component: {fileID: 8422279790132620662}
+  m_Layer: 0
+  m_Name: Empty Hands in Basket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5919808508103619899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363252050989483001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8262066475933258731}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8422279790132620662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363252050989483001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: EmptyContainerInContainer
+  displayName: Empty Hands in Basket
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+    - key: fromContainerKey
+      value: weederHands
+    - key: toContainerKey
+      value: basket
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &3375399920869415980
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1061342886983787254}
+  - component: {fileID: 1435262672420557158}
+  m_Layer: 0
+  m_Name: Until Success
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1061342886983787254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3375399920869415980}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3826593662386517773}
+  m_Father: {fileID: 5024542006734534142}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1435262672420557158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3375399920869415980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeUntilSuccess
+  displayName: Until Success
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &3433806849250133019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6235145717315728527}
+  - component: {fileID: 2768763165823135081}
+  m_Layer: 0
+  m_Name: If Garden Lane has Weeds to Pickup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6235145717315728527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3433806849250133019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5368802106300127174}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2768763165823135081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3433806849250133019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: IfGardenLaneHasWeeds
+  displayName: If Garden Lane has Weeds to Pickup
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: weedsToUnplant
+      value: 0
+    - key: weedsToPickup
+      value: 1
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &3463448617156006081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6891951107421216381}
+  - component: {fileID: 7653674351558550810}
+  m_Layer: 0
+  m_Name: Move to Basket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6891951107421216381
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3463448617156006081}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.08907139, y: -14.796752, z: 13.668028}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8262066475933258731}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7653674351558550810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3463448617156006081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: MoveToObject
+  displayName: Move to Basket
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: basket
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: randomPick
+      value: 0
+    - key: preventSameNode
+      value: 0
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &3601968534048812232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4027830727594612156}
+  - component: {fileID: 188952064820862225}
+  m_Layer: 0
+  m_Name: Find Closest Basket Waypoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4027830727594612156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3601968534048812232}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5024542006734534142}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &188952064820862225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3601968534048812232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: FindClosestBasketWaypoint
+  displayName: Find Closest Basket Waypoint
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+    - key: gardenKey
+      value: garden
+    - key: closestWaypointKey
+      value: closestBasketWaypoint
+    - key: currentLaneKey
+      value: currentLane
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: inCurrentGardenLane
+      value: 0
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &3650095338268228015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3650095338268228009}
+  - component: {fileID: 3650095338268228008}
+  m_Layer: 0
+  m_Name: Weeder_PickingUpBehaviour
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3650095338268228009
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650095338268228015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06318557, y: -3.4383059, z: -16.699318}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8949706675001892155}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3650095338268228008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650095338268228015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSequence
+  displayName: root
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams:
+    - key: repeatTimes
+      value: 500
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: ignoringFailure
+      value: 0
+    - key: oncePerTick
+      value: 0
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &3650095338775885343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3650095338775885336}
+  - component: {fileID: 3650095338775885337}
+  m_Layer: 0
+  m_Name: Selector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3650095338775885336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650095338775885343}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3650095339357854468}
+  m_Father: {fileID: 8949706675001892155}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3650095338775885337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650095338775885343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSelector
+  displayName: Selector
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &3650095339357854475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3650095339357854468}
+  - component: {fileID: 3650095339357854469}
+  m_Layer: 0
+  m_Name: Sequence in garden
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3650095339357854468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650095339357854475}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3650095339819873795}
+  - {fileID: 2564074186366890348}
+  m_Father: {fileID: 3650095338775885336}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3650095339357854469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650095339357854475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSequence
+  displayName: Sequence in garden
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &3650095339819873794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3650095339819873795}
+  - component: {fileID: 3650095339819873820}
+  m_Layer: 0
+  m_Name: Is in Garden
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3650095339819873795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650095339819873794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3650095339357854468}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3650095339819873820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3650095339819873794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: IsInArea
+  displayName: Is in Garden
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+    - key: areaKey
+      value: garden
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: multipleAreas
+      value: 0
+    - key: anyArea
+      value: 0
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &4005698316308322410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1874570436548782345}
+  - component: {fileID: 6855338739180531333}
+  m_Layer: 0
+  m_Name: Stop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1874570436548782345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4005698316308322410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 879313430309186269}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6855338739180531333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4005698316308322410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: Stop
+  displayName: Stop
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams:
+    - key: time
+      value: 0.25
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &4977441140009960115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1766884646693448685}
+  - component: {fileID: 6011997300501661557}
+  m_Layer: 0
+  m_Name: Move to Closest Basket Waypoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1766884646693448685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4977441140009960115}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5024542006734534142}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6011997300501661557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4977441140009960115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: MoveToWaypoint
+  displayName: Move to Closest Basket Waypoint
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+    - key: waypointKey
+      value: closestBasketWaypoint
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &5194634313220109414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6623940727368045501}
+  - component: {fileID: 2103415825586946779}
+  m_Layer: 0
+  m_Name: Move to Basket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6623940727368045501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5194634313220109414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6363444083220277785}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2103415825586946779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5194634313220109414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: MoveToObject
+  displayName: Move to Basket
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: basket
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &5236512094085792277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5368802106300127174}
+  - component: {fileID: 6192749879574942391}
+  m_Layer: 0
+  m_Name: Sequence if garden lane has weeds to pickup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5368802106300127174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5236512094085792277}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6235145717315728527}
+  - {fileID: 879313430309186269}
+  m_Father: {fileID: 2564074186366890348}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6192749879574942391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5236512094085792277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSequence
+  displayName: Sequence if garden lane has weeds to pickup
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &5290204692466213614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5809446474562494342}
+  - component: {fileID: 7795466067605936815}
+  m_Layer: 0
+  m_Name: If Hands contains Weeds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5809446474562494342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5290204692466213614}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3283900038260978667}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7795466067605936815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5290204692466213614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: IfContainerContains
+  displayName: If Hands contains Weeds
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+    - key: containerKey
+      value: weederHands
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams:
+    - key: value
+      value: 0
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: equals
+      value: 0
+    - key: more
+      value: 1
+    - key: less
+      value: 0
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &5367638226751424333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3346302440771705394}
+  - component: {fileID: 186549207838971764}
+  m_Layer: 0
+  m_Name: Pick up Weeds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3346302440771705394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5367638226751424333}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 879313430309186269}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &186549207838971764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5367638226751424333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: PickupWeeds
+  displayName: Pick up Weeds
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: currentWaypoint
+      value: 1
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &5394110920490552230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2247638095456848633}
+  - component: {fileID: 6972019231669815560}
+  m_Layer: 0
+  m_Name: Drop Basket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2247638095456848633
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5394110920490552230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5024542006734534142}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6972019231669815560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5394110920490552230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: DropObject
+  displayName: Drop Basket
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: basket
+    - key: dropWaypointKey
+      value: closestBasketWaypoint
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &5786898564856855015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8150144392635806022}
+  - component: {fileID: 7410869640489689617}
+  m_Layer: 0
+  m_Name: Stop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8150144392635806022
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5786898564856855015}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5024542006734534142}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7410869640489689617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5786898564856855015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: Stop
+  displayName: Stop
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams:
+    - key: time
+      value: 0.05
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &5991894780794351605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5314300309093719413}
+  - component: {fileID: 7020060548386124800}
+  m_Layer: 0
+  m_Name: Is Near
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5314300309093719413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5991894780794351605}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1834364809674510949}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7020060548386124800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5991894780794351605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: IsNearObject
+  displayName: Is Near
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: basket
+    - key: waypointKey
+      value: closestBaksetWaypoint
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams:
+    - key: minimalRange
+      value: 0.5
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: autoStop
+      value: 1
+    - key: faceObject
+      value: 1
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &6107951421585857048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3283900038260978667}
+  - component: {fileID: 8794397413757645080}
+  m_Layer: 0
+  m_Name: Sequence if hands contains weeds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3283900038260978667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6107951421585857048}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5809446474562494342}
+  - {fileID: 8262066475933258731}
+  m_Father: {fileID: 2564074186366890348}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8794397413757645080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6107951421585857048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSequence
+  displayName: Sequence if hands contains weeds
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &6771837637523438085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 879313430309186269}
+  - component: {fileID: 9009454531390647007}
+  m_Layer: 0
+  m_Name: Sequence Pick up
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &879313430309186269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6771837637523438085}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2817780842326677201}
+  - {fileID: 8490527089239776230}
+  - {fileID: 4263256107126609944}
+  - {fileID: 8755096052470416444}
+  - {fileID: 7364942731042328829}
+  - {fileID: 3346302440771705394}
+  - {fileID: 1874570436548782345}
+  m_Father: {fileID: 5368802106300127174}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9009454531390647007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6771837637523438085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSequence
+  displayName: Sequence Pick up
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &7057663958440899023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8257271491592261969}
+  - component: {fileID: 6417684903757696142}
+  m_Layer: 0
+  m_Name: Until Success
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8257271491592261969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7057663958440899023}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.08907139, y: -14.796752, z: 13.668028}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4755361323523895904}
+  m_Father: {fileID: 8262066475933258731}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6417684903757696142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7057663958440899023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeUntilSuccess
+  displayName: Until Success
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams: []
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: randomPick
+      value: 0
+    - key: preventSameNode
+      value: 0
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &7296853677699672066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6363444083220277785}
+  - component: {fileID: 7893756413173612263}
+  m_Layer: 0
+  m_Name: Sequence Carry Basket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6363444083220277785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296853677699672066}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6623940727368045501}
+  - {fileID: 1834364809674510949}
+  - {fileID: 6556576597895430915}
+  m_Father: {fileID: 8995259159190981138}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7893756413173612263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296853677699672066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSequence
+  displayName: Sequence Carry Basket
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &7366666899738204008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6556576597895430915}
+  - component: {fileID: 2080057139295542881}
+  m_Layer: 0
+  m_Name: Carry Basket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6556576597895430915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7366666899738204008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6363444083220277785}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2080057139295542881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7366666899738204008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: CarryObject
+  displayName: Carry Basket
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: basket
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &7511971590752949354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8995259159190981138}
+  - component: {fileID: 5350674544657625212}
+  m_Layer: 0
+  m_Name: Selector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8995259159190981138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7511971590752949354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5024542006734534142}
+  - {fileID: 6363444083220277785}
+  m_Father: {fileID: 2429414219661896307}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5350674544657625212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7511971590752949354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSelector
+  displayName: Selector
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &8003447669113860919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8490527089239776230}
+  - component: {fileID: 5020548133169589860}
+  m_Layer: 0
+  m_Name: Find Closest Garden Waypoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8490527089239776230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003447669113860919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 879313430309186269}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5020548133169589860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003447669113860919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: FindClosestGardenWaypoint
+  displayName: Find Closest Garden Waypoint
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+    - key: gardenKey
+      value: garden
+    - key: closestWaypointKey
+      value: closestGardenWaypoint
+    - key: currentLaneKey
+      value: currentLane
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: unplant
+      value: 0
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &8171519862007974330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5755382422356298420}
+  - component: {fileID: 1598175787561026063}
+  m_Layer: 0
+  m_Name: Stop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5755382422356298420
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171519862007974330}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8949706675001892155}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598175787561026063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171519862007974330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: Stop
+  displayName: Stop
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams:
+    - key: time
+      value: 0.05
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &8688536166394471320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8331632304180461992}
+  - component: {fileID: 8511835245517635377}
+  m_Layer: 0
+  m_Name: Stop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8331632304180461992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8688536166394471320}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8262066475933258731}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8511835245517635377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8688536166394471320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: Stop
+  displayName: Stop
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams:
+    - key: time
+      value: 0.05
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &8877859980717233787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1834364809674510949}
+  - component: {fileID: 988556382941068360}
+  m_Layer: 0
+  m_Name: Until Success
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1834364809674510949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8877859980717233787}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5314300309093719413}
+  m_Father: {fileID: 6363444083220277785}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &988556382941068360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8877859980717233787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeUntilSuccess
+  displayName: Until Success
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &9059927152635807631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2564074186366890348}
+  - component: {fileID: 5880472421487335760}
+  m_Layer: 0
+  m_Name: Selector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2564074186366890348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9059927152635807631}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5368802106300127174}
+  - {fileID: 3283900038260978667}
+  - {fileID: 2429414219661896307}
+  m_Father: {fileID: 3650095339357854468}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5880472421487335760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9059927152635807631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSelector
+  displayName: Selector
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &9103641695523499487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2429414219661896307}
+  - component: {fileID: 5670721228705385531}
+  m_Layer: 0
+  m_Name: Sequence if garden has weeds to pick up
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2429414219661896307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9103641695523499487}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3984222410806763559}
+  - {fileID: 8995259159190981138}
+  m_Father: {fileID: 2564074186366890348}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5670721228705385531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9103641695523499487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: AillieoUtils.EasyBehaviorTree.NodeSequence
+  displayName: Sequence if garden has weeds to pick up
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams: []
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []
+--- !u!1 &9206386130985542484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3687187522604199066}
+  - component: {fileID: 7530566727410327620}
+  m_Layer: 0
+  m_Name: Stop Crawling
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3687187522604199066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206386130985542484}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8949706675001892155}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7530566727410327620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9206386130985542484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feb5477fb5ae48f49b6c170e3613c8fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeFullName: Crawl
+  displayName: Stop Crawling
+  nodeDescription: 
+  mEnumParamSet:
+    nodeParams: []
+  mStringParamSet:
+    nodeParams:
+    - key: objectKey
+      value: 
+  mStringArrayParamSet:
+    nodeParams: []
+  mIntParamSet:
+    nodeParams: []
+  mIntArrayParamSet:
+    nodeParams: []
+  mFloatParamSet:
+    nodeParams: []
+  mFloatArrayParamSet:
+    nodeParams: []
+  mBoolParamSet:
+    nodeParams:
+    - key: stop
+      value: 1
+  mBoolArrayParamSet:
+    nodeParams: []
+  mLongParamSet:
+    nodeParams: []
+  mLongArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector3ArrayParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ParamSet:
+    nodeParams: []
+  mUnityEngine_Vector2ArrayParamSet:
+    nodeParams: []

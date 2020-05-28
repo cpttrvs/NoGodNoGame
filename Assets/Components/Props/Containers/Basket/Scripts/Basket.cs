@@ -9,7 +9,7 @@ public class Basket : Container, ICarriable
 
     private Character _isCarriedBy;
     public Character isCarriedBy { get { return _isCarriedBy; } }
-
+    
     public bool Carry(Character c)
     {
         if (isCarried) return false;

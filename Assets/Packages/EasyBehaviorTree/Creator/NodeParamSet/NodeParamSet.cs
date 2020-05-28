@@ -29,6 +29,7 @@ namespace AillieoUtils.EasyBehaviorTree.Creator
         public T GetValueForKey(string key)
         {
             EnsureDict();
+            Debug.Log(key);
             return nodeParams[dict[key]].value;
         }
 

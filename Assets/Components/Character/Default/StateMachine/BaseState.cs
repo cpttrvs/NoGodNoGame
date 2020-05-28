@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using AillieoUtils.EasyBehaviorTree;
 using UnityEditor;
+using System.IO;
 
 public class BaseState : StateMachineBehaviour
 {
     [SerializeField]
     private Object behaviorFile = null;
+    [SerializeField]
+    private string behaviorName = "";
 
     protected BehaviorTree behaviorTree;
     protected Animator stateAnimator;
@@ -17,17 +20,39 @@ public class BaseState : StateMachineBehaviour
     {
         stateAnimator = animator;
         animatedGameobject = stateAnimator.gameObject;
+        
+#if UNITY_EDITOR
 
         behaviorTree = BytesAssetProcessor.LoadBehaviorTree(AssetDatabase.GetAssetPath(behaviorFile));
 
-        if(behaviorTree != null)
+#else
+        string path = "";
+
+        if(Application.platform == RuntimePlatform.WebGLPlayer)
         {
-            behaviorTree.OnBehaviorTreeCompleted += BehaviourTree_OnBehaviorTreeCompleted;
-            behaviorTree.OnBehaviorTreeStarted += BehaviourTree_OnBehaviorTreeStarted;
+            path = Path.Combine("StreamingAssets", behaviorName + ".bt");
+        } else if(Application.platform == RuntimePlatform.OSXPlayer)
+        {
+            path = Path.Combine(Application.streamingAssetsPath, behaviorName + ".bt");
+        } else if(Application.platform == RuntimePlatform.WindowsPlayer)
+        {
+            path = Path.Combine(Application.streamingAssetsPath, behaviorName + ".bt");
+        } else
+        {
+            path = Path.Combine(Application.streamingAssetsPath, behaviorName + ".bt");
+        }
 
-            behaviorTree.Restart();
+        behaviorTree = BytesAssetProcessor.LoadBehaviorTree(path);
+#endif
 
+
+
+        if (behaviorTree != null)
+        {
             Init();
+        } else
+        {
+            Debug.LogError(behaviorFile.name + " can't load Behavior Tree from it");
         }
     }
 
@@ -56,9 +81,17 @@ public class BaseState : StateMachineBehaviour
 
     protected virtual void BehaviourTree_OnBehaviorTreeCompleted(BehaviorTree tree, BTState state)
     {
+        behaviorTree.CleanUp();
     }
 
     protected virtual void Init()
     {
+        behaviorTree.OnBehaviorTreeCompleted -= BehaviourTree_OnBehaviorTreeCompleted;
+        behaviorTree.OnBehaviorTreeStarted -= BehaviourTree_OnBehaviorTreeStarted;
+
+        behaviorTree.OnBehaviorTreeCompleted += BehaviourTree_OnBehaviorTreeCompleted;
+        behaviorTree.OnBehaviorTreeStarted += BehaviourTree_OnBehaviorTreeStarted;
+
+        behaviorTree.Restart();
     }
 }
